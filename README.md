@@ -4,6 +4,8 @@ A learning project built with Databricks and Python. The app has three pages: Ca
 
 **Joining the team?** Start with [TEAM_HANDOFF.md](TEAM_HANDOFF.md) for collaboration steps, the analysis status, and the optional Gemini/retro-floor roadmap.
 
+**Learning the code or preparing for judging?** Read [the comprehensive code and requirements explanation](docs/CODE_EXPLAINED.md). It covers the formulas, architecture, evidence, Databricks integration, proposed Gemini design, and requirements that remain unfinished.
+
 ## What each tool does
 
 - **Databricks** runs the documented analysis and preserves the notebook for judges.
