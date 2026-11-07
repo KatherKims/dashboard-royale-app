@@ -1,0 +1,5770 @@
+{
+  "execution": "Databricks",
+  "sources": {
+    "prepared_daily_view": {
+      "sha256": "dcf59b0a3ad7dceeff1de7ae5a86e313c42300f3f3b73c652df86cd60fd0eebb",
+      "file": "prepared_daily_view.parquet"
+    },
+    "property_day": {
+      "sha256": "8e3df1d0662e27cd964d72287bac224e9f2395600ad8bece9ce4f8b17f5457d5",
+      "file": "property_day.parquet"
+    },
+    "player_period": {
+      "sha256": "e7ddbbafb2ddd9a24ec8bb7b5c5a9c79a17ff0d379011a4f35054be03a0fac2f",
+      "file": "player_period.parquet"
+    },
+    "machine_day": {
+      "sha256": "8bd1ebdb1dd2f695eef8585da0d3d5b6785d7c050e29ae52b14c2123c7c33176",
+      "file": "machine_day.parquet"
+    },
+    "machines": {
+      "sha256": "da7f869b62161b61bc44b0fc19d266ccaab2eab94505aa279956d70a1b8047e0",
+      "file": "machines.parquet"
+    },
+    "game_math": {
+      "sha256": "b6ebc7040d7120dd20be89c5f6ba264d650be9e4bfd03530a2e0abfb3f4f931d",
+      "file": "game_math.parquet"
+    },
+    "action_catalog": {
+      "sha256": "d4583febb24d0528feb90f8fa81bb4c2910abba94def7d8c06b96897814d2842",
+      "file": "action_catalog.parquet"
+    },
+    "loyalty_ledger": {
+      "sha256": "f00e81ec27c36fc9d6adea0569a7b31d041f41572bef596dadfdd2ffcbe46f5e",
+      "file": "loyalty_ledger.parquet"
+    },
+    "zone_traffic_hourly": {
+      "sha256": "5f33099b4e65115461828c0de1bde4f88244d57b9069b263601abdbc20e22e3c",
+      "file": "zone_traffic_hourly.parquet"
+    },
+    "events": {
+      "sha256": "f55b840d409bd56991ce1afe401239a67ec646d3a540217701dc7b4ad88607f8",
+      "file": "events.parquet"
+    }
+  },
+  "validation": {
+    "rows": 56110,
+    "active_rows": 55092,
+    "dates": [
+      "2025-01-01",
+      "2025-06-30"
+    ],
+    "money_and_ledger_reconciled": true
+  },
+  "monthly": [
+    {
+      "month": "2025-01",
+      "days": 31,
+      "wagers": 41676918.15,
+      "actual": 3936193.75,
+      "expected": 3946193.976,
+      "comps": 28750.3,
+      "comp_face": 103499.5,
+      "hours": 222333.4594444445,
+      "wagers_per_day": 1344416.7145161289,
+      "wagers_per_available_hour": 187.4522991462,
+      "comp_cost_per_theo": 0.007285577
+    },
+    {
+      "month": "2025-02",
+      "days": 28,
+      "wagers": 39577371.95,
+      "actual": 3889478.3,
+      "expected": 3755949.8405,
+      "comps": 29854.3,
+      "comp_face": 106853.5,
+      "hours": 200827.5091666667,
+      "wagers_per_day": 1413477.5696428572,
+      "wagers_per_available_hour": 197.0714675207,
+      "comp_cost_per_theo": 0.0079485353
+    },
+    {
+      "month": "2025-03",
+      "days": 31,
+      "wagers": 43647425.45,
+      "actual": 4108214.25,
+      "expected": 4132019.4420000003,
+      "comps": 33255.5,
+      "comp_face": 119167.5,
+      "hours": 223456.8038888889,
+      "wagers_per_day": 1407981.4661290324,
+      "wagers_per_available_hour": 195.328245506,
+      "comp_cost_per_theo": 0.0080482438
+    },
+    {
+      "month": "2025-04",
+      "days": 30,
+      "wagers": 41288570.55,
+      "actual": 3864536.65,
+      "expected": 3899006.3145,
+      "comps": 31390.3,
+      "comp_face": 112214.0,
+      "hours": 221004.9322222222,
+      "wagers_per_day": 1376285.6849999998,
+      "wagers_per_available_hour": 186.821941641,
+      "comp_cost_per_theo": 0.0080508462
+    },
+    {
+      "month": "2025-05",
+      "days": 31,
+      "wagers": 42984383.3,
+      "actual": 4023535.85,
+      "expected": 4060078.617,
+      "comps": 34446.1,
+      "comp_face": 123048.5,
+      "hours": 228134.6891666667,
+      "wagers_per_day": 1386593.0096774192,
+      "wagers_per_available_hour": 188.4166912845,
+      "comp_cost_per_theo": 0.0084840968
+    },
+    {
+      "month": "2025-06",
+      "days": 30,
+      "wagers": 39730549.85,
+      "actual": 3816196.3,
+      "expected": 3752116.2885,
+      "comps": 32972.8,
+      "comp_face": 117966.5,
+      "hours": 221129.5272222222,
+      "wagers_per_day": 1324351.6616666666,
+      "wagers_per_available_hour": 179.6709392413,
+      "comp_cost_per_theo": 0.0087877873
+    }
+  ],
+  "zone_monthly": [
+    {
+      "month": "2025-01",
+      "zone_name": "Back Forty",
+      "bank_id": "B-31",
+      "wagers": 605572.35,
+      "theo": 58642.0025,
+      "available_hours": 4464.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 135.6568884409
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Back Forty",
+      "bank_id": "B-32",
+      "wagers": 531897.6,
+      "theo": 58681.752,
+      "available_hours": 4464.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 119.152688172
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Back Forty",
+      "bank_id": "B-33",
+      "wagers": 517059.95,
+      "theo": 57340.036,
+      "available_hours": 4459.3486111111,
+      "downtime_hours": 4.6513888889,
+      "wagers_per_available_hour": 115.949658816
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Back Forty",
+      "bank_id": "B-34",
+      "wagers": 597371.05,
+      "theo": 60358.962,
+      "available_hours": 4454.9958333333,
+      "downtime_hours": 9.0041666667,
+      "wagers_per_available_hour": 134.0901478584
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Back Forty",
+      "bank_id": "B-35",
+      "wagers": 632308.95,
+      "theo": 61712.3985,
+      "available_hours": 4439.4422222222,
+      "downtime_hours": 24.5577777778,
+      "wagers_per_available_hour": 142.4298185107
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Back Forty",
+      "bank_id": "B-36",
+      "wagers": 623497.75,
+      "theo": 57057.83,
+      "available_hours": 4462.6038888889,
+      "downtime_hours": 1.3961111111,
+      "wagers_per_available_hour": 139.7161311028
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Back Forty",
+      "bank_id": "B-37",
+      "wagers": 638462.7,
+      "theo": 52712.4795,
+      "available_hours": 4460.4002777778,
+      "downtime_hours": 3.5997222222,
+      "wagers_per_available_hour": 143.1402251455
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Back Forty",
+      "bank_id": "B-38",
+      "wagers": 522090.1,
+      "theo": 42380.402,
+      "available_hours": 4445.2213888889,
+      "downtime_hours": 18.7786111111,
+      "wagers_per_available_hour": 117.4497408172
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Bar Row",
+      "bank_id": "B-19",
+      "wagers": 793272.1,
+      "theo": 73383.426,
+      "available_hours": 4448.8622222222,
+      "downtime_hours": 15.1377777778,
+      "wagers_per_available_hour": 178.3089833705
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Bar Row",
+      "bank_id": "B-20",
+      "wagers": 930354.55,
+      "theo": 89868.064,
+      "available_hours": 4413.7511111111,
+      "downtime_hours": 50.2488888889,
+      "wagers_per_available_hour": 210.7854581238
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Bar Row",
+      "bank_id": "B-21",
+      "wagers": 836977.55,
+      "theo": 75767.3185,
+      "available_hours": 4450.9183333333,
+      "downtime_hours": 13.0816666667,
+      "wagers_per_available_hour": 188.0460361925
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Bar Row",
+      "bank_id": "B-22",
+      "wagers": 846954.35,
+      "theo": 84083.2385,
+      "available_hours": 4451.7838888889,
+      "downtime_hours": 12.2161111111,
+      "wagers_per_available_hour": 190.2505537418
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Bar Row",
+      "bank_id": "B-23",
+      "wagers": 865033.6,
+      "theo": 76679.996,
+      "available_hours": 4429.4022222222,
+      "downtime_hours": 34.5977777778,
+      "wagers_per_available_hour": 195.2935309555
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Bar Row",
+      "bank_id": "B-24",
+      "wagers": 837737.7,
+      "theo": 86411.852,
+      "available_hours": 4410.8636111111,
+      "downtime_hours": 53.1363888889,
+      "wagers_per_available_hour": 189.9260040346
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Bar Row",
+      "bank_id": "B-25",
+      "wagers": 878989.5,
+      "theo": 64170.385,
+      "available_hours": 4450.6780555556,
+      "downtime_hours": 13.3219444444,
+      "wagers_per_available_hour": 197.4956375249
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Bar Row",
+      "bank_id": "B-26",
+      "wagers": 801092.4,
+      "theo": 83846.456,
+      "available_hours": 4445.6683333333,
+      "downtime_hours": 18.3316666667,
+      "wagers_per_available_hour": 180.1961684801
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-07",
+      "wagers": 855912.35,
+      "theo": 74431.2895,
+      "available_hours": 4454.7375,
+      "downtime_hours": 9.2625,
+      "wagers_per_available_hour": 192.1353053912
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-08",
+      "wagers": 919352.8,
+      "theo": 102838.512,
+      "available_hours": 4462.8463888889,
+      "downtime_hours": 1.1536111111,
+      "wagers_per_available_hour": 206.0014438966
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-09",
+      "wagers": 983764.35,
+      "theo": 75082.352,
+      "available_hours": 4449.9913888889,
+      "downtime_hours": 14.0086111111,
+      "wagers_per_available_hour": 221.0710682399
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-10",
+      "wagers": 1042564.6,
+      "theo": 89651.734,
+      "available_hours": 4447.0177777778,
+      "downtime_hours": 16.9822222222,
+      "wagers_per_available_hour": 234.4412934911
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-11",
+      "wagers": 876054.1,
+      "theo": 98161.726,
+      "available_hours": 4439.895,
+      "downtime_hours": 24.105,
+      "wagers_per_available_hour": 197.3141481949
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-12",
+      "wagers": 867758.75,
+      "theo": 87505.215,
+      "available_hours": 4454.3636111111,
+      "downtime_hours": 9.6363888889,
+      "wagers_per_available_hour": 194.8109372651
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-13",
+      "wagers": 863736.15,
+      "theo": 88457.034,
+      "available_hours": 4437.2047222222,
+      "downtime_hours": 26.7952777778,
+      "wagers_per_available_hour": 194.6577190082
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-14",
+      "wagers": 1027968.35,
+      "theo": 101749.986,
+      "available_hours": 4429.8569444444,
+      "downtime_hours": 34.1430555556,
+      "wagers_per_available_hour": 232.054525212
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-15",
+      "wagers": 972517.75,
+      "theo": 83276.0325,
+      "available_hours": 4426.4555555556,
+      "downtime_hours": 37.5444444444,
+      "wagers_per_available_hour": 219.7057527844
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-16",
+      "wagers": 1042220.85,
+      "theo": 101289.336,
+      "available_hours": 4445.9427777778,
+      "downtime_hours": 18.0572222222,
+      "wagers_per_available_hour": 234.4206621843
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-17",
+      "wagers": 973958.7,
+      "theo": 94666.712,
+      "available_hours": 4447.7822222222,
+      "downtime_hours": 16.2177777778,
+      "wagers_per_available_hour": 218.9762563315
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Center Pit",
+      "bank_id": "B-18",
+      "wagers": 882696.75,
+      "theo": 83776.928,
+      "available_hours": 4447.4627777778,
+      "downtime_hours": 16.5372222222,
+      "wagers_per_available_hour": 198.4719814656
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-45",
+      "wagers": 883821.25,
+      "theo": 72681.2225,
+      "available_hours": 4447.5830555556,
+      "downtime_hours": 16.4169444444,
+      "wagers_per_available_hour": 198.7194480598
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-46",
+      "wagers": 875611.4,
+      "theo": 84579.526,
+      "available_hours": 4440.0144444444,
+      "downtime_hours": 23.9855555556,
+      "wagers_per_available_hour": 197.2091332035
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-47",
+      "wagers": 726009.45,
+      "theo": 71259.4645,
+      "available_hours": 4459.4963888889,
+      "downtime_hours": 4.5036111111,
+      "wagers_per_available_hour": 162.8007709142
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-48",
+      "wagers": 803078.4,
+      "theo": 74343.718,
+      "available_hours": 4435.2833333333,
+      "downtime_hours": 28.7166666667,
+      "wagers_per_available_hour": 181.0658620081
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-49",
+      "wagers": 711706.45,
+      "theo": 75586.724,
+      "available_hours": 4460.8688888889,
+      "downtime_hours": 3.1311111111,
+      "wagers_per_available_hour": 159.5443550858
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-50",
+      "wagers": 793819.1,
+      "theo": 72890.204,
+      "available_hours": 4423.8877777778,
+      "downtime_hours": 40.1122222222,
+      "wagers_per_available_hour": 179.4392488859
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-27",
+      "wagers": 698640.0,
+      "theo": 69864.0,
+      "available_hours": 4461.0533333333,
+      "downtime_hours": 2.9466666667,
+      "wagers_per_available_hour": 156.6087530897
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-28",
+      "wagers": 746225.0,
+      "theo": 74622.5,
+      "available_hours": 4458.1438888889,
+      "downtime_hours": 5.8561111111,
+      "wagers_per_available_hour": 167.3846826389
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-29",
+      "wagers": 713325.0,
+      "theo": 71332.5,
+      "available_hours": 4464.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 159.7950268817
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-30",
+      "wagers": 725685.0,
+      "theo": 72568.5,
+      "available_hours": 4464.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 162.563844086
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-39",
+      "wagers": 914022.8,
+      "theo": 71801.1285,
+      "available_hours": 4454.1041666667,
+      "downtime_hours": 9.8958333333,
+      "wagers_per_available_hour": 205.2091208015
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-40",
+      "wagers": 698360.25,
+      "theo": 67759.82,
+      "available_hours": 4426.1280555556,
+      "downtime_hours": 37.8719444444,
+      "wagers_per_available_hour": 157.7813025819
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-41",
+      "wagers": 807295.05,
+      "theo": 80827.228,
+      "available_hours": 4448.2230555556,
+      "downtime_hours": 15.7769444444,
+      "wagers_per_available_hour": 181.4870881962
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-42",
+      "wagers": 919445.1,
+      "theo": 96234.824,
+      "available_hours": 4456.9072222222,
+      "downtime_hours": 7.0927777778,
+      "wagers_per_available_hour": 206.2966658618
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-43",
+      "wagers": 939272.05,
+      "theo": 74659.2155,
+      "available_hours": 4446.8433333333,
+      "downtime_hours": 17.1566666667,
+      "wagers_per_available_hour": 211.2222040654
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-44",
+      "wagers": 909175.05,
+      "theo": 91705.158,
+      "available_hours": 4448.1677777778,
+      "downtime_hours": 15.8322222222,
+      "wagers_per_available_hour": 204.3931558837
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-01",
+      "wagers": 995739.6,
+      "theo": 92350.996,
+      "available_hours": 4449.0202777778,
+      "downtime_hours": 14.9797222222,
+      "wagers_per_available_hour": 223.8109826052
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-02",
+      "wagers": 1027552.05,
+      "theo": 95150.858,
+      "available_hours": 4432.5138888889,
+      "downtime_hours": 31.4861111111,
+      "wagers_per_available_hour": 231.8215071081
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-03",
+      "wagers": 918433.3,
+      "theo": 95268.856,
+      "available_hours": 4445.4144444444,
+      "downtime_hours": 18.5855555556,
+      "wagers_per_available_hour": 206.6024015259
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-04",
+      "wagers": 1168107.8,
+      "theo": 102843.154,
+      "available_hours": 4447.8527777778,
+      "downtime_hours": 16.1472222222,
+      "wagers_per_available_hour": 262.6228560972
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-05",
+      "wagers": 995467.1,
+      "theo": 89439.891,
+      "available_hours": 4438.0627777778,
+      "downtime_hours": 25.9372222222,
+      "wagers_per_available_hour": 224.3021673746
+    },
+    {
+      "month": "2025-01",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-06",
+      "wagers": 938949.25,
+      "theo": 84441.0325,
+      "available_hours": 4430.3938888889,
+      "downtime_hours": 33.6061111111,
+      "wagers_per_available_hour": 211.9335827803
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Back Forty",
+      "bank_id": "B-31",
+      "wagers": 560783.2,
+      "theo": 54877.747,
+      "available_hours": 4025.3955555556,
+      "downtime_hours": 6.6044444444,
+      "wagers_per_available_hour": 139.3113278585
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Back Forty",
+      "bank_id": "B-32",
+      "wagers": 502829.3,
+      "theo": 55467.718,
+      "available_hours": 4030.2022222222,
+      "downtime_hours": 1.7977777778,
+      "wagers_per_available_hour": 124.7652778383
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Back Forty",
+      "bank_id": "B-33",
+      "wagers": 410151.75,
+      "theo": 44525.932,
+      "available_hours": 3415.4983333333,
+      "downtime_hours": 16.5016666667,
+      "wagers_per_available_hour": 120.0854780098
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Back Forty",
+      "bank_id": "B-34",
+      "wagers": 568692.85,
+      "theo": 56995.278,
+      "available_hours": 4019.4897222222,
+      "downtime_hours": 12.5102777778,
+      "wagers_per_available_hour": 141.4838423036
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Back Forty",
+      "bank_id": "B-35",
+      "wagers": 594310.65,
+      "theo": 57686.4695,
+      "available_hours": 4030.9269444444,
+      "downtime_hours": 1.0730555556,
+      "wagers_per_available_hour": 147.4377130102
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Back Forty",
+      "bank_id": "B-36",
+      "wagers": 591140.95,
+      "theo": 54010.002,
+      "available_hours": 4023.7494444444,
+      "downtime_hours": 8.2505555556,
+      "wagers_per_available_hour": 146.9129621916
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Back Forty",
+      "bank_id": "B-37",
+      "wagers": 588044.6,
+      "theo": 49239.5785,
+      "available_hours": 4018.9844444444,
+      "downtime_hours": 13.0155555556,
+      "wagers_per_available_hour": 146.316714615
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Back Forty",
+      "bank_id": "B-38",
+      "wagers": 522236.15,
+      "theo": 42698.673,
+      "available_hours": 4012.3888888889,
+      "downtime_hours": 19.6111111111,
+      "wagers_per_available_hour": 130.1559157055
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Bar Row",
+      "bank_id": "B-19",
+      "wagers": 721426.25,
+      "theo": 66751.55,
+      "available_hours": 4001.1713888889,
+      "downtime_hours": 30.8286111111,
+      "wagers_per_available_hour": 180.3037610444
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Bar Row",
+      "bank_id": "B-20",
+      "wagers": 881378.5,
+      "theo": 85032.334,
+      "available_hours": 4021.7225,
+      "downtime_hours": 10.2775,
+      "wagers_per_available_hour": 219.1544792064
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Bar Row",
+      "bank_id": "B-21",
+      "wagers": 780828.75,
+      "theo": 71727.2675,
+      "available_hours": 4020.4936111111,
+      "downtime_hours": 11.5063888889,
+      "wagers_per_available_hour": 194.212160378
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Bar Row",
+      "bank_id": "B-22",
+      "wagers": 787052.75,
+      "theo": 78608.1405,
+      "available_hours": 4019.8388888889,
+      "downtime_hours": 12.1611111111,
+      "wagers_per_available_hour": 195.7921130062
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Bar Row",
+      "bank_id": "B-23",
+      "wagers": 796497.45,
+      "theo": 70941.977,
+      "available_hours": 4006.0213888889,
+      "downtime_hours": 25.9786111111,
+      "wagers_per_available_hour": 198.8250617456
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Bar Row",
+      "bank_id": "B-24",
+      "wagers": 788703.6,
+      "theo": 81347.076,
+      "available_hours": 4000.1183333333,
+      "downtime_hours": 31.8816666667,
+      "wagers_per_available_hour": 197.1700670522
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Bar Row",
+      "bank_id": "B-25",
+      "wagers": 845418.75,
+      "theo": 61933.3175,
+      "available_hours": 4007.8038888889,
+      "downtime_hours": 24.1961111111,
+      "wagers_per_available_hour": 210.943143287
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Bar Row",
+      "bank_id": "B-26",
+      "wagers": 755254.2,
+      "theo": 79481.136,
+      "available_hours": 4001.5802777778,
+      "downtime_hours": 30.4197222222,
+      "wagers_per_available_hour": 188.7389849941
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-07",
+      "wagers": 838380.85,
+      "theo": 72493.6895,
+      "available_hours": 4025.2630555556,
+      "downtime_hours": 6.7369444444,
+      "wagers_per_available_hour": 208.2797666709
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-08",
+      "wagers": 866152.2,
+      "theo": 96813.932,
+      "available_hours": 4019.0119444444,
+      "downtime_hours": 12.9880555556,
+      "wagers_per_available_hour": 215.5137162997
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-09",
+      "wagers": 980277.95,
+      "theo": 77541.089,
+      "available_hours": 4277.9680555556,
+      "downtime_hours": 18.0319444444,
+      "wagers_per_available_hour": 229.1456918962
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-10",
+      "wagers": 959385.05,
+      "theo": 82609.508,
+      "available_hours": 4026.3694444444,
+      "downtime_hours": 5.6305555556,
+      "wagers_per_available_hour": 238.2754645935
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-11",
+      "wagers": 822357.0,
+      "theo": 91829.252,
+      "available_hours": 4023.1025,
+      "downtime_hours": 8.8975,
+      "wagers_per_available_hour": 204.4086622203
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-12",
+      "wagers": 742809.35,
+      "theo": 73988.3295,
+      "available_hours": 3757.7594444444,
+      "downtime_hours": 10.2405555556,
+      "wagers_per_available_hour": 197.673470317
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-13",
+      "wagers": 800239.35,
+      "theo": 81956.972,
+      "available_hours": 4028.2136111111,
+      "downtime_hours": 3.7863888889,
+      "wagers_per_available_hour": 198.6586182502
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-14",
+      "wagers": 946042.1,
+      "theo": 93640.736,
+      "available_hours": 3997.3563888889,
+      "downtime_hours": 34.6436111111,
+      "wagers_per_available_hour": 236.6669388373
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-15",
+      "wagers": 931148.0,
+      "theo": 79753.1025,
+      "available_hours": 4007.6869444444,
+      "downtime_hours": 24.3130555556,
+      "wagers_per_available_hour": 232.3405028656
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-16",
+      "wagers": 969922.95,
+      "theo": 94310.022,
+      "available_hours": 4019.6038888889,
+      "downtime_hours": 12.3961111111,
+      "wagers_per_available_hour": 241.2981420087
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-17",
+      "wagers": 932835.55,
+      "theo": 89849.5675,
+      "available_hours": 4010.7213888889,
+      "downtime_hours": 21.2786111111,
+      "wagers_per_available_hour": 232.585477661
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Center Pit",
+      "bank_id": "B-18",
+      "wagers": 809045.85,
+      "theo": 77433.2945,
+      "available_hours": 4007.4347222222,
+      "downtime_hours": 24.5652777778,
+      "wagers_per_available_hour": 201.8862205075
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-45",
+      "wagers": 835906.35,
+      "theo": 69184.5735,
+      "available_hours": 3989.8969444444,
+      "downtime_hours": 42.1030555556,
+      "wagers_per_available_hour": 209.5057495567
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-46",
+      "wagers": 816982.9,
+      "theo": 78844.892,
+      "available_hours": 4026.6436111111,
+      "downtime_hours": 5.3563888889,
+      "wagers_per_available_hour": 202.8942660199
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-47",
+      "wagers": 687454.85,
+      "theo": 67677.0135,
+      "available_hours": 4011.3208333333,
+      "downtime_hours": 20.6791666667,
+      "wagers_per_available_hour": 171.3786751454
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-48",
+      "wagers": 758492.4,
+      "theo": 70803.768,
+      "available_hours": 4013.6205555556,
+      "downtime_hours": 18.3794444444,
+      "wagers_per_available_hour": 188.9795982209
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-49",
+      "wagers": 688453.05,
+      "theo": 72951.956,
+      "available_hours": 4032.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 170.7472842262
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-50",
+      "wagers": 748946.3,
+      "theo": 68625.446,
+      "available_hours": 4011.8233333333,
+      "downtime_hours": 20.1766666667,
+      "wagers_per_available_hour": 186.684765946
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-27",
+      "wagers": 740918.0,
+      "theo": 73557.11,
+      "available_hours": 4019.675,
+      "downtime_hours": 12.325,
+      "wagers_per_available_hour": 184.3228619229
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-28",
+      "wagers": 793250.0,
+      "theo": 79325.0,
+      "available_hours": 4032.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 196.7385912698
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-29",
+      "wagers": 720970.0,
+      "theo": 72097.0,
+      "available_hours": 4032.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 178.8120039683
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-30",
+      "wagers": 772145.0,
+      "theo": 77214.5,
+      "available_hours": 4032.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 191.5042162698
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-39",
+      "wagers": 836441.2,
+      "theo": 66154.379,
+      "available_hours": 4017.2088888889,
+      "downtime_hours": 14.7911111111,
+      "wagers_per_available_hour": 208.2145148871
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-40",
+      "wagers": 654530.25,
+      "theo": 63471.29,
+      "available_hours": 4016.5644444444,
+      "downtime_hours": 15.4355555556,
+      "wagers_per_available_hour": 162.9577364071
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-41",
+      "wagers": 798315.45,
+      "theo": 79879.45,
+      "available_hours": 4026.7419444444,
+      "downtime_hours": 5.2580555556,
+      "wagers_per_available_hour": 198.2534418679
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-42",
+      "wagers": 898560.7,
+      "theo": 93625.008,
+      "available_hours": 4020.1408333333,
+      "downtime_hours": 11.8591666667,
+      "wagers_per_available_hour": 223.51473176
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-43",
+      "wagers": 855616.4,
+      "theo": 69141.399,
+      "available_hours": 4005.4016666667,
+      "downtime_hours": 26.5983333333,
+      "wagers_per_available_hour": 213.6156298931
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-44",
+      "wagers": 842958.65,
+      "theo": 85209.984,
+      "available_hours": 4009.4838888889,
+      "downtime_hours": 22.5161111111,
+      "wagers_per_available_hour": 210.2411864869
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-01",
+      "wagers": 942994.3,
+      "theo": 87823.188,
+      "available_hours": 4022.4533333333,
+      "downtime_hours": 9.5466666667,
+      "wagers_per_available_hour": 234.4326265231
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-02",
+      "wagers": 953220.05,
+      "theo": 88426.628,
+      "available_hours": 4008.9833333333,
+      "downtime_hours": 23.0166666667,
+      "wagers_per_available_hour": 237.7710184211
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-03",
+      "wagers": 989519.5,
+      "theo": 105265.75,
+      "available_hours": 4604.1819444444,
+      "downtime_hours": 27.8180555556,
+      "wagers_per_available_hour": 214.9175492932
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-04",
+      "wagers": 1098286.4,
+      "theo": 96868.324,
+      "available_hours": 4012.3113888889,
+      "downtime_hours": 19.6886111111,
+      "wagers_per_available_hour": 273.7291036387
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-05",
+      "wagers": 957586.85,
+      "theo": 85759.4385,
+      "available_hours": 3998.9275,
+      "downtime_hours": 33.0725,
+      "wagers_per_available_hour": 239.4609179586
+    },
+    {
+      "month": "2025-02",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-06",
+      "wagers": 892477.45,
+      "theo": 80500.052,
+      "available_hours": 4028.2525,
+      "downtime_hours": 3.7475,
+      "wagers_per_available_hour": 221.5544954046
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Back Forty",
+      "bank_id": "B-31",
+      "wagers": 457438.2,
+      "theo": 44133.273,
+      "available_hours": 4437.9461111111,
+      "downtime_hours": 20.0538888889,
+      "wagers_per_available_hour": 103.0743025146
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Back Forty",
+      "bank_id": "B-32",
+      "wagers": 414898.2,
+      "theo": 45816.152,
+      "available_hours": 4458.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 93.0682368775
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Back Forty",
+      "bank_id": "B-33",
+      "wagers": 326192.1,
+      "theo": 35212.032,
+      "available_hours": 3699.3213888889,
+      "downtime_hours": 15.6786111111,
+      "wagers_per_available_hour": 88.1761992834
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Back Forty",
+      "bank_id": "B-34",
+      "wagers": 439885.55,
+      "theo": 43820.19,
+      "available_hours": 4434.5488888889,
+      "downtime_hours": 23.4511111111,
+      "wagers_per_available_hour": 99.195106655
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Back Forty",
+      "bank_id": "B-35",
+      "wagers": 500039.5,
+      "theo": 48351.901,
+      "available_hours": 4458.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 112.1667788246
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Back Forty",
+      "bank_id": "B-36",
+      "wagers": 479244.6,
+      "theo": 43565.746,
+      "available_hours": 4449.4477777778,
+      "downtime_hours": 8.5522222222,
+      "wagers_per_available_hour": 107.7087818388
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Back Forty",
+      "bank_id": "B-37",
+      "wagers": 461915.9,
+      "theo": 38659.0965,
+      "available_hours": 4453.0625,
+      "downtime_hours": 4.9375,
+      "wagers_per_available_hour": 103.7299386658
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Back Forty",
+      "bank_id": "B-38",
+      "wagers": 413930.7,
+      "theo": 33739.3515,
+      "available_hours": 4438.5241666667,
+      "downtime_hours": 19.4758333333,
+      "wagers_per_available_hour": 93.2586338289
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Bar Row",
+      "bank_id": "B-19",
+      "wagers": 811129.8,
+      "theo": 75066.068,
+      "available_hours": 4436.3527777778,
+      "downtime_hours": 21.6472222222,
+      "wagers_per_available_hour": 182.8370827638
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Bar Row",
+      "bank_id": "B-20",
+      "wagers": 960417.4,
+      "theo": 92620.962,
+      "available_hours": 4425.345,
+      "downtime_hours": 32.655,
+      "wagers_per_available_hour": 217.0265595112
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Bar Row",
+      "bank_id": "B-21",
+      "wagers": 880269.85,
+      "theo": 80428.0545,
+      "available_hours": 4434.2486111111,
+      "downtime_hours": 23.7513888889,
+      "wagers_per_available_hour": 198.5161246472
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Bar Row",
+      "bank_id": "B-22",
+      "wagers": 899934.1,
+      "theo": 89993.054,
+      "available_hours": 4449.3997222222,
+      "downtime_hours": 8.6002777778,
+      "wagers_per_available_hour": 202.2596656141
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Bar Row",
+      "bank_id": "B-23",
+      "wagers": 884737.8,
+      "theo": 79140.963,
+      "available_hours": 4424.3572222222,
+      "downtime_hours": 33.6427777778,
+      "wagers_per_available_hour": 199.9697934778
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Bar Row",
+      "bank_id": "B-24",
+      "wagers": 892235.3,
+      "theo": 91434.698,
+      "available_hours": 4412.5930555556,
+      "downtime_hours": 45.4069444444,
+      "wagers_per_available_hour": 202.2020360288
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Bar Row",
+      "bank_id": "B-25",
+      "wagers": 946102.25,
+      "theo": 69500.8075,
+      "available_hours": 4445.0247222222,
+      "downtime_hours": 12.9752777778,
+      "wagers_per_available_hour": 212.8452166464
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Bar Row",
+      "bank_id": "B-26",
+      "wagers": 837696.8,
+      "theo": 88120.892,
+      "available_hours": 4442.2011111111,
+      "downtime_hours": 15.7988888889,
+      "wagers_per_available_hour": 188.5769642227
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-07",
+      "wagers": 935042.2,
+      "theo": 81139.7135,
+      "available_hours": 4451.9261111111,
+      "downtime_hours": 6.0738888889,
+      "wagers_per_available_hour": 210.0309341762
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-08",
+      "wagers": 966806.9,
+      "theo": 107967.138,
+      "available_hours": 4436.4611111111,
+      "downtime_hours": 21.5388888889,
+      "wagers_per_available_hour": 217.9229966828
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-09",
+      "wagers": 1188647.8,
+      "theo": 97926.8785,
+      "available_hours": 5177.6533333333,
+      "downtime_hours": 23.3466666667,
+      "wagers_per_available_hour": 229.5726893007
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-10",
+      "wagers": 1092696.15,
+      "theo": 93565.54,
+      "available_hours": 4437.5675,
+      "downtime_hours": 20.4325,
+      "wagers_per_available_hour": 246.2376403289
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-11",
+      "wagers": 925657.5,
+      "theo": 103431.038,
+      "available_hours": 4439.3691666667,
+      "downtime_hours": 18.6308333333,
+      "wagers_per_available_hour": 208.5110440804
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-12",
+      "wagers": 780029.1,
+      "theo": 75023.4795,
+      "available_hours": 3701.6916666667,
+      "downtime_hours": 13.3083333333,
+      "wagers_per_available_hour": 210.7223319068
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-13",
+      "wagers": 942061.45,
+      "theo": 96673.372,
+      "available_hours": 4448.0816666667,
+      "downtime_hours": 9.9183333333,
+      "wagers_per_available_hour": 211.7905021978
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-14",
+      "wagers": 1086422.75,
+      "theo": 107780.82,
+      "available_hours": 4443.0041666667,
+      "downtime_hours": 14.9958333333,
+      "wagers_per_available_hour": 244.5243599254
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-15",
+      "wagers": 1035727.75,
+      "theo": 88638.9225,
+      "available_hours": 4414.4041666667,
+      "downtime_hours": 43.5958333333,
+      "wagers_per_available_hour": 234.6245859907
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-16",
+      "wagers": 1072037.05,
+      "theo": 104502.658,
+      "available_hours": 4415.6105555556,
+      "downtime_hours": 42.3894444444,
+      "wagers_per_available_hour": 242.7834240615
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-17",
+      "wagers": 1009801.65,
+      "theo": 97257.1945,
+      "available_hours": 4435.9830555556,
+      "downtime_hours": 22.0169444444,
+      "wagers_per_available_hour": 227.638752753
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-18",
+      "wagers": 956453.75,
+      "theo": 90444.633,
+      "available_hours": 4456.4761111111,
+      "downtime_hours": 1.5238888889,
+      "wagers_per_available_hour": 214.6210876381
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Center Pit",
+      "bank_id": "B-51",
+      "wagers": 495994.0,
+      "theo": 44639.46,
+      "available_hours": 1484.1463888889,
+      "downtime_hours": 51.8536111111,
+      "wagers_per_available_hour": 334.1947962231
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-45",
+      "wagers": 938763.55,
+      "theo": 76550.9055,
+      "available_hours": 4423.6658333333,
+      "downtime_hours": 34.3341666667,
+      "wagers_per_available_hour": 212.2139387036
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-46",
+      "wagers": 888039.45,
+      "theo": 85894.656,
+      "available_hours": 4425.4630555556,
+      "downtime_hours": 32.5369444444,
+      "wagers_per_available_hour": 200.6658826098
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-47",
+      "wagers": 759676.45,
+      "theo": 75089.5745,
+      "available_hours": 4440.6502777778,
+      "downtime_hours": 17.3497222222,
+      "wagers_per_available_hour": 171.0732443403
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-48",
+      "wagers": 833456.1,
+      "theo": 77799.672,
+      "available_hours": 4441.1230555556,
+      "downtime_hours": 16.8769444444,
+      "wagers_per_available_hour": 187.6678690444
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-49",
+      "wagers": 746308.95,
+      "theo": 79345.724,
+      "available_hours": 4433.8927777778,
+      "downtime_hours": 24.1072222222,
+      "wagers_per_available_hour": 168.3191243912
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-50",
+      "wagers": 823579.35,
+      "theo": 75421.504,
+      "available_hours": 4433.355,
+      "downtime_hours": 24.645,
+      "wagers_per_available_hour": 185.7688703025
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-27",
+      "wagers": 853313.0,
+      "theo": 79916.21,
+      "available_hours": 4458.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 191.4116195603
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-28",
+      "wagers": 859220.0,
+      "theo": 85922.0,
+      "available_hours": 4458.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 192.7366532077
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-29",
+      "wagers": 845000.0,
+      "theo": 84500.0,
+      "available_hours": 4443.5680555556,
+      "downtime_hours": 14.4319444444,
+      "wagers_per_available_hour": 190.1624976675
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-30",
+      "wagers": 851055.0,
+      "theo": 85105.5,
+      "available_hours": 4456.2008333333,
+      "downtime_hours": 1.7991666667,
+      "wagers_per_available_hour": 190.9821912949
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-39",
+      "wagers": 902752.45,
+      "theo": 71260.289,
+      "available_hours": 4433.3302777778,
+      "downtime_hours": 24.6697222222,
+      "wagers_per_available_hour": 203.6285125259
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-40",
+      "wagers": 748861.25,
+      "theo": 72923.66,
+      "available_hours": 4435.2619444444,
+      "downtime_hours": 22.7380555556,
+      "wagers_per_available_hour": 168.8426206569
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-41",
+      "wagers": 888991.95,
+      "theo": 88679.558,
+      "available_hours": 4446.1166666667,
+      "downtime_hours": 11.8833333333,
+      "wagers_per_available_hour": 199.9479583307
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-42",
+      "wagers": 983386.0,
+      "theo": 102870.986,
+      "available_hours": 4437.7936111111,
+      "downtime_hours": 20.2063888889,
+      "wagers_per_available_hour": 221.5934507495
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-43",
+      "wagers": 1013881.4,
+      "theo": 81059.129,
+      "available_hours": 4445.5763888889,
+      "downtime_hours": 12.4236111111,
+      "wagers_per_available_hour": 228.0652296368
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-44",
+      "wagers": 992707.9,
+      "theo": 100333.354,
+      "available_hours": 4442.0352777778,
+      "downtime_hours": 15.9647222222,
+      "wagers_per_available_hour": 223.480417854
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-01",
+      "wagers": 1041706.4,
+      "theo": 96723.234,
+      "available_hours": 4427.3141666667,
+      "downtime_hours": 30.6858333333,
+      "wagers_per_available_hour": 235.2908243655
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-02",
+      "wagers": 1100244.45,
+      "theo": 102451.372,
+      "available_hours": 4417.765,
+      "downtime_hours": 40.235,
+      "wagers_per_available_hour": 249.050017373
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-03",
+      "wagers": 1168124.8,
+      "theo": 124522.896,
+      "available_hours": 5198.3272222222,
+      "downtime_hours": 2.6727777778,
+      "wagers_per_available_hour": 224.7116716713
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-04",
+      "wagers": 1226316.6,
+      "theo": 107434.794,
+      "available_hours": 4442.5561111111,
+      "downtime_hours": 15.4438888889,
+      "wagers_per_available_hour": 276.0385168649
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-05",
+      "wagers": 1113969.2,
+      "theo": 100918.557,
+      "available_hours": 4439.1286111111,
+      "downtime_hours": 18.8713888889,
+      "wagers_per_available_hour": 250.9432137676
+    },
+    {
+      "month": "2025-03",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-06",
+      "wagers": 974625.1,
+      "theo": 88701.7785,
+      "available_hours": 4436.9316666667,
+      "downtime_hours": 21.0683333333,
+      "wagers_per_available_hour": 219.6619585832
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Back Forty",
+      "bank_id": "B-31",
+      "wagers": 523851.8,
+      "theo": 50646.918,
+      "available_hours": 4277.5288888889,
+      "downtime_hours": 42.4711111111,
+      "wagers_per_available_hour": 122.4659876315
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Back Forty",
+      "bank_id": "B-32",
+      "wagers": 487149.9,
+      "theo": 53673.394,
+      "available_hours": 4320.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 112.7661805556
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Back Forty",
+      "bank_id": "B-33",
+      "wagers": 376347.45,
+      "theo": 41063.988,
+      "available_hours": 3586.0394444444,
+      "downtime_hours": 13.9605555556,
+      "wagers_per_available_hour": 104.9479393159
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Back Forty",
+      "bank_id": "B-34",
+      "wagers": 497677.3,
+      "theo": 49941.634,
+      "available_hours": 4295.9772222222,
+      "downtime_hours": 24.0227777778,
+      "wagers_per_available_hour": 115.8472855549
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Back Forty",
+      "bank_id": "B-35",
+      "wagers": 574076.2,
+      "theo": 55785.643,
+      "available_hours": 4311.7072222222,
+      "downtime_hours": 8.2927777778,
+      "wagers_per_available_hour": 133.1435949643
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Back Forty",
+      "bank_id": "B-36",
+      "wagers": 552377.7,
+      "theo": 49361.682,
+      "available_hours": 4305.5561111111,
+      "downtime_hours": 14.4438888889,
+      "wagers_per_available_hour": 128.2941589298
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Back Forty",
+      "bank_id": "B-37",
+      "wagers": 538503.2,
+      "theo": 44925.1645,
+      "available_hours": 4309.2158333333,
+      "downtime_hours": 10.7841666667,
+      "wagers_per_available_hour": 124.9654741901
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Back Forty",
+      "bank_id": "B-38",
+      "wagers": 471476.5,
+      "theo": 38760.44,
+      "available_hours": 4303.1266666667,
+      "downtime_hours": 16.8733333333,
+      "wagers_per_available_hour": 109.5660287326
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Bar Row",
+      "bank_id": "B-19",
+      "wagers": 723636.15,
+      "theo": 66885.714,
+      "available_hours": 4292.8577777778,
+      "downtime_hours": 27.1422222222,
+      "wagers_per_available_hour": 168.5674642533
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Bar Row",
+      "bank_id": "B-20",
+      "wagers": 900928.0,
+      "theo": 87238.758,
+      "available_hours": 4315.7291666667,
+      "downtime_hours": 4.2708333333,
+      "wagers_per_available_hour": 208.7545268036
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Bar Row",
+      "bank_id": "B-21",
+      "wagers": 802527.6,
+      "theo": 72869.382,
+      "available_hours": 4320.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 185.7702777778
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Bar Row",
+      "bank_id": "B-22",
+      "wagers": 795242.95,
+      "theo": 78920.8615,
+      "available_hours": 4301.0833333333,
+      "downtime_hours": 18.9166666667,
+      "wagers_per_available_hour": 184.8936391994
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Bar Row",
+      "bank_id": "B-23",
+      "wagers": 820396.1,
+      "theo": 72681.736,
+      "available_hours": 4305.2827777778,
+      "downtime_hours": 14.7172222222,
+      "wagers_per_available_hour": 190.5556829471
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Bar Row",
+      "bank_id": "B-24",
+      "wagers": 806642.3,
+      "theo": 82971.808,
+      "available_hours": 4303.0155555556,
+      "downtime_hours": 16.9844444444,
+      "wagers_per_available_hour": 187.4597685241
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Bar Row",
+      "bank_id": "B-25",
+      "wagers": 811099.0,
+      "theo": 59595.9175,
+      "available_hours": 4295.8888888889,
+      "downtime_hours": 24.1111111111,
+      "wagers_per_available_hour": 188.8081887075
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Bar Row",
+      "bank_id": "B-26",
+      "wagers": 787509.1,
+      "theo": 82664.748,
+      "available_hours": 4265.1916666667,
+      "downtime_hours": 54.8083333333,
+      "wagers_per_available_hour": 184.6362746496
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-07",
+      "wagers": 844615.35,
+      "theo": 73095.893,
+      "available_hours": 4316.7983333333,
+      "downtime_hours": 3.2016666667,
+      "wagers_per_available_hour": 195.6578197036
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-08",
+      "wagers": 882808.1,
+      "theo": 98664.706,
+      "available_hours": 4290.6480555556,
+      "downtime_hours": 29.3519444444,
+      "wagers_per_available_hour": 205.7516926509
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-09",
+      "wagers": 1082477.05,
+      "theo": 89288.1385,
+      "available_hours": 4991.9038888889,
+      "downtime_hours": 48.0961111111,
+      "wagers_per_available_hour": 216.8465327246
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-10",
+      "wagers": 1001858.65,
+      "theo": 86506.398,
+      "available_hours": 4307.9541666667,
+      "downtime_hours": 12.0458333333,
+      "wagers_per_available_hour": 232.5601924347
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-11",
+      "wagers": 831764.6,
+      "theo": 92808.636,
+      "available_hours": 4305.8030555556,
+      "downtime_hours": 14.1969444444,
+      "wagers_per_available_hour": 193.1729318011
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-12",
+      "wagers": 689808.7,
+      "theo": 66732.1065,
+      "available_hours": 3600.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 191.6135277778
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-13",
+      "wagers": 825356.35,
+      "theo": 84392.852,
+      "available_hours": 4320.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 191.0547106481
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-14",
+      "wagers": 955478.8,
+      "theo": 94414.788,
+      "available_hours": 4310.9766666667,
+      "downtime_hours": 9.0233333333,
+      "wagers_per_available_hour": 221.6385923375
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-15",
+      "wagers": 928311.25,
+      "theo": 78192.635,
+      "available_hours": 4306.625,
+      "downtime_hours": 13.375,
+      "wagers_per_available_hour": 215.5542333033
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-16",
+      "wagers": 978662.25,
+      "theo": 94870.82,
+      "available_hours": 4293.8102777778,
+      "downtime_hours": 26.1897222222,
+      "wagers_per_available_hour": 227.9239618632
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-17",
+      "wagers": 935813.8,
+      "theo": 90355.875,
+      "available_hours": 4301.0933333333,
+      "downtime_hours": 18.9066666667,
+      "wagers_per_available_hour": 217.5757946817
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-18",
+      "wagers": 874631.35,
+      "theo": 82557.65,
+      "available_hours": 4316.5144444444,
+      "downtime_hours": 3.4855555556,
+      "wagers_per_available_hour": 202.6244464734
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Center Pit",
+      "bank_id": "B-51",
+      "wagers": 1790523.0,
+      "theo": 161147.07,
+      "available_hours": 5741.5741666667,
+      "downtime_hours": 18.4258333333,
+      "wagers_per_available_hour": 311.8522809293
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-45",
+      "wagers": 857405.55,
+      "theo": 70545.9455,
+      "available_hours": 4314.4688888889,
+      "downtime_hours": 5.5311111111,
+      "wagers_per_available_hour": 198.7279482321
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-46",
+      "wagers": 811729.55,
+      "theo": 78772.014,
+      "available_hours": 4298.1491666667,
+      "downtime_hours": 21.8508333333,
+      "wagers_per_available_hour": 188.8556023823
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-47",
+      "wagers": 717294.95,
+      "theo": 70067.7495,
+      "available_hours": 4311.7919444444,
+      "downtime_hours": 8.2080555556,
+      "wagers_per_available_hour": 166.3565773215
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-48",
+      "wagers": 753616.1,
+      "theo": 70301.972,
+      "available_hours": 4315.4819444444,
+      "downtime_hours": 4.5180555556,
+      "wagers_per_available_hour": 174.6308082624
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-49",
+      "wagers": 677271.55,
+      "theo": 72076.236,
+      "available_hours": 4312.0708333333,
+      "downtime_hours": 7.9291666667,
+      "wagers_per_available_hour": 157.0641058965
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-50",
+      "wagers": 774860.0,
+      "theo": 71178.508,
+      "available_hours": 4288.0805555556,
+      "downtime_hours": 31.9194444444,
+      "wagers_per_available_hour": 180.7008963477
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-27",
+      "wagers": 672699.0,
+      "theo": 62554.83,
+      "available_hours": 4312.2091666667,
+      "downtime_hours": 7.7908333333,
+      "wagers_per_available_hour": 155.9986944047
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-28",
+      "wagers": 733660.0,
+      "theo": 73366.0,
+      "available_hours": 4320.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 169.8287037037
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-29",
+      "wagers": 680095.0,
+      "theo": 68009.5,
+      "available_hours": 4316.6,
+      "downtime_hours": 3.4,
+      "wagers_per_available_hour": 157.5533985081
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-30",
+      "wagers": 675895.0,
+      "theo": 67589.5,
+      "available_hours": 4316.0,
+      "downtime_hours": 4.0,
+      "wagers_per_available_hour": 156.6021779425
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-39",
+      "wagers": 821562.4,
+      "theo": 65017.8655,
+      "available_hours": 4294.7838888889,
+      "downtime_hours": 25.2161111111,
+      "wagers_per_available_hour": 191.2930711428
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-40",
+      "wagers": 651266.75,
+      "theo": 63428.89,
+      "available_hours": 4316.5813888889,
+      "downtime_hours": 3.4186111111,
+      "wagers_per_available_hour": 150.8755867957
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-41",
+      "wagers": 776240.9,
+      "theo": 77924.014,
+      "available_hours": 4316.9005555556,
+      "downtime_hours": 3.0994444444,
+      "wagers_per_available_hour": 179.8144038785
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-42",
+      "wagers": 918069.0,
+      "theo": 96248.15,
+      "available_hours": 4303.4388888889,
+      "downtime_hours": 16.5611111111,
+      "wagers_per_available_hour": 213.3338066843
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-43",
+      "wagers": 879097.85,
+      "theo": 70800.6485,
+      "available_hours": 4320.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 203.4948726852
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-44",
+      "wagers": 838165.7,
+      "theo": 84427.122,
+      "available_hours": 4294.6233333333,
+      "downtime_hours": 25.3766666667,
+      "wagers_per_available_hour": 195.1662893215
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-01",
+      "wagers": 962687.55,
+      "theo": 89475.498,
+      "available_hours": 4315.9730555556,
+      "downtime_hours": 4.0269444444,
+      "wagers_per_available_hour": 223.0522613576
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-02",
+      "wagers": 985194.95,
+      "theo": 91177.732,
+      "available_hours": 4317.9975,
+      "downtime_hours": 2.0025,
+      "wagers_per_available_hour": 228.1601483095
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-03",
+      "wagers": 1035779.4,
+      "theo": 110233.688,
+      "available_hours": 5002.4647222222,
+      "downtime_hours": 37.5352777778,
+      "wagers_per_available_hour": 207.0538139727
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-04",
+      "wagers": 1111452.8,
+      "theo": 97734.172,
+      "available_hours": 4306.8697222222,
+      "downtime_hours": 13.1302777778,
+      "wagers_per_available_hour": 258.0651079983
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-05",
+      "wagers": 998504.25,
+      "theo": 89160.4575,
+      "available_hours": 4313.8833333333,
+      "downtime_hours": 6.1166666667,
+      "wagers_per_available_hour": 231.4629703322
+    },
+    {
+      "month": "2025-04",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-06",
+      "wagers": 864471.8,
+      "theo": 77900.4655,
+      "available_hours": 4284.6613888889,
+      "downtime_hours": 35.3386111111,
+      "wagers_per_available_hour": 201.7596541565
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Back Forty",
+      "bank_id": "B-31",
+      "wagers": 589128.7,
+      "theo": 57461.155,
+      "available_hours": 4437.6216666667,
+      "downtime_hours": 26.3783333333,
+      "wagers_per_available_hour": 132.7577572521
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Back Forty",
+      "bank_id": "B-32",
+      "wagers": 538860.0,
+      "theo": 59427.276,
+      "available_hours": 4454.0163888889,
+      "downtime_hours": 9.9836111111,
+      "wagers_per_available_hour": 120.9829405532
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Back Forty",
+      "bank_id": "B-33",
+      "wagers": 411431.1,
+      "theo": 44650.188,
+      "available_hours": 3709.3394444444,
+      "downtime_hours": 10.6605555556,
+      "wagers_per_available_hour": 110.9176192047
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Back Forty",
+      "bank_id": "B-34",
+      "wagers": 561983.45,
+      "theo": 56254.578,
+      "available_hours": 4448.6386111111,
+      "downtime_hours": 15.3613888889,
+      "wagers_per_available_hour": 126.3270629798
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Back Forty",
+      "bank_id": "B-35",
+      "wagers": 602022.55,
+      "theo": 58542.5705,
+      "available_hours": 4462.3144444444,
+      "downtime_hours": 1.6855555556,
+      "wagers_per_available_hour": 134.9126238178
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Back Forty",
+      "bank_id": "B-36",
+      "wagers": 592870.6,
+      "theo": 53609.876,
+      "available_hours": 4441.5463888889,
+      "downtime_hours": 22.4536111111,
+      "wagers_per_available_hour": 133.4829242093
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Back Forty",
+      "bank_id": "B-37",
+      "wagers": 591528.15,
+      "theo": 49084.8915,
+      "available_hours": 4447.8722222222,
+      "downtime_hours": 16.1277777778,
+      "wagers_per_available_hour": 132.9912642375
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Back Forty",
+      "bank_id": "B-38",
+      "wagers": 527294.75,
+      "theo": 42678.9375,
+      "available_hours": 4418.555,
+      "downtime_hours": 45.445,
+      "wagers_per_available_hour": 119.3364685966
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Bar Row",
+      "bank_id": "B-19",
+      "wagers": 757322.8,
+      "theo": 70150.128,
+      "available_hours": 4413.4058333333,
+      "downtime_hours": 50.5941666667,
+      "wagers_per_available_hour": 171.5960028602
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Bar Row",
+      "bank_id": "B-20",
+      "wagers": 921959.4,
+      "theo": 89109.482,
+      "available_hours": 4433.7872222222,
+      "downtime_hours": 30.2127777778,
+      "wagers_per_available_hour": 207.9394778755
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Bar Row",
+      "bank_id": "B-21",
+      "wagers": 915821.7,
+      "theo": 83025.0365,
+      "available_hours": 5075.0,
+      "downtime_hours": 13.0,
+      "wagers_per_available_hour": 180.4574778325
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Bar Row",
+      "bank_id": "B-22",
+      "wagers": 810610.35,
+      "theo": 80362.2155,
+      "available_hours": 4426.2583333333,
+      "downtime_hours": 37.7416666667,
+      "wagers_per_available_hour": 183.1367012394
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Bar Row",
+      "bank_id": "B-23",
+      "wagers": 805721.55,
+      "theo": 71694.118,
+      "available_hours": 4442.5330555556,
+      "downtime_hours": 21.4669444444,
+      "wagers_per_available_hour": 181.3653471846
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Bar Row",
+      "bank_id": "B-24",
+      "wagers": 847320.8,
+      "theo": 87478.738,
+      "available_hours": 4454.4641666667,
+      "downtime_hours": 9.5358333333,
+      "wagers_per_available_hour": 190.2183446307
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Bar Row",
+      "bank_id": "B-25",
+      "wagers": 882491.75,
+      "theo": 64630.105,
+      "available_hours": 4433.2772222222,
+      "downtime_hours": 30.7227777778,
+      "wagers_per_available_hour": 199.060808915
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Bar Row",
+      "bank_id": "B-26",
+      "wagers": 769097.75,
+      "theo": 80434.232,
+      "available_hours": 4436.5641666667,
+      "downtime_hours": 27.4358333333,
+      "wagers_per_available_hour": 173.3543618682
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-07",
+      "wagers": 894059.35,
+      "theo": 76961.4225,
+      "available_hours": 4450.4677777778,
+      "downtime_hours": 13.5322222222,
+      "wagers_per_available_hour": 200.891096092
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-08",
+      "wagers": 918326.7,
+      "theo": 102645.19,
+      "available_hours": 4455.19,
+      "downtime_hours": 8.81,
+      "wagers_per_available_hour": 206.1251484224
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-09",
+      "wagers": 1124280.15,
+      "theo": 92459.2955,
+      "available_hours": 5165.1475,
+      "downtime_hours": 42.8525,
+      "wagers_per_available_hour": 217.6666106825
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-10",
+      "wagers": 1006797.2,
+      "theo": 86900.374,
+      "available_hours": 4432.5077777778,
+      "downtime_hours": 31.4922222222,
+      "wagers_per_available_hour": 227.1394096695
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-11",
+      "wagers": 855442.8,
+      "theo": 95506.096,
+      "available_hours": 4456.6169444444,
+      "downtime_hours": 7.3830555556,
+      "wagers_per_available_hour": 191.9489179043
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-12",
+      "wagers": 723123.8,
+      "theo": 69607.7435,
+      "available_hours": 3699.2222222222,
+      "downtime_hours": 20.7777777778,
+      "wagers_per_available_hour": 195.4799567477
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-13",
+      "wagers": 876095.8,
+      "theo": 89733.626,
+      "available_hours": 4464.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 196.2580197133
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-14",
+      "wagers": 1001294.45,
+      "theo": 98779.672,
+      "available_hours": 4455.7988888889,
+      "downtime_hours": 8.2011111111,
+      "wagers_per_available_hour": 224.717155098
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-15",
+      "wagers": 956567.25,
+      "theo": 81557.3075,
+      "available_hours": 4437.1427777778,
+      "downtime_hours": 26.8572222222,
+      "wagers_per_available_hour": 215.5818052082
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-16",
+      "wagers": 1012662.8,
+      "theo": 98681.748,
+      "available_hours": 4430.275,
+      "downtime_hours": 33.725,
+      "wagers_per_available_hour": 228.5778648052
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-17",
+      "wagers": 941001.0,
+      "theo": 91261.8185,
+      "available_hours": 4444.8302777778,
+      "downtime_hours": 19.1697222222,
+      "wagers_per_available_hour": 211.7068461994
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-18",
+      "wagers": 875767.6,
+      "theo": 83778.093,
+      "available_hours": 4430.9730555556,
+      "downtime_hours": 33.0269444444,
+      "wagers_per_available_hour": 197.6467897727
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Center Pit",
+      "bank_id": "B-51",
+      "wagers": 1882920.0,
+      "theo": 169462.8,
+      "available_hours": 5940.4383333333,
+      "downtime_hours": 11.5616666667,
+      "wagers_per_available_hour": 316.9665089248
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-45",
+      "wagers": 848770.7,
+      "theo": 70052.467,
+      "available_hours": 4450.6183333333,
+      "downtime_hours": 13.3816666667,
+      "wagers_per_available_hour": 190.7084895694
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-46",
+      "wagers": 826645.75,
+      "theo": 80077.726,
+      "available_hours": 4412.1063888889,
+      "downtime_hours": 51.8936111111,
+      "wagers_per_available_hour": 187.3585260958
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-47",
+      "wagers": 722119.95,
+      "theo": 70708.2645,
+      "available_hours": 4449.645,
+      "downtime_hours": 14.355,
+      "wagers_per_available_hour": 162.2870925658
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-48",
+      "wagers": 767524.55,
+      "theo": 71498.376,
+      "available_hours": 4428.5702777778,
+      "downtime_hours": 35.4297222222,
+      "wagers_per_available_hour": 173.3120401976
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-49",
+      "wagers": 685024.0,
+      "theo": 73033.76,
+      "available_hours": 4462.5497222222,
+      "downtime_hours": 1.4502777778,
+      "wagers_per_available_hour": 153.505068322
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-50",
+      "wagers": 775570.7,
+      "theo": 71167.292,
+      "available_hours": 4450.5130555556,
+      "downtime_hours": 13.4869444444,
+      "wagers_per_available_hour": 174.2654589075
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-27",
+      "wagers": 767579.0,
+      "theo": 71835.83,
+      "available_hours": 4464.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 171.9487007168
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-28",
+      "wagers": 783350.0,
+      "theo": 78335.0,
+      "available_hours": 4464.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 175.4816308244
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-29",
+      "wagers": 663130.0,
+      "theo": 66313.0,
+      "available_hours": 4449.9716666667,
+      "downtime_hours": 14.0283333333,
+      "wagers_per_available_hour": 149.0189263377
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-30",
+      "wagers": 750940.0,
+      "theo": 75094.0,
+      "available_hours": 4455.9822222222,
+      "downtime_hours": 8.0177777778,
+      "wagers_per_available_hour": 168.5240116657
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-39",
+      "wagers": 863979.2,
+      "theo": 68069.3265,
+      "available_hours": 4418.76,
+      "downtime_hours": 45.24,
+      "wagers_per_available_hour": 195.5252604803
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-40",
+      "wagers": 593986.75,
+      "theo": 59008.25,
+      "available_hours": 3840.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 154.6840494792
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-41",
+      "wagers": 791257.8,
+      "theo": 79335.94,
+      "available_hours": 4428.8494444444,
+      "downtime_hours": 35.1505555556,
+      "wagers_per_available_hour": 178.6599002575
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-42",
+      "wagers": 920438.3,
+      "theo": 96186.36,
+      "available_hours": 4436.51,
+      "downtime_hours": 27.49,
+      "wagers_per_available_hour": 207.469001535
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-43",
+      "wagers": 914964.75,
+      "theo": 73440.0925,
+      "available_hours": 4449.6447222222,
+      "downtime_hours": 14.3552777778,
+      "wagers_per_available_hour": 205.626472925
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-44",
+      "wagers": 889645.1,
+      "theo": 89342.966,
+      "available_hours": 4452.1583333333,
+      "downtime_hours": 11.8416666667,
+      "wagers_per_available_hour": 199.8233291344
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-01",
+      "wagers": 985956.1,
+      "theo": 91408.286,
+      "available_hours": 4457.4719444444,
+      "downtime_hours": 6.5280555556,
+      "wagers_per_available_hour": 221.1917679547
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-02",
+      "wagers": 1001694.2,
+      "theo": 92918.352,
+      "available_hours": 4440.3641666667,
+      "downtime_hours": 23.6358333333,
+      "wagers_per_available_hour": 225.5882991579
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-03",
+      "wagers": 1072689.5,
+      "theo": 114255.12,
+      "available_hours": 5180.3897222222,
+      "downtime_hours": 27.6102777778,
+      "wagers_per_available_hour": 207.0673361501
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-04",
+      "wagers": 1188762.8,
+      "theo": 103929.936,
+      "available_hours": 4461.05,
+      "downtime_hours": 2.95,
+      "wagers_per_available_hour": 266.4760090113
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-05",
+      "wagers": 1065001.05,
+      "theo": 95589.3905,
+      "available_hours": 4455.2288888889,
+      "downtime_hours": 8.7711111111,
+      "wagers_per_available_hour": 239.045193089
+    },
+    {
+      "month": "2025-05",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-06",
+      "wagers": 911548.8,
+      "theo": 82550.168,
+      "available_hours": 4428.5005555556,
+      "downtime_hours": 35.4994444444,
+      "wagers_per_available_hour": 205.8368941281
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Back Forty",
+      "bank_id": "B-31",
+      "wagers": 553146.45,
+      "theo": 54024.8145,
+      "available_hours": 4320.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 128.0431597222
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Back Forty",
+      "bank_id": "B-32",
+      "wagers": 481450.2,
+      "theo": 53038.58,
+      "available_hours": 4317.3919444444,
+      "downtime_hours": 2.6080555556,
+      "wagers_per_available_hour": 111.514128482
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Back Forty",
+      "bank_id": "B-33",
+      "wagers": 365786.45,
+      "theo": 39745.356,
+      "available_hours": 3595.5555555556,
+      "downtime_hours": 4.4444444444,
+      "wagers_per_available_hour": 101.7329434487
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Back Forty",
+      "bank_id": "B-34",
+      "wagers": 524776.75,
+      "theo": 52788.716,
+      "available_hours": 4308.2444444444,
+      "downtime_hours": 11.7555555556,
+      "wagers_per_available_hour": 121.8075614713
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Back Forty",
+      "bank_id": "B-35",
+      "wagers": 564376.7,
+      "theo": 54734.908,
+      "available_hours": 4315.7997222222,
+      "downtime_hours": 4.2002777778,
+      "wagers_per_available_hour": 130.7699004414
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Back Forty",
+      "bank_id": "B-36",
+      "wagers": 546623.35,
+      "theo": 50129.036,
+      "available_hours": 4311.4794444444,
+      "downtime_hours": 8.5205555556,
+      "wagers_per_available_hour": 126.7832439058
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Back Forty",
+      "bank_id": "B-37",
+      "wagers": 548935.8,
+      "theo": 45528.593,
+      "available_hours": 4297.6222222222,
+      "downtime_hours": 22.3777777778,
+      "wagers_per_available_hour": 127.7301194976
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Back Forty",
+      "bank_id": "B-38",
+      "wagers": 474304.65,
+      "theo": 38577.803,
+      "available_hours": 4313.0547222222,
+      "downtime_hours": 6.9452777778,
+      "wagers_per_available_hour": 109.9695414381
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Bar Row",
+      "bank_id": "B-19",
+      "wagers": 687782.95,
+      "theo": 63572.012,
+      "available_hours": 4312.8933333333,
+      "downtime_hours": 7.1066666667,
+      "wagers_per_available_hour": 159.4713564289
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Bar Row",
+      "bank_id": "B-20",
+      "wagers": 868815.4,
+      "theo": 83782.562,
+      "available_hours": 4300.2691666667,
+      "downtime_hours": 19.7308333333,
+      "wagers_per_available_hour": 202.0374461056
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Bar Row",
+      "bank_id": "B-21",
+      "wagers": 851143.1,
+      "theo": 76358.8595,
+      "available_hours": 5036.7219444444,
+      "downtime_hours": 3.2780555556,
+      "wagers_per_available_hour": 168.9875100091
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Bar Row",
+      "bank_id": "B-22",
+      "wagers": 759303.3,
+      "theo": 75544.328,
+      "available_hours": 4298.7338888889,
+      "downtime_hours": 21.2661111111,
+      "wagers_per_available_hour": 176.6341717413
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Bar Row",
+      "bank_id": "B-23",
+      "wagers": 751462.8,
+      "theo": 66838.878,
+      "available_hours": 4318.9491666667,
+      "downtime_hours": 1.0508333333,
+      "wagers_per_available_hour": 173.9920455188
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Bar Row",
+      "bank_id": "B-24",
+      "wagers": 747703.2,
+      "theo": 76797.072,
+      "available_hours": 4293.0380555556,
+      "downtime_hours": 26.9619444444,
+      "wagers_per_available_hour": 174.1664505006
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Bar Row",
+      "bank_id": "B-25",
+      "wagers": 798523.5,
+      "theo": 58796.625,
+      "available_hours": 4294.8675,
+      "downtime_hours": 25.1325,
+      "wagers_per_available_hour": 185.9250605519
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Bar Row",
+      "bank_id": "B-26",
+      "wagers": 739377.75,
+      "theo": 77613.056,
+      "available_hours": 4307.3258333333,
+      "downtime_hours": 12.6741666667,
+      "wagers_per_available_hour": 171.6558669136
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-07",
+      "wagers": 722531.8,
+      "theo": 63841.0335,
+      "available_hours": 3791.5136111111,
+      "downtime_hours": 24.4863888889,
+      "wagers_per_available_hour": 190.5655297881
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-08",
+      "wagers": 855402.5,
+      "theo": 95406.47,
+      "available_hours": 4311.3391666667,
+      "downtime_hours": 8.6608333333,
+      "wagers_per_available_hour": 198.4076100098
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-09",
+      "wagers": 1017301.55,
+      "theo": 83545.786,
+      "available_hours": 5029.2369444444,
+      "downtime_hours": 10.7630555556,
+      "wagers_per_available_hour": 202.277514708
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-10",
+      "wagers": 939021.5,
+      "theo": 81344.884,
+      "available_hours": 4300.5383333333,
+      "downtime_hours": 19.4616666667,
+      "wagers_per_available_hour": 218.3497569878
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-11",
+      "wagers": 833252.0,
+      "theo": 93296.004,
+      "available_hours": 4301.6769444444,
+      "downtime_hours": 18.3230555556,
+      "wagers_per_available_hour": 193.7039928292
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-12",
+      "wagers": 652424.15,
+      "theo": 63339.348,
+      "available_hours": 3591.0058333333,
+      "downtime_hours": 8.9941666667,
+      "wagers_per_available_hour": 181.6828432702
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-13",
+      "wagers": 804723.8,
+      "theo": 82417.164,
+      "available_hours": 4314.2669444444,
+      "downtime_hours": 5.7330555556,
+      "wagers_per_available_hour": 186.5261956116
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-14",
+      "wagers": 923512.55,
+      "theo": 91600.218,
+      "available_hours": 4307.03,
+      "downtime_hours": 12.97,
+      "wagers_per_available_hour": 214.4198090099
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-15",
+      "wagers": 883721.5,
+      "theo": 75332.0575,
+      "available_hours": 4299.6744444444,
+      "downtime_hours": 20.3255555556,
+      "wagers_per_available_hour": 205.5321888711
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-16",
+      "wagers": 954645.95,
+      "theo": 92298.512,
+      "available_hours": 4283.7702777778,
+      "downtime_hours": 36.2297222222,
+      "wagers_per_available_hour": 222.8518076593
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-17",
+      "wagers": 911036.75,
+      "theo": 87441.2075,
+      "available_hours": 4287.4988888889,
+      "downtime_hours": 32.5011111111,
+      "wagers_per_available_hour": 212.4867606056
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-18",
+      "wagers": 816827.45,
+      "theo": 77106.7195,
+      "available_hours": 4292.6266666667,
+      "downtime_hours": 27.3733333333,
+      "wagers_per_available_hour": 190.2861612315
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Center Pit",
+      "bank_id": "B-51",
+      "wagers": 1781078.0,
+      "theo": 160297.02,
+      "available_hours": 5753.6052777778,
+      "downtime_hours": 6.3947222222,
+      "wagers_per_available_hour": 309.5586009139
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-45",
+      "wagers": 823722.1,
+      "theo": 68067.601,
+      "available_hours": 4311.0186111111,
+      "downtime_hours": 8.9813888889,
+      "wagers_per_available_hour": 191.0736589902
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-46",
+      "wagers": 783552.7,
+      "theo": 75696.134,
+      "available_hours": 4292.5283333333,
+      "downtime_hours": 27.4716666667,
+      "wagers_per_available_hour": 182.5387368827
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-47",
+      "wagers": 674572.35,
+      "theo": 66241.2935,
+      "available_hours": 4314.9633333333,
+      "downtime_hours": 5.0366666667,
+      "wagers_per_available_hour": 156.3332751379
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-48",
+      "wagers": 733268.35,
+      "theo": 68244.032,
+      "available_hours": 4304.91,
+      "downtime_hours": 15.09,
+      "wagers_per_available_hour": 170.3330267067
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-49",
+      "wagers": 654031.2,
+      "theo": 70180.464,
+      "available_hours": 4315.0630555556,
+      "downtime_hours": 4.9369444444,
+      "wagers_per_available_hour": 151.5693262368
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Garage Entrance",
+      "bank_id": "B-50",
+      "wagers": 695025.95,
+      "theo": 64130.866,
+      "available_hours": 4292.5641666667,
+      "downtime_hours": 27.4358333333,
+      "wagers_per_available_hour": 161.9139337269
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-27",
+      "wagers": 612961.0,
+      "theo": 57028.72,
+      "available_hours": 4320.0,
+      "downtime_hours": 0.0,
+      "wagers_per_available_hour": 141.8891203704
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-28",
+      "wagers": 604770.0,
+      "theo": 60477.0,
+      "available_hours": 4314.5733333333,
+      "downtime_hours": 5.4266666667,
+      "wagers_per_available_hour": 140.1691322124
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-29",
+      "wagers": 629555.0,
+      "theo": 62955.5,
+      "available_hours": 4318.2411111111,
+      "downtime_hours": 1.7588888889,
+      "wagers_per_available_hour": 145.7896823733
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "High-Limit Room",
+      "bank_id": "B-30",
+      "wagers": 630830.0,
+      "theo": 63083.0,
+      "available_hours": 4317.8080555556,
+      "downtime_hours": 2.1919444444,
+      "wagers_per_available_hour": 146.0995930999
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-39",
+      "wagers": 796965.55,
+      "theo": 63153.0185,
+      "available_hours": 4314.0141666667,
+      "downtime_hours": 5.9858333333,
+      "wagers_per_available_hour": 184.7387419721
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-40",
+      "wagers": 546837.75,
+      "theo": 55071.45,
+      "available_hours": 3586.4327777778,
+      "downtime_hours": 13.5672222222,
+      "wagers_per_available_hour": 152.4739996211
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-41",
+      "wagers": 755657.15,
+      "theo": 75678.12,
+      "available_hours": 4317.7547222222,
+      "downtime_hours": 2.2452777778,
+      "wagers_per_available_hour": 175.0115971412
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-42",
+      "wagers": 855815.5,
+      "theo": 89806.712,
+      "available_hours": 4309.2111111111,
+      "downtime_hours": 10.7888888889,
+      "wagers_per_available_hour": 198.6014325901
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-43",
+      "wagers": 877483.95,
+      "theo": 69603.2395,
+      "available_hours": 4303.3727777778,
+      "downtime_hours": 16.6272222222,
+      "wagers_per_available_hour": 203.9060976849
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Hotel Corridor",
+      "bank_id": "B-44",
+      "wagers": 889691.75,
+      "theo": 87620.38,
+      "available_hours": 4811.9169444444,
+      "downtime_hours": 12.0830555556,
+      "wagers_per_available_hour": 184.8934136378
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-01",
+      "wagers": 913382.85,
+      "theo": 84546.816,
+      "available_hours": 4316.7072222222,
+      "downtime_hours": 3.2927777778,
+      "wagers_per_available_hour": 211.5924946908
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-02",
+      "wagers": 939741.5,
+      "theo": 87347.64,
+      "available_hours": 4311.0825,
+      "downtime_hours": 8.9175,
+      "wagers_per_available_hour": 217.9827224369
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-03",
+      "wagers": 987514.0,
+      "theo": 104632.33,
+      "available_hours": 5019.6858333333,
+      "downtime_hours": 20.3141666667,
+      "wagers_per_available_hour": 196.7282480992
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-04",
+      "wagers": 1108297.2,
+      "theo": 97283.82,
+      "available_hours": 4307.2383333333,
+      "downtime_hours": 12.7616666667,
+      "wagers_per_available_hour": 257.3103957176
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-05",
+      "wagers": 961532.85,
+      "theo": 86171.8285,
+      "available_hours": 4315.2644444444,
+      "downtime_hours": 4.7355555556,
+      "wagers_per_available_hour": 222.8213038573
+    },
+    {
+      "month": "2025-06",
+      "zone_name": "Main Entrance",
+      "bank_id": "B-06",
+      "wagers": 896349.3,
+      "theo": 79958.7005,
+      "available_hours": 4309.4461111111,
+      "downtime_hours": 10.5538888889,
+      "wagers_per_available_hour": 207.9964053127
+    }
+  ],
+  "event_associations": [
+    {
+      "event": "CES",
+      "start": "2025-01-07",
+      "end": "2025-01-10",
+      "days": 4,
+      "wagers": 5166884.4,
+      "weekday_baseline": 5094944.086038961,
+      "difference_pct": 0.014119941798413027
+    },
+    {
+      "event": "Super Bowl LIX weekend",
+      "start": "2025-02-07",
+      "end": "2025-02-09",
+      "days": 3,
+      "wagers": 5831329.05,
+      "weekday_baseline": 4742418.897500001,
+      "difference_pct": 0.22961070627354863
+    },
+    {
+      "event": "College basketball tournament opening rounds",
+      "start": "2025-03-20",
+      "end": "2025-03-23",
+      "days": 4,
+      "wagers": 7163708.05,
+      "weekday_baseline": 6013420.73159091,
+      "difference_pct": 0.19128668519170278
+    },
+    {
+      "event": "CinemaCon",
+      "start": "2025-03-31",
+      "end": "2025-04-03",
+      "days": 4,
+      "wagers": 4817531.0,
+      "weekday_baseline": 4689024.439299831,
+      "difference_pct": 0.027405820200706366
+    },
+    {
+      "event": "NAB Show",
+      "start": "2025-04-05",
+      "end": "2025-04-09",
+      "days": 5,
+      "wagers": 6928996.000000001,
+      "weekday_baseline": 6559569.327708922,
+      "difference_pct": 0.056318738904175714
+    },
+    {
+      "event": "EDC Las Vegas festival weekend",
+      "start": "2025-05-16",
+      "end": "2025-05-18",
+      "days": 3,
+      "wagers": 5479462.75,
+      "weekday_baseline": 4742418.897500001,
+      "difference_pct": 0.15541517281160822
+    },
+    {
+      "event": "Gilded Ace Winter Slot Tournament",
+      "start": "2025-02-21",
+      "end": "2025-02-23",
+      "days": 3,
+      "wagers": 5583941.15,
+      "weekday_baseline": 4742418.897500001,
+      "difference_pct": 0.17744578677847578
+    },
+    {
+      "event": "Gilded Ace Locals Appreciation Week",
+      "start": "2025-06-09",
+      "end": "2025-06-15",
+      "days": 7,
+      "wagers": 9820264.100000001,
+      "weekday_baseline": 9431443.336799832,
+      "difference_pct": 0.04122600850317992
+    }
+  ],
+  "traffic": [
+    {
+      "month": "2025-01",
+      "zone_id": "Z-B40",
+      "observed_entries": 18332.0,
+      "covered_minutes": 44570,
+      "valid_intervals": 743,
+      "intervals": 744,
+      "entries_per_covered_hour": 24.6784832847,
+      "valid_interval_share": 0.998655914
+    },
+    {
+      "month": "2025-01",
+      "zone_id": "Z-BAR",
+      "observed_entries": 84309.0,
+      "covered_minutes": 44494,
+      "valid_intervals": 742,
+      "intervals": 744,
+      "entries_per_covered_hour": 113.6903852205,
+      "valid_interval_share": 0.997311828
+    },
+    {
+      "month": "2025-01",
+      "zone_id": "Z-ENT",
+      "observed_entries": 85621.0,
+      "covered_minutes": 44339,
+      "valid_intervals": 740,
+      "intervals": 744,
+      "entries_per_covered_hour": 115.8632355263,
+      "valid_interval_share": 0.9946236559
+    },
+    {
+      "month": "2025-01",
+      "zone_id": "Z-GAR",
+      "observed_entries": 70413.0,
+      "covered_minutes": 44436,
+      "valid_intervals": 742,
+      "intervals": 744,
+      "entries_per_covered_hour": 95.0756143667,
+      "valid_interval_share": 0.997311828
+    },
+    {
+      "month": "2025-01",
+      "zone_id": "Z-HL",
+      "observed_entries": 4761.0,
+      "covered_minutes": 44253,
+      "valid_intervals": 739,
+      "intervals": 744,
+      "entries_per_covered_hour": 6.4551555827,
+      "valid_interval_share": 0.9932795699
+    },
+    {
+      "month": "2025-01",
+      "zone_id": "Z-HTL",
+      "observed_entries": 62593.0,
+      "covered_minutes": 44405,
+      "valid_intervals": 741,
+      "intervals": 744,
+      "entries_per_covered_hour": 84.5756108546,
+      "valid_interval_share": 0.9959677419
+    },
+    {
+      "month": "2025-01",
+      "zone_id": "Z-PIT",
+      "observed_entries": 124593.0,
+      "covered_minutes": 44128,
+      "valid_intervals": 736,
+      "intervals": 744,
+      "entries_per_covered_hour": 169.4067258883,
+      "valid_interval_share": 0.9892473118
+    },
+    {
+      "month": "2025-02",
+      "zone_id": "Z-B40",
+      "observed_entries": 17047.0,
+      "covered_minutes": 39992,
+      "valid_intervals": 667,
+      "intervals": 672,
+      "entries_per_covered_hour": 25.575615123,
+      "valid_interval_share": 0.9925595238
+    },
+    {
+      "month": "2025-02",
+      "zone_id": "Z-BAR",
+      "observed_entries": 79335.0,
+      "covered_minutes": 40227,
+      "valid_intervals": 671,
+      "intervals": 672,
+      "entries_per_covered_hour": 118.3309717354,
+      "valid_interval_share": 0.9985119048
+    },
+    {
+      "month": "2025-02",
+      "zone_id": "Z-ENT",
+      "observed_entries": 82241.0,
+      "covered_minutes": 40121,
+      "valid_intervals": 669,
+      "intervals": 672,
+      "entries_per_covered_hour": 122.9894568929,
+      "valid_interval_share": 0.9955357143
+    },
+    {
+      "month": "2025-02",
+      "zone_id": "Z-GAR",
+      "observed_entries": 66155.0,
+      "covered_minutes": 40200,
+      "valid_intervals": 670,
+      "intervals": 672,
+      "entries_per_covered_hour": 98.7388059701,
+      "valid_interval_share": 0.9970238095
+    },
+    {
+      "month": "2025-02",
+      "zone_id": "Z-HL",
+      "observed_entries": 4910.0,
+      "covered_minutes": 40032,
+      "valid_intervals": 668,
+      "intervals": 672,
+      "entries_per_covered_hour": 7.3591127098,
+      "valid_interval_share": 0.994047619
+    },
+    {
+      "month": "2025-02",
+      "zone_id": "Z-HTL",
+      "observed_entries": 58730.0,
+      "covered_minutes": 40070,
+      "valid_intervals": 669,
+      "intervals": 672,
+      "entries_per_covered_hour": 87.9411030696,
+      "valid_interval_share": 0.9955357143
+    },
+    {
+      "month": "2025-02",
+      "zone_id": "Z-PIT",
+      "observed_entries": 118617.0,
+      "covered_minutes": 40196,
+      "valid_intervals": 671,
+      "intervals": 672,
+      "entries_per_covered_hour": 177.0579162106,
+      "valid_interval_share": 0.9985119048
+    },
+    {
+      "month": "2025-03",
+      "zone_id": "Z-B40",
+      "observed_entries": 13603.0,
+      "covered_minutes": 44395,
+      "valid_intervals": 740,
+      "intervals": 743,
+      "entries_per_covered_hour": 18.3845027593,
+      "valid_interval_share": 0.9959623149
+    },
+    {
+      "month": "2025-03",
+      "zone_id": "Z-BAR",
+      "observed_entries": 97826.0,
+      "covered_minutes": 44460,
+      "valid_intervals": 741,
+      "intervals": 743,
+      "entries_per_covered_hour": 132.0188933873,
+      "valid_interval_share": 0.99730821
+    },
+    {
+      "month": "2025-03",
+      "zone_id": "Z-ENT",
+      "observed_entries": 78347.0,
+      "covered_minutes": 44161,
+      "valid_intervals": 738,
+      "intervals": 743,
+      "entries_per_covered_hour": 106.4473177691,
+      "valid_interval_share": 0.9932705249
+    },
+    {
+      "month": "2025-03",
+      "zone_id": "Z-GAR",
+      "observed_entries": 72189.0,
+      "covered_minutes": 44431,
+      "valid_intervals": 741,
+      "intervals": 743,
+      "entries_per_covered_hour": 97.4846391033,
+      "valid_interval_share": 0.99730821
+    },
+    {
+      "month": "2025-03",
+      "zone_id": "Z-HL",
+      "observed_entries": 5717.0,
+      "covered_minutes": 44371,
+      "valid_intervals": 741,
+      "intervals": 743,
+      "entries_per_covered_hour": 7.7307250231,
+      "valid_interval_share": 0.99730821
+    },
+    {
+      "month": "2025-03",
+      "zone_id": "Z-HTL",
+      "observed_entries": 63765.0,
+      "covered_minutes": 44217,
+      "valid_intervals": 738,
+      "intervals": 743,
+      "entries_per_covered_hour": 86.5255444738,
+      "valid_interval_share": 0.9932705249
+    },
+    {
+      "month": "2025-03",
+      "zone_id": "Z-PIT",
+      "observed_entries": 136407.0,
+      "covered_minutes": 44552,
+      "valid_intervals": 743,
+      "intervals": 743,
+      "entries_per_covered_hour": 183.7048841803,
+      "valid_interval_share": 1.0
+    },
+    {
+      "month": "2025-04",
+      "zone_id": "Z-B40",
+      "observed_entries": 15766.0,
+      "covered_minutes": 43109,
+      "valid_intervals": 719,
+      "intervals": 720,
+      "entries_per_covered_hour": 21.9434456842,
+      "valid_interval_share": 0.9986111111
+    },
+    {
+      "month": "2025-04",
+      "zone_id": "Z-BAR",
+      "observed_entries": 84138.0,
+      "covered_minutes": 43048,
+      "valid_intervals": 718,
+      "intervals": 720,
+      "entries_per_covered_hour": 117.2709533544,
+      "valid_interval_share": 0.9972222222
+    },
+    {
+      "month": "2025-04",
+      "zone_id": "Z-ENT",
+      "observed_entries": 81790.0,
+      "covered_minutes": 42979,
+      "valid_intervals": 717,
+      "intervals": 720,
+      "entries_per_covered_hour": 114.1813443775,
+      "valid_interval_share": 0.9958333333
+    },
+    {
+      "month": "2025-04",
+      "zone_id": "Z-GAR",
+      "observed_entries": 67232.0,
+      "covered_minutes": 42895,
+      "valid_intervals": 716,
+      "intervals": 720,
+      "entries_per_covered_hour": 94.0417298053,
+      "valid_interval_share": 0.9944444444
+    },
+    {
+      "month": "2025-04",
+      "zone_id": "Z-HL",
+      "observed_entries": 4648.0,
+      "covered_minutes": 42910,
+      "valid_intervals": 717,
+      "intervals": 720,
+      "entries_per_covered_hour": 6.4991843393,
+      "valid_interval_share": 0.9958333333
+    },
+    {
+      "month": "2025-04",
+      "zone_id": "Z-HTL",
+      "observed_entries": 60994.0,
+      "covered_minutes": 42990,
+      "valid_intervals": 717,
+      "intervals": 720,
+      "entries_per_covered_hour": 85.1277041172,
+      "valid_interval_share": 0.9958333333
+    },
+    {
+      "month": "2025-04",
+      "zone_id": "Z-PIT",
+      "observed_entries": 123723.0,
+      "covered_minutes": 42865,
+      "valid_intervals": 715,
+      "intervals": 720,
+      "entries_per_covered_hour": 173.1804502508,
+      "valid_interval_share": 0.9930555556
+    },
+    {
+      "month": "2025-05",
+      "zone_id": "Z-B40",
+      "observed_entries": 17056.0,
+      "covered_minutes": 44392,
+      "valid_intervals": 740,
+      "intervals": 744,
+      "entries_per_covered_hour": 23.0528023067,
+      "valid_interval_share": 0.9946236559
+    },
+    {
+      "month": "2025-05",
+      "zone_id": "Z-BAR",
+      "observed_entries": 82368.0,
+      "covered_minutes": 42822,
+      "valid_intervals": 714,
+      "intervals": 744,
+      "entries_per_covered_hour": 115.4098360656,
+      "valid_interval_share": 0.9596774194
+    },
+    {
+      "month": "2025-05",
+      "zone_id": "Z-ENT",
+      "observed_entries": 86675.0,
+      "covered_minutes": 44286,
+      "valid_intervals": 740,
+      "intervals": 744,
+      "entries_per_covered_hour": 117.4298875491,
+      "valid_interval_share": 0.9946236559
+    },
+    {
+      "month": "2025-05",
+      "zone_id": "Z-GAR",
+      "observed_entries": 69616.0,
+      "covered_minutes": 44541,
+      "valid_intervals": 743,
+      "intervals": 744,
+      "entries_per_covered_hour": 93.7778675827,
+      "valid_interval_share": 0.998655914
+    },
+    {
+      "month": "2025-05",
+      "zone_id": "Z-HL",
+      "observed_entries": 4848.0,
+      "covered_minutes": 44409,
+      "valid_intervals": 742,
+      "intervals": 744,
+      "entries_per_covered_hour": 6.5500236439,
+      "valid_interval_share": 0.997311828
+    },
+    {
+      "month": "2025-05",
+      "zone_id": "Z-HTL",
+      "observed_entries": 62138.0,
+      "covered_minutes": 44556,
+      "valid_intervals": 743,
+      "intervals": 744,
+      "entries_per_covered_hour": 83.6762725559,
+      "valid_interval_share": 0.998655914
+    },
+    {
+      "month": "2025-05",
+      "zone_id": "Z-PIT",
+      "observed_entries": 126686.0,
+      "covered_minutes": 44278,
+      "valid_intervals": 739,
+      "intervals": 744,
+      "entries_per_covered_hour": 171.6690004065,
+      "valid_interval_share": 0.9932795699
+    },
+    {
+      "month": "2025-06",
+      "zone_id": "Z-B40",
+      "observed_entries": 15858.0,
+      "covered_minutes": 42970,
+      "valid_intervals": 717,
+      "intervals": 720,
+      "entries_per_covered_hour": 22.1428903886,
+      "valid_interval_share": 0.9958333333
+    },
+    {
+      "month": "2025-06",
+      "zone_id": "Z-BAR",
+      "observed_entries": 80294.0,
+      "covered_minutes": 42898,
+      "valid_intervals": 716,
+      "intervals": 720,
+      "entries_per_covered_hour": 112.304536342,
+      "valid_interval_share": 0.9944444444
+    },
+    {
+      "month": "2025-06",
+      "zone_id": "Z-ENT",
+      "observed_entries": 80022.0,
+      "covered_minutes": 43028,
+      "valid_intervals": 718,
+      "intervals": 720,
+      "entries_per_covered_hour": 111.5859440364,
+      "valid_interval_share": 0.9972222222
+    },
+    {
+      "month": "2025-06",
+      "zone_id": "Z-GAR",
+      "observed_entries": 66934.0,
+      "covered_minutes": 43051,
+      "valid_intervals": 718,
+      "intervals": 720,
+      "entries_per_covered_hour": 93.2856379643,
+      "valid_interval_share": 0.9972222222
+    },
+    {
+      "month": "2025-06",
+      "zone_id": "Z-HL",
+      "observed_entries": 4219.0,
+      "covered_minutes": 43037,
+      "valid_intervals": 718,
+      "intervals": 720,
+      "entries_per_covered_hour": 5.881915561,
+      "valid_interval_share": 0.9972222222
+    },
+    {
+      "month": "2025-06",
+      "zone_id": "Z-HTL",
+      "observed_entries": 55996.0,
+      "covered_minutes": 42907,
+      "valid_intervals": 716,
+      "intervals": 720,
+      "entries_per_covered_hour": 78.3033071527,
+      "valid_interval_share": 0.9944444444
+    },
+    {
+      "month": "2025-06",
+      "zone_id": "Z-PIT",
+      "observed_entries": 117336.0,
+      "covered_minutes": 42876,
+      "valid_intervals": 715,
+      "intervals": 720,
+      "entries_per_covered_hour": 164.1981528128,
+      "valid_interval_share": 0.9930555556
+    }
+  ],
+  "players": {
+    "tracked_players": 113890,
+    "tracked_wagers": 163804869.64999998,
+    "tracked_payouts": 148219409.05,
+    "player_net": -15585460.600000001,
+    "players_ahead_share": 0.13613135481605057,
+    "top1pct_count": 1139,
+    "top1pct_wager_share": 0.22859958424929527,
+    "top1pct_positive_loss_share": 0.19860854533368733,
+    "tracked_wager_coverage": 0.6581013855136345
+  },
+  "loyalty": [
+    {
+      "gaming_month": "2025-01",
+      "points_delta": -1433623,
+      "face_cents": 10349950,
+      "cost_cents": 2875030,
+      "redemptions": 9171,
+      "points_per_face_dollar": 13.8514968671
+    },
+    {
+      "gaming_month": "2025-02",
+      "points_delta": -1411208,
+      "face_cents": 10685350,
+      "cost_cents": 2985430,
+      "redemptions": 9292,
+      "points_per_face_dollar": 13.2069422153
+    },
+    {
+      "gaming_month": "2025-03",
+      "points_delta": -1531314,
+      "face_cents": 11916750,
+      "cost_cents": 3325550,
+      "redemptions": 10430,
+      "points_per_face_dollar": 12.8500975518
+    },
+    {
+      "gaming_month": "2025-04",
+      "points_delta": -1404060,
+      "face_cents": 11221400,
+      "cost_cents": 3139030,
+      "redemptions": 9702,
+      "points_per_face_dollar": 12.5123424885
+    },
+    {
+      "gaming_month": "2025-05",
+      "points_delta": -719172,
+      "face_cents": 12304850,
+      "cost_cents": 3444610,
+      "redemptions": 10629,
+      "points_per_face_dollar": 5.8446222424
+    },
+    {
+      "gaming_month": "2025-06",
+      "points_delta": -673602,
+      "face_cents": 11796650,
+      "cost_cents": 3297280,
+      "redemptions": 10137,
+      "points_per_face_dollar": 5.7101126167
+    }
+  ],
+  "forecast": {
+    "train_start": "2025-01-01",
+    "train_end": "2025-04-30",
+    "test_start": "2025-05-01",
+    "test_end": "2025-06-30",
+    "weekday_mae": 68698.55169827497,
+    "constant_mae": 218258.0969262295,
+    "winner": "weekday",
+    "improvement_pct": 0.6852416809925048,
+    "test_rows": [
+      {
+        "gaming_date": "2025-05-01T00:00:00.000",
+        "coin_in_usd": 1291815.85,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-02T00:00:00.000",
+        "coin_in_usd": 1631269.55,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-03T00:00:00.000",
+        "coin_in_usd": 1743901.5,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-04T00:00:00.000",
+        "coin_in_usd": 1343811.5,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-05T00:00:00.000",
+        "coin_in_usd": 1070007.9,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-06T00:00:00.000",
+        "coin_in_usd": 991699.2,
+        "weekday_prediction": 1112941.95,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-07T00:00:00.000",
+        "coin_in_usd": 1106454.35,
+        "weekday_prediction": 1149981.0444444446,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-08T00:00:00.000",
+        "coin_in_usd": 1203856.6,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-09T00:00:00.000",
+        "coin_in_usd": 1567783.0,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-10T00:00:00.000",
+        "coin_in_usd": 1755586.95,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-11T00:00:00.000",
+        "coin_in_usd": 1431857.75,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-12T00:00:00.000",
+        "coin_in_usd": 1221449.3,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-13T00:00:00.000",
+        "coin_in_usd": 1069979.25,
+        "weekday_prediction": 1112941.95,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-14T00:00:00.000",
+        "coin_in_usd": 1140824.55,
+        "weekday_prediction": 1149981.0444444446,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-15T00:00:00.000",
+        "coin_in_usd": 1290797.8,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-16T00:00:00.000",
+        "coin_in_usd": 1744575.8,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-17T00:00:00.000",
+        "coin_in_usd": 2073091.55,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-18T00:00:00.000",
+        "coin_in_usd": 1661795.4,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-19T00:00:00.000",
+        "coin_in_usd": 1228961.75,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-20T00:00:00.000",
+        "coin_in_usd": 1116186.25,
+        "weekday_prediction": 1112941.95,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-21T00:00:00.000",
+        "coin_in_usd": 1183952.15,
+        "weekday_prediction": 1149981.0444444446,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-22T00:00:00.000",
+        "coin_in_usd": 1305669.45,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-23T00:00:00.000",
+        "coin_in_usd": 1582260.85,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-24T00:00:00.000",
+        "coin_in_usd": 1808468.0,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-25T00:00:00.000",
+        "coin_in_usd": 1387073.1,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-26T00:00:00.000",
+        "coin_in_usd": 1196838.2,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-27T00:00:00.000",
+        "coin_in_usd": 1108861.95,
+        "weekday_prediction": 1112941.95,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-28T00:00:00.000",
+        "coin_in_usd": 1176974.6,
+        "weekday_prediction": 1149981.0444444446,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-29T00:00:00.000",
+        "coin_in_usd": 1279443.2,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-30T00:00:00.000",
+        "coin_in_usd": 1560965.95,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-05-31T00:00:00.000",
+        "coin_in_usd": 1708170.05,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-01T00:00:00.000",
+        "coin_in_usd": 1394639.55,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-02T00:00:00.000",
+        "coin_in_usd": 1187695.7,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-03T00:00:00.000",
+        "coin_in_usd": 1064891.45,
+        "weekday_prediction": 1112941.95,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-04T00:00:00.000",
+        "coin_in_usd": 1111422.4,
+        "weekday_prediction": 1149981.0444444446,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-05T00:00:00.000",
+        "coin_in_usd": 1227154.6,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-06T00:00:00.000",
+        "coin_in_usd": 1571962.25,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-07T00:00:00.000",
+        "coin_in_usd": 1722647.25,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-08T00:00:00.000",
+        "coin_in_usd": 1300608.3,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-09T00:00:00.000",
+        "coin_in_usd": 1240886.05,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-10T00:00:00.000",
+        "coin_in_usd": 1187963.45,
+        "weekday_prediction": 1112941.95,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-11T00:00:00.000",
+        "coin_in_usd": 1244896.95,
+        "weekday_prediction": 1149981.0444444446,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-12T00:00:00.000",
+        "coin_in_usd": 1346270.6,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-13T00:00:00.000",
+        "coin_in_usd": 1586472.9,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-14T00:00:00.000",
+        "coin_in_usd": 1799689.3,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-15T00:00:00.000",
+        "coin_in_usd": 1414084.85,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-16T00:00:00.000",
+        "coin_in_usd": 1135901.05,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-17T00:00:00.000",
+        "coin_in_usd": 1004140.85,
+        "weekday_prediction": 1112941.95,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-18T00:00:00.000",
+        "coin_in_usd": 1076348.25,
+        "weekday_prediction": 1149981.0444444446,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-19T00:00:00.000",
+        "coin_in_usd": 1183952.0,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-20T00:00:00.000",
+        "coin_in_usd": 1599667.0,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-21T00:00:00.000",
+        "coin_in_usd": 1729846.7,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-22T00:00:00.000",
+        "coin_in_usd": 1375155.3,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-23T00:00:00.000",
+        "coin_in_usd": 1162013.95,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-24T00:00:00.000",
+        "coin_in_usd": 1055434.8,
+        "weekday_prediction": 1112941.95,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-25T00:00:00.000",
+        "coin_in_usd": 1105788.65,
+        "weekday_prediction": 1149981.0444444446,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-26T00:00:00.000",
+        "coin_in_usd": 1276182.15,
+        "weekday_prediction": 1290980.4529411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-27T00:00:00.000",
+        "coin_in_usd": 1549921.4,
+        "weekday_prediction": 1655737.2029411765,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-28T00:00:00.000",
+        "coin_in_usd": 1601715.0,
+        "weekday_prediction": 1820595.1852941175,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-29T00:00:00.000",
+        "coin_in_usd": 1328909.25,
+        "weekday_prediction": 1465879.0823529414,
+        "constant_prediction": 1384919.0508333333
+      },
+      {
+        "gaming_date": "2025-06-30T00:00:00.000",
+        "coin_in_usd": 1144287.9,
+        "weekday_prediction": 1212138.3205882353,
+        "constant_prediction": 1384919.0508333333
+      }
+    ],
+    "july_refit_baseline_wagers": 40711161.62000001,
+    "july_refit_note": "Winner refit on Jan-Jun after holdout evaluation; July is a scenario, not a validated forecast."
+  },
+  "simulation": {
+    "seed": 20251107,
+    "scenarios": 1000,
+    "objective": "Maximize expected 30-day incremental contribution",
+    "horizon": "2025-07-01 to 2025-07-30",
+    "candidate_count": 9,
+    "feasible_portfolios": 42,
+    "candidates": [
+      {
+        "id": "inspect_M-1158",
+        "action_type": "A-INSPECT",
+        "name": "Machine inspection and paytable verification",
+        "target": "M-1158",
+        "quantity": 1,
+        "cost": 1200.0,
+        "lead_days": 1,
+        "benefit_days": 29,
+        "catalogue_downtime_minutes": 120,
+        "additional_theo_cost": 23.945242517783758,
+        "targets": [
+          "M-1158"
+        ],
+        "assumption": "Information only; no cash recovery credited without a corrective-action estimate.",
+        "expected_net": -1223.945242517784
+      },
+      {
+        "id": "inspect_M-1181",
+        "action_type": "A-INSPECT",
+        "name": "Machine inspection and paytable verification",
+        "target": "M-1181",
+        "quantity": 1,
+        "cost": 1200.0,
+        "lead_days": 1,
+        "benefit_days": 29,
+        "catalogue_downtime_minutes": 120,
+        "additional_theo_cost": 15.006473421231838,
+        "targets": [
+          "M-1181"
+        ],
+        "assumption": "Information only; no cash recovery credited without a corrective-action estimate.",
+        "expected_net": -1215.006473421232
+      },
+      {
+        "id": "move_weak",
+        "action_type": "A-MOVE-MACHINE",
+        "name": "Relocate one machine",
+        "target": "M-5076",
+        "quantity": 1,
+        "cost": 1800.0,
+        "lead_days": 2,
+        "benefit_days": 28,
+        "catalogue_downtime_minutes": 180,
+        "additional_theo_cost": 19.176153846153845,
+        "targets": [
+          "M-5076"
+        ],
+        "assumption": "Incremental play uplift triangular(-10%,20%,60%); floor retention triangular(25%,50%,100%). Destination not yet chosen; exploratory candidate.",
+        "expected_net": -1244.8852049998711
+      },
+      {
+        "id": "lease_weak",
+        "action_type": "A-REPLACE-LEASE",
+        "name": "Replace a machine with a leased new title",
+        "target": "M-5076",
+        "quantity": 1,
+        "cost": 3380.0,
+        "lead_days": 14,
+        "benefit_days": 16,
+        "catalogue_downtime_minutes": 360,
+        "additional_theo_cost": 38.35230769230769,
+        "targets": [
+          "M-5076"
+        ],
+        "assumption": "New title uplift triangular(-10%,50%,150%); floor retention 25%-100%; no observed replacement effect claimed.",
+        "expected_net": -2539.166547308062
+      },
+      {
+        "id": "technician",
+        "action_type": "A-TECH-SHIFT",
+        "name": "Add one technician to a shift for 30 days",
+        "target": "One additional shift; roster to select",
+        "quantity": 1,
+        "cost": 11520.0,
+        "lead_days": 7,
+        "benefit_days": 23,
+        "catalogue_downtime_minutes": 0,
+        "additional_theo_cost": 0.0,
+        "targets": [
+          "M-5076",
+          "M-1158",
+          "M-1238",
+          "M-1181",
+          "M-1035",
+          "M-1179",
+          "M-1017",
+          "M-1265",
+          "M-1256",
+          "M-1063",
+          "M-1192",
+          "M-1162",
+          "M-1059",
+          "M-1048",
+          "M-1210",
+          "M-1184",
+          "M-1095",
+          "M-1075",
+          "M-1053",
+          "M-1041",
+          "M-1128",
+          "M-1070",
+          "M-1168",
+          "M-1252",
+          "M-1189",
+          "M-1042",
+          "M-1195",
+          "M-1532",
+          "M-1157",
+          "M-1289",
+          "M-1230",
+          "M-1232",
+          "M-1218",
+          "M-1290",
+          "M-1009",
+          "M-1065",
+          "M-1082",
+          "M-1033",
+          "M-1050",
+          "M-1026",
+          "M-1131",
+          "M-1202",
+          "M-1228",
+          "M-1288",
+          "M-1274",
+          "M-1173",
+          "M-1115",
+          "M-1270",
+          "M-1057",
+          "M-1140",
+          "M-1126",
+          "M-1076",
+          "M-1243",
+          "M-1239",
+          "M-1275",
+          "M-1255",
+          "M-1200",
+          "M-1163",
+          "M-1197",
+          "M-1240",
+          "M-1216",
+          "M-1245",
+          "M-1058",
+          "M-1300",
+          "M-1071",
+          "M-1144",
+          "M-1165",
+          "M-1248",
+          "M-1014",
+          "M-1153",
+          "M-1185",
+          "M-1086",
+          "M-1008",
+          "M-1107",
+          "M-1292",
+          "M-1092",
+          "M-1047",
+          "M-1083",
+          "M-1190",
+          "M-1034",
+          "M-1129",
+          "M-1084",
+          "M-1124",
+          "M-1207",
+          "M-1262",
+          "M-1139",
+          "M-1247",
+          "M-1194",
+          "M-1090",
+          "M-1010",
+          "M-1040",
+          "M-1221",
+          "M-1231",
+          "M-1283",
+          "M-1154",
+          "M-1012",
+          "M-1278",
+          "M-1088",
+          "M-1064",
+          "M-1003",
+          "M-1298",
+          "M-1056",
+          "M-7487",
+          "M-1299",
+          "M-1236",
+          "M-1241",
+          "M-1137",
+          "M-1073",
+          "M-1155",
+          "M-1015",
+          "M-1145",
+          "M-8743",
+          "M-2799",
+          "M-1276",
+          "M-1081",
+          "M-1004",
+          "M-1045",
+          "M-1286",
+          "M-1104",
+          "M-1054",
+          "M-1080",
+          "M-1249",
+          "M-1272",
+          "M-1037",
+          "M-7943",
+          "M-7756",
+          "M-1116",
+          "M-3101",
+          "M-1143",
+          "M-1079",
+          "M-1023",
+          "M-1068",
+          "M-1123",
+          "M-1006",
+          "M-1127",
+          "M-1038",
+          "M-8057",
+          "M-1149",
+          "M-1180",
+          "M-2642",
+          "M-1069",
+          "M-1279",
+          "M-1201",
+          "M-1150",
+          "M-1148",
+          "M-1052",
+          "M-1295",
+          "M-1227",
+          "M-1049",
+          "M-1277",
+          "M-1089",
+          "M-1030",
+          "M-1109",
+          "M-1094",
+          "M-1258",
+          "M-1187",
+          "M-1019",
+          "M-1146",
+          "M-1051",
+          "M-1215",
+          "M-1204",
+          "M-1183",
+          "M-1175",
+          "M-1251",
+          "M-1032",
+          "M-1250",
+          "M-1217",
+          "M-1117",
+          "M-1122",
+          "M-1264",
+          "M-1005",
+          "M-1235",
+          "M-1225",
+          "M-1110",
+          "M-1167",
+          "M-1119",
+          "M-1025",
+          "M-1028",
+          "M-1024",
+          "M-1280",
+          "M-1078",
+          "M-1260",
+          "M-1188",
+          "M-1178",
+          "M-1151",
+          "M-1101",
+          "M-1066",
+          "M-1018",
+          "M-1061",
+          "M-1282",
+          "M-1152",
+          "M-1293",
+          "M-1186",
+          "M-1220",
+          "M-1263",
+          "M-1191",
+          "M-1029",
+          "M-1199",
+          "M-1182",
+          "M-1002",
+          "M-1106",
+          "M-1046",
+          "M-1013",
+          "M-1020",
+          "M-1166",
+          "M-1211",
+          "M-1285",
+          "M-1141",
+          "M-1113",
+          "M-1007",
+          "M-1203",
+          "M-1159",
+          "M-1100",
+          "M-1259",
+          "M-1222",
+          "M-1208",
+          "M-1138",
+          "M-1284",
+          "M-1226",
+          "M-1172",
+          "M-1156",
+          "M-1108",
+          "M-1044",
+          "M-1055",
+          "M-1237",
+          "M-1062",
+          "M-1209",
+          "M-1176",
+          "M-1098",
+          "M-1134",
+          "M-1171",
+          "M-1105",
+          "M-1164",
+          "M-1160",
+          "M-1223",
+          "M-1021",
+          "M-1254",
+          "M-1136",
+          "M-1096",
+          "M-1234",
+          "M-1229",
+          "M-1224",
+          "M-1102",
+          "M-1242",
+          "M-1036",
+          "M-1273",
+          "M-1099",
+          "M-1297",
+          "M-1022",
+          "M-1060",
+          "M-1206",
+          "M-1125",
+          "M-1147",
+          "M-1205",
+          "M-1135",
+          "M-1177",
+          "M-1266",
+          "M-1067",
+          "M-1031",
+          "M-1133",
+          "M-1214",
+          "M-1112",
+          "M-1074",
+          "M-1043",
+          "M-1016",
+          "M-1269",
+          "M-1161",
+          "M-1103",
+          "M-1196",
+          "M-1296",
+          "M-1091",
+          "M-1219",
+          "M-1142",
+          "M-1244",
+          "M-1077",
+          "M-1001",
+          "M-1085",
+          "M-1246",
+          "M-1097",
+          "M-1213",
+          "M-1193",
+          "M-1132",
+          "M-1271",
+          "M-1261",
+          "M-1174",
+          "M-1072",
+          "M-1268",
+          "M-1233",
+          "M-1281",
+          "M-1039",
+          "M-1294",
+          "M-1111",
+          "M-1257",
+          "M-1130",
+          "M-1093",
+          "M-1121",
+          "M-1253",
+          "M-1011",
+          "M-1287",
+          "M-1027",
+          "M-1291",
+          "M-1169",
+          "M-1170",
+          "M-1114",
+          "M-1198",
+          "M-1212",
+          "M-1087",
+          "M-1267"
+        ],
+        "assumption": "Recovers 10%-60% (mode30%) of historical downtime opportunity scaled to 23 July days; assumes one shift can cover this opportunity.",
+        "expected_net": -9278.331139757047
+      },
+      {
+        "id": "preventive",
+        "action_type": "A-PREVENTIVE",
+        "name": "Preventive maintenance sweep for one manufacturer",
+        "target": "Ridgeline",
+        "quantity": 1,
+        "cost": 9000.0,
+        "lead_days": 7,
+        "benefit_days": 23,
+        "catalogue_downtime_minutes": 90,
+        "additional_theo_cost": 2417.3546241334866,
+        "targets": [
+          "M-1158",
+          "M-1179",
+          "M-1017",
+          "M-1063",
+          "M-1184",
+          "M-1095",
+          "M-1053",
+          "M-1041",
+          "M-1070",
+          "M-1168",
+          "M-1252",
+          "M-1195",
+          "M-1230",
+          "M-1009",
+          "M-1065",
+          "M-1033",
+          "M-1173",
+          "M-1057",
+          "M-1126",
+          "M-1076",
+          "M-1255",
+          "M-1197",
+          "M-1300",
+          "M-1144",
+          "M-1014",
+          "M-1153",
+          "M-1190",
+          "M-1034",
+          "M-1207",
+          "M-1139",
+          "M-1247",
+          "M-1090",
+          "M-1278",
+          "M-1236",
+          "M-1241",
+          "M-1073",
+          "M-1015",
+          "M-1081",
+          "M-1054",
+          "M-1127",
+          "M-1038",
+          "M-1180",
+          "M-1295",
+          "M-1049",
+          "M-1258",
+          "M-1051",
+          "M-1028",
+          "M-1078",
+          "M-1188",
+          "M-1151",
+          "M-1066",
+          "M-1061",
+          "M-1293",
+          "M-1182",
+          "M-1002",
+          "M-1106",
+          "M-1046",
+          "M-1166",
+          "M-1141",
+          "M-1226",
+          "M-1172",
+          "M-1156",
+          "M-1044",
+          "M-1176",
+          "M-1105",
+          "M-1164",
+          "M-1160",
+          "M-1223",
+          "M-1136",
+          "M-1102",
+          "M-1242",
+          "M-1036",
+          "M-1273",
+          "M-1297",
+          "M-1022",
+          "M-1125",
+          "M-1177",
+          "M-1031",
+          "M-1133",
+          "M-1214",
+          "M-1112",
+          "M-1043",
+          "M-1244",
+          "M-1193",
+          "M-1268",
+          "M-1111",
+          "M-1093",
+          "M-1121",
+          "M-1011",
+          "M-1027",
+          "M-1114",
+          "M-1267"
+        ],
+        "assumption": "Recovers 20%-80% (mode50%) of manufacturer downtime; planned 90 minutes per machine deducted.",
+        "expected_net": -9606.856721698427
+      },
+      {
+        "id": "signage",
+        "action_type": "A-WAYFINDING",
+        "name": "Wayfinding and signage refresh for a zone",
+        "target": "Back Forty",
+        "quantity": 1,
+        "cost": 7500.0,
+        "lead_days": 10,
+        "benefit_days": 20,
+        "catalogue_downtime_minutes": 0,
+        "additional_theo_cost": 0.0,
+        "targets": [
+          "M-1008",
+          "M-1014",
+          "M-1017",
+          "M-1033",
+          "M-1035",
+          "M-1040",
+          "M-1042",
+          "M-1045",
+          "M-1048",
+          "M-1053",
+          "M-1057",
+          "M-1063",
+          "M-1071",
+          "M-1073",
+          "M-1079",
+          "M-1082",
+          "M-1092",
+          "M-1116",
+          "M-1120",
+          "M-1128",
+          "M-1129",
+          "M-1131",
+          "M-1140",
+          "M-1146",
+          "M-1152",
+          "M-1154",
+          "M-1157",
+          "M-1158",
+          "M-1168",
+          "M-1179",
+          "M-1180",
+          "M-1181",
+          "M-1184",
+          "M-1185",
+          "M-1194",
+          "M-1197",
+          "M-1202",
+          "M-1207",
+          "M-1216",
+          "M-1221",
+          "M-1227",
+          "M-1230",
+          "M-1231",
+          "M-1232",
+          "M-1238",
+          "M-1256",
+          "M-1265",
+          "M-1283",
+          "M-5076"
+        ],
+        "assumption": "Zone play uplift triangular(0%,2.5%,8%); retained incremental floor play 25%-100%. Observational location differences are not causal effects.",
+        "expected_net": -2322.9102799195566
+      },
+      {
+        "id": "comp_policy",
+        "action_type": "A-COMP-CHANGE",
+        "name": "Change comp redemption rate floor-wide",
+        "target": "Floor-wide: proposed 12 points per comp face-value dollar",
+        "quantity": 1,
+        "cost": 1500.0,
+        "lead_days": 3,
+        "benefit_days": 27,
+        "catalogue_downtime_minutes": 0,
+        "additional_theo_cost": 0.0,
+        "targets": [],
+        "assumption": "Proposed rate12 (catalogue range5-20); savings0%-25% (mode10%) and loss of expected gaming earnings0%-0.2% (mode0.05%) are assumptions, not proven effects.",
+        "expected_net": -1028.3724442924035
+      },
+      {
+        "id": "comp_pilot",
+        "action_type": "A-COMP-PILOT",
+        "name": "Comp policy pilot with control group",
+        "target": "Randomized pilot with unchanged total comp budget",
+        "quantity": 1,
+        "cost": 4000.0,
+        "lead_days": 5,
+        "benefit_days": 25,
+        "catalogue_downtime_minutes": 0,
+        "additional_theo_cost": 0.0,
+        "targets": [],
+        "assumption": "Information-only test; no immediate benefit or additional comp spend credited. Cannot combine with floor-wide change.",
+        "expected_net": -4000.0
+      }
+    ],
+    "portfolios": [
+      {
+        "actions": [],
+        "cost": 0,
+        "mean_net": 0.0,
+        "median_net": 0.0,
+        "p10": 0.0,
+        "p90": 0.0,
+        "probability_positive": 0.0,
+        "conservative_net": 0
+      },
+      {
+        "actions": [
+          "comp_policy"
+        ],
+        "cost": 1500.0,
+        "mean_net": -1028.3724442924035,
+        "median_net": -975.1193526429633,
+        "p10": -3842.7362221794915,
+        "p90": 1643.580316432699,
+        "probability_positive": 0.31,
+        "conservative_net": -8524.583877563537
+      },
+      {
+        "actions": [
+          "inspect_M-1181"
+        ],
+        "cost": 1200.0,
+        "mean_net": -1215.006473421232,
+        "median_net": -1215.006473421232,
+        "p10": -1215.006473421232,
+        "p90": -1215.006473421232,
+        "probability_positive": 0.0,
+        "conservative_net": -1215.006473421232
+      },
+      {
+        "actions": [
+          "inspect_M-1158"
+        ],
+        "cost": 1200.0,
+        "mean_net": -1223.945242517784,
+        "median_net": -1223.9452425177838,
+        "p10": -1223.9452425177838,
+        "p90": -1223.9452425177838,
+        "probability_positive": 0.0,
+        "conservative_net": -1223.9452425177838
+      },
+      {
+        "actions": [
+          "move_weak"
+        ],
+        "cost": 1800.0,
+        "mean_net": -1244.8852049998711,
+        "median_net": -1302.740536941513,
+        "p10": -1701.5828251307423,
+        "p90": -720.3323525947942,
+        "probability_positive": 0.003,
+        "conservative_net": -2246.5304395604394
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "comp_policy"
+        ],
+        "cost": 2700.0,
+        "mean_net": -2243.3789177136355,
+        "median_net": -2190.1258260641953,
+        "p10": -5057.742695600723,
+        "p90": 428.5738430114671,
+        "probability_positive": 0.141,
+        "conservative_net": -9739.590350984769
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "comp_policy"
+        ],
+        "cost": 2700.0,
+        "mean_net": -2252.317686810187,
+        "median_net": -2199.064595160747,
+        "p10": -5066.681464697274,
+        "p90": 419.63507391491527,
+        "probability_positive": 0.14,
+        "conservative_net": -9748.52912008132
+      },
+      {
+        "actions": [
+          "signage"
+        ],
+        "cost": 7500.0,
+        "mean_net": -2322.9102799195566,
+        "median_net": -2862.6932959885703,
+        "p10": -5616.693729078954,
+        "p90": 1879.9814148432608,
+        "probability_positive": 0.198,
+        "conservative_net": -7500.0
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "inspect_M-1181"
+        ],
+        "cost": 2400.0,
+        "mean_net": -2438.9517159390157,
+        "median_net": -2438.9517159390157,
+        "p10": -2438.9517159390157,
+        "p90": -2438.9517159390157,
+        "probability_positive": 0.0,
+        "conservative_net": -2438.9517159390157
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "move_weak"
+        ],
+        "cost": 3000.0,
+        "mean_net": -2459.891678421103,
+        "median_net": -2517.747010362745,
+        "p10": -2916.5892985519745,
+        "p90": -1935.3388260160264,
+        "probability_positive": 0.0,
+        "conservative_net": -3461.5369129816713
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "move_weak"
+        ],
+        "cost": 3000.0,
+        "mean_net": -2468.8304475176546,
+        "median_net": -2526.6857794592966,
+        "p10": -2925.5280676485263,
+        "p90": -1944.2775951125782,
+        "probability_positive": 0.0,
+        "conservative_net": -3470.475682078223
+      },
+      {
+        "actions": [
+          "lease_weak"
+        ],
+        "cost": 3380.0,
+        "mean_net": -2539.166547308062,
+        "median_net": -2614.2456162997732,
+        "p10": -3176.143724626705,
+        "p90": -1847.8575612133561,
+        "probability_positive": 0.0,
+        "conservative_net": -3662.554756671899
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "inspect_M-1181",
+          "comp_policy"
+        ],
+        "cost": 3900.0,
+        "mean_net": -3467.324160231419,
+        "median_net": -3414.071068581979,
+        "p10": -6281.687938118506,
+        "p90": -795.3713995063167,
+        "probability_positive": 0.05,
+        "conservative_net": -10963.535593502553
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "inspect_M-1181",
+          "move_weak"
+        ],
+        "cost": 4200.0,
+        "mean_net": -3683.8369209388866,
+        "median_net": -3741.6922528805285,
+        "p10": -4140.534541069758,
+        "p90": -3159.28406853381,
+        "probability_positive": 0.0,
+        "conservative_net": -4685.482155499455
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "lease_weak"
+        ],
+        "cost": 4580.0,
+        "mean_net": -3754.173020729294,
+        "median_net": -3829.252089721005,
+        "p10": -4391.150198047937,
+        "p90": -3062.8640346345883,
+        "probability_positive": 0.0,
+        "conservative_net": -4877.561230093132
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "lease_weak"
+        ],
+        "cost": 4580.0,
+        "mean_net": -3763.1117898258453,
+        "median_net": -3838.1908588175575,
+        "p10": -4400.088967144489,
+        "p90": -3071.8028037311396,
+        "probability_positive": 0.0,
+        "conservative_net": -4886.499999189683
+      },
+      {
+        "actions": [
+          "comp_pilot"
+        ],
+        "cost": 4000.0,
+        "mean_net": -4000.0,
+        "median_net": -4000.0,
+        "p10": -4000.0,
+        "p90": -4000.0,
+        "probability_positive": 0.0,
+        "conservative_net": -4000.0
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "inspect_M-1181",
+          "lease_weak"
+        ],
+        "cost": 5780.0,
+        "mean_net": -4978.118263247078,
+        "median_net": -5053.197332238789,
+        "p10": -5615.095440565721,
+        "p90": -4286.809277152372,
+        "probability_positive": 0.0,
+        "conservative_net": -6101.506472610915
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "comp_pilot"
+        ],
+        "cost": 5200.0,
+        "mean_net": -5215.006473421234,
+        "median_net": -5215.006473421232,
+        "p10": -5215.006473421232,
+        "p90": -5215.006473421232,
+        "probability_positive": 0.0,
+        "conservative_net": -5215.006473421232
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "comp_pilot"
+        ],
+        "cost": 5200.0,
+        "mean_net": -5223.945242517786,
+        "median_net": -5223.945242517784,
+        "p10": -5223.945242517784,
+        "p90": -5223.945242517784,
+        "probability_positive": 0.0,
+        "conservative_net": -5223.945242517784
+      },
+      {
+        "actions": [
+          "move_weak",
+          "comp_pilot"
+        ],
+        "cost": 5800.0,
+        "mean_net": -5244.885204999871,
+        "median_net": -5302.740536941514,
+        "p10": -5701.582825130743,
+        "p90": -4720.3323525947935,
+        "probability_positive": 0.0,
+        "conservative_net": -6246.53043956044
+      },
+      {
+        "actions": [
+          "signage",
+          "comp_pilot"
+        ],
+        "cost": 11500.0,
+        "mean_net": -6322.910279919557,
+        "median_net": -6862.693295988571,
+        "p10": -9616.693729078954,
+        "p90": -2120.0185851567394,
+        "probability_positive": 0.032,
+        "conservative_net": -11500.0
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "inspect_M-1181",
+          "comp_pilot"
+        ],
+        "cost": 6400.0,
+        "mean_net": -6438.951715939015,
+        "median_net": -6438.951715939016,
+        "p10": -6438.951715939016,
+        "p90": -6438.951715939016,
+        "probability_positive": 0.0,
+        "conservative_net": -6438.951715939016
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "move_weak",
+          "comp_pilot"
+        ],
+        "cost": 7000.0,
+        "mean_net": -6459.891678421102,
+        "median_net": -6517.747010362746,
+        "p10": -6916.589298551975,
+        "p90": -5935.338826016025,
+        "probability_positive": 0.0,
+        "conservative_net": -7461.536912981672
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "move_weak",
+          "comp_pilot"
+        ],
+        "cost": 7000.0,
+        "mean_net": -6468.830447517655,
+        "median_net": -6526.685779459296,
+        "p10": -6925.528067648526,
+        "p90": -5944.277595112578,
+        "probability_positive": 0.0,
+        "conservative_net": -7470.475682078223
+      },
+      {
+        "actions": [
+          "lease_weak",
+          "comp_pilot"
+        ],
+        "cost": 7380.0,
+        "mean_net": -6539.166547308061,
+        "median_net": -6614.245616299773,
+        "p10": -7176.143724626705,
+        "p90": -5847.857561213356,
+        "probability_positive": 0.0,
+        "conservative_net": -7662.5547566719
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "inspect_M-1181",
+          "move_weak",
+          "comp_pilot"
+        ],
+        "cost": 8200.0,
+        "mean_net": -7683.836920938887,
+        "median_net": -7741.692252880528,
+        "p10": -8140.534541069758,
+        "p90": -7159.28406853381,
+        "probability_positive": 0.0,
+        "conservative_net": -8685.482155499456
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "lease_weak",
+          "comp_pilot"
+        ],
+        "cost": 8580.0,
+        "mean_net": -7754.173020729294,
+        "median_net": -7829.252089721005,
+        "p10": -8391.150198047937,
+        "p90": -7062.864034634588,
+        "probability_positive": 0.0,
+        "conservative_net": -8877.561230093132
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "lease_weak",
+          "comp_pilot"
+        ],
+        "cost": 8580.0,
+        "mean_net": -7763.111789825845,
+        "median_net": -7838.1908588175575,
+        "p10": -8400.08896714449,
+        "p90": -7071.80280373114,
+        "probability_positive": 0.0,
+        "conservative_net": -8886.499999189684
+      },
+      {
+        "actions": [
+          "inspect_M-1158",
+          "inspect_M-1181",
+          "lease_weak",
+          "comp_pilot"
+        ],
+        "cost": 9780.0,
+        "mean_net": -8978.118263247077,
+        "median_net": -9053.19733223879,
+        "p10": -9615.095440565721,
+        "p90": -8286.809277152373,
+        "probability_positive": 0.0,
+        "conservative_net": -10101.506472610916
+      },
+      {
+        "actions": [
+          "technician"
+        ],
+        "cost": 11520.0,
+        "mean_net": -9278.331139757047,
+        "median_net": -9385.786835456056,
+        "p10": -10318.525395791345,
+        "p90": -8010.114938098309,
+        "probability_positive": 0.0,
+        "conservative_net": -11520.0
+      },
+      {
+        "actions": [
+          "preventive"
+        ],
+        "cost": 9000.0,
+        "mean_net": -9606.856721698427,
+        "median_net": -9713.631264942198,
+        "p10": -10400.173362708134,
+        "p90": -8667.629819237492,
+        "probability_positive": 0.0,
+        "conservative_net": -11417.354624133486
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "preventive"
+        ],
+        "cost": 10200.0,
+        "mean_net": -10821.863195119657,
+        "median_net": -10928.63773836343,
+        "p10": -11615.179836129366,
+        "p90": -9882.636292658724,
+        "probability_positive": 0.0,
+        "conservative_net": -12632.361097554718
+      },
+      {
+        "actions": [
+          "move_weak",
+          "preventive"
+        ],
+        "cost": 10800.0,
+        "mean_net": -10851.741926698294,
+        "median_net": -10982.107371566217,
+        "p10": -11873.840964253579,
+        "p90": -9603.887039299583,
+        "probability_positive": 0.0,
+        "conservative_net": -13663.885063693926
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "move_weak",
+          "preventive"
+        ],
+        "cost": 12000.0,
+        "mean_net": -12066.748400119528,
+        "median_net": -12197.113844987449,
+        "p10": -13088.84743767481,
+        "p90": -10818.893512720815,
+        "probability_positive": 0.0,
+        "conservative_net": -14878.891537115158
+      },
+      {
+        "actions": [
+          "lease_weak",
+          "preventive"
+        ],
+        "cost": 12380.0,
+        "mean_net": -12146.023269006488,
+        "median_net": -12272.145134799293,
+        "p10": -13321.820399861714,
+        "p90": -10880.747366548036,
+        "probability_positive": 0.0,
+        "conservative_net": -15079.909380805386
+      },
+      {
+        "actions": [
+          "technician",
+          "comp_pilot"
+        ],
+        "cost": 15520.0,
+        "mean_net": -13278.331139757047,
+        "median_net": -13385.786835456056,
+        "p10": -14318.525395791345,
+        "p90": -12010.114938098308,
+        "probability_positive": 0.0,
+        "conservative_net": -15520.0
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "lease_weak",
+          "preventive"
+        ],
+        "cost": 13580.0,
+        "mean_net": -13361.029742427718,
+        "median_net": -13487.151608220525,
+        "p10": -14536.826873282946,
+        "p90": -12095.753839969268,
+        "probability_positive": 0.0,
+        "conservative_net": -16294.915854226618
+      },
+      {
+        "actions": [
+          "preventive",
+          "comp_pilot"
+        ],
+        "cost": 13000.0,
+        "mean_net": -13606.856721698425,
+        "median_net": -13713.631264942198,
+        "p10": -14400.173362708134,
+        "p90": -12667.629819237492,
+        "probability_positive": 0.0,
+        "conservative_net": -15417.354624133486
+      },
+      {
+        "actions": [
+          "inspect_M-1181",
+          "preventive",
+          "comp_pilot"
+        ],
+        "cost": 14200.0,
+        "mean_net": -14821.863195119657,
+        "median_net": -14928.63773836343,
+        "p10": -15615.179836129366,
+        "p90": -13882.636292658724,
+        "probability_positive": 0.0,
+        "conservative_net": -16632.36109755472
+      },
+      {
+        "actions": [
+          "move_weak",
+          "preventive",
+          "comp_pilot"
+        ],
+        "cost": 14800.0,
+        "mean_net": -14851.741926698296,
+        "median_net": -14982.107371566217,
+        "p10": -15873.840964253579,
+        "p90": -13603.887039299583,
+        "probability_positive": 0.0,
+        "conservative_net": -17663.885063693924
+      },
+      {
+        "actions": [
+          "lease_weak",
+          "preventive",
+          "comp_pilot"
+        ],
+        "cost": 16380.0,
+        "mean_net": -16146.023269006488,
+        "median_net": -16272.145134799293,
+        "p10": -17321.82039986171,
+        "p90": -14880.747366548036,
+        "probability_positive": 0.0,
+        "conservative_net": -19079.909380805388
+      }
+    ],
+    "recommended": {
+      "actions": [],
+      "cost": 0,
+      "mean_net": 0.0,
+      "median_net": 0.0,
+      "p10": 0.0,
+      "p90": 0.0,
+      "probability_positive": 0.0,
+      "conservative_net": 0
+    },
+    "learning_option": [
+      "inspect_M-1158"
+    ],
+    "limitations": [
+      "Effects are assumed, not causal estimates. Probabilities are conditional on assumptions.",
+      "Simulation concerns theoretical contribution, not realized payout profit.",
+      "Common demand scenarios are used for all portfolios; shocks are bootstrapped independently by day.",
+      "Search is exhaustive only within this limited candidate list and conservative overlap exclusions.",
+      "Information value is unpriced; information-only actions may be worthwhile beyond 30 days.",
+      "Moving/replacement/signage targets require location and operational feasibility checks before implementation."
+    ]
+  },
+  "downtime": {
+    "hours": 5021.078888888889,
+    "missed_wagers_low": 856353.7586591465,
+    "missed_wagers_mid": 990374.5526150785,
+    "missed_wagers_high": 1138230.518955472,
+    "missed_theo_mid": 92253.68459083037,
+    "method": "Machine-by-weekday operating-day hourly wager rate, 25th/50th/75th percentiles; machine/global fallback. Historical machine opportunity, not net floor loss or confidence interval."
+  },
+  "bottom10": [
+    {
+      "machine_id": "M-5076",
+      "house_win_usd": 3573.25,
+      "theo_usd": 7478.7,
+      "coin_in_usd": 149574.0,
+      "available_hours": 1170.0,
+      "scheduled_hours": 1176.0,
+      "down_hours": 6.0,
+      "variance_usd2": 4440598.2255,
+      "missed_theo_mid": 24.2015625,
+      "missed_wagers_low": 445.046875,
+      "missed_wagers_mid": 484.03125,
+      "missed_wagers_high": 630.59375,
+      "active_days": 49,
+      "first_day": "2025-05-13T00:00:00.000",
+      "last_day": "2025-06-30T00:00:00.000",
+      "manufacturer": "Halcyon",
+      "theme": "Royal Draw",
+      "install_date": "2025-05-13T00:00:00.000",
+      "retire_date": null,
+      "lease_class": "leased_fixed",
+      "eligible_july": true,
+      "availability": 0.9948979592,
+      "theo_per_hour": 6.3920512821,
+      "actual_per_day": 72.9234693878,
+      "payout_gap": -3905.45,
+      "payout_sd": 2107.2726984185,
+      "standardized_gap": -1.8533196975,
+      "theme_peer_theo_per_hour": 10.5999371891,
+      "peer_ratio": 0.6030272791
+    },
+    {
+      "machine_id": "M-1158",
+      "house_win_usd": 15796.25,
+      "theo_usd": 51961.0,
+      "coin_in_usd": 519610.0,
+      "available_hours": 4339.9852777778,
+      "scheduled_hours": 4343.0,
+      "down_hours": 3.0147222222,
+      "variance_usd2": 62619681.045,
+      "missed_theo_mid": 32.2221537654,
+      "missed_wagers_low": 256.3770023148,
+      "missed_wagers_mid": 322.2215376539,
+      "missed_wagers_high": 407.7097771991,
+      "active_days": 181,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-06-30T00:00:00.000",
+      "manufacturer": "Ridgeline",
+      "theme": "Desert Gold",
+      "install_date": "2021-06-04T00:00:00.000",
+      "retire_date": null,
+      "lease_class": "owned",
+      "eligible_july": true,
+      "availability": 0.9993058434,
+      "theo_per_hour": 11.9726212589,
+      "actual_per_day": 87.2720994475,
+      "payout_gap": -36164.75,
+      "payout_sd": 7913.2598241812,
+      "standardized_gap": -4.5701456547,
+      "theme_peer_theo_per_hour": 17.7809564858,
+      "peer_ratio": 0.6733395511
+    },
+    {
+      "machine_id": "M-1120",
+      "house_win_usd": 16355.0,
+      "theo_usd": 18910.925,
+      "coin_in_usd": 378218.5,
+      "available_hours": 3150.1636111111,
+      "scheduled_hours": 3167.0,
+      "down_hours": 16.8363888889,
+      "variance_usd2": 10519944.2248125,
+      "missed_theo_mid": 97.4013169126,
+      "missed_wagers_low": 1399.6994010417,
+      "missed_wagers_mid": 1948.0263382523,
+      "missed_wagers_high": 2342.0118881348,
+      "active_days": 132,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-05-12T00:00:00.000",
+      "manufacturer": "Ridgeline",
+      "theme": "Royal Draw",
+      "install_date": "2018-02-16T00:00:00.000",
+      "retire_date": "2025-05-13T00:00:00.000",
+      "lease_class": "leased_revenue_share",
+      "eligible_july": false,
+      "availability": 0.9946838052,
+      "theo_per_hour": 6.0031564498,
+      "actual_per_day": 123.9015151515,
+      "payout_gap": -2555.925,
+      "payout_sd": 3243.4463499205,
+      "standardized_gap": -0.7880275251,
+      "theme_peer_theo_per_hour": 10.5999371891,
+      "peer_ratio": 0.56633887
+    },
+    {
+      "machine_id": "M-1118",
+      "house_win_usd": 20050.0,
+      "theo_usd": 25329.0,
+      "coin_in_usd": 253290.0,
+      "available_hours": 1313.4636111111,
+      "scheduled_hours": 1320.0,
+      "down_hours": 6.5363888889,
+      "variance_usd2": 66205854.0,
+      "missed_theo_mid": 80.7516377315,
+      "missed_wagers_low": 640.6656333929,
+      "missed_wagers_mid": 807.5163773148,
+      "missed_wagers_high": 860.624537037,
+      "active_days": 55,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-02-24T00:00:00.000",
+      "manufacturer": "Ridgeline",
+      "theme": "Platinum Reels",
+      "install_date": "2019-02-16T00:00:00.000",
+      "retire_date": "2025-02-25T00:00:00.000",
+      "lease_class": "leased_revenue_share",
+      "eligible_july": false,
+      "availability": 0.9950481902,
+      "theo_per_hour": 19.2841276955,
+      "actual_per_day": 364.5454545455,
+      "payout_gap": -5279.0,
+      "payout_sd": 8136.6979789101,
+      "standardized_gap": -0.6487889822,
+      "theme_peer_theo_per_hour": 16.7482730831,
+      "peer_ratio": 1.1514099155
+    },
+    {
+      "machine_id": "M-1238",
+      "house_win_usd": 24932.75,
+      "theo_usd": 33139.3125,
+      "coin_in_usd": 662786.25,
+      "available_hours": 4331.8036111111,
+      "scheduled_hours": 4343.0,
+      "down_hours": 11.1963888889,
+      "variance_usd2": 20434513.838281248,
+      "missed_theo_mid": 72.9823505498,
+      "missed_wagers_low": 1249.9100202546,
+      "missed_wagers_mid": 1459.6470109954,
+      "missed_wagers_high": 1825.6072511574,
+      "active_days": 181,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-06-30T00:00:00.000",
+      "manufacturer": "Halcyon",
+      "theme": "Royal Draw",
+      "install_date": "2017-10-03T00:00:00.000",
+      "retire_date": null,
+      "lease_class": "leased_fixed",
+      "eligible_july": true,
+      "availability": 0.9974219689,
+      "theo_per_hour": 7.6502342846,
+      "actual_per_day": 137.75,
+      "payout_gap": -8206.5625,
+      "payout_sd": 4520.4550477005,
+      "standardized_gap": -1.8154284056,
+      "theme_peer_theo_per_hour": 10.5999371891,
+      "peer_ratio": 0.7217244921
+    },
+    {
+      "machine_id": "M-1181",
+      "house_win_usd": 26977.0,
+      "theo_usd": 32516.16,
+      "coin_in_usd": 406452.0,
+      "available_hours": 4333.6177777778,
+      "scheduled_hours": 4343.0,
+      "down_hours": 9.3822222222,
+      "variance_usd2": 5300632.0674,
+      "missed_theo_mid": 76.9061756944,
+      "missed_wagers_low": 786.1475260417,
+      "missed_wagers_mid": 961.3271961806,
+      "missed_wagers_high": 1184.4542947049,
+      "active_days": 181,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-06-30T00:00:00.000",
+      "manufacturer": "Halcyon",
+      "theme": "Comet Cash",
+      "install_date": "2024-09-23T00:00:00.000",
+      "retire_date": null,
+      "lease_class": "leased_revenue_share",
+      "eligible_july": true,
+      "availability": 0.9978396909,
+      "theo_per_hour": 7.5032367106,
+      "actual_per_day": 149.044198895,
+      "payout_gap": -5539.16,
+      "payout_sd": 2302.3101588187,
+      "standardized_gap": -2.4059138943,
+      "theme_peer_theo_per_hour": 12.9864580819,
+      "peer_ratio": 0.5777739137
+    },
+    {
+      "machine_id": "M-1035",
+      "house_win_usd": 30303.5,
+      "theo_usd": 30894.6,
+      "coin_in_usd": 617892.0,
+      "available_hours": 4339.3863888889,
+      "scheduled_hours": 4343.0,
+      "down_hours": 3.6136111111,
+      "variance_usd2": 18847540.08275,
+      "missed_theo_mid": 19.5342029803,
+      "missed_wagers_low": 281.2970399306,
+      "missed_wagers_mid": 390.6840596065,
+      "missed_wagers_high": 460.7730584491,
+      "active_days": 181,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-06-30T00:00:00.000",
+      "manufacturer": "Northwind",
+      "theme": "Royal Draw",
+      "install_date": "2019-03-02T00:00:00.000",
+      "retire_date": null,
+      "lease_class": "leased_fixed",
+      "eligible_july": true,
+      "availability": 0.9991679459,
+      "theo_per_hour": 7.1195780305,
+      "actual_per_day": 167.4226519337,
+      "payout_gap": -591.1,
+      "payout_sd": 4341.3753676398,
+      "standardized_gap": -0.1361550085,
+      "theme_peer_theo_per_hour": 10.5999371891,
+      "peer_ratio": 0.6716622847
+    },
+    {
+      "machine_id": "M-1179",
+      "house_win_usd": 30393.75,
+      "theo_usd": 33784.7,
+      "coin_in_usd": 422308.75,
+      "available_hours": 4325.2266666667,
+      "scheduled_hours": 4343.0,
+      "down_hours": 17.7733333333,
+      "variance_usd2": 5431442.5917,
+      "missed_theo_mid": 139.3579784722,
+      "missed_wagers_low": 1328.6357798032,
+      "missed_wagers_mid": 1741.9747309028,
+      "missed_wagers_high": 2161.4335619213,
+      "active_days": 181,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-06-30T00:00:00.000",
+      "manufacturer": "Ridgeline",
+      "theme": "Comet Cash",
+      "install_date": "2021-08-10T00:00:00.000",
+      "retire_date": null,
+      "lease_class": "owned",
+      "eligible_july": true,
+      "availability": 0.9959075908,
+      "theo_per_hour": 7.8110819626,
+      "actual_per_day": 167.9212707182,
+      "payout_gap": -3390.95,
+      "payout_sd": 2330.5455566669,
+      "standardized_gap": -1.4550026668,
+      "theme_peer_theo_per_hour": 12.9864580819,
+      "peer_ratio": 0.6014790109
+    },
+    {
+      "machine_id": "M-1017",
+      "house_win_usd": 31939.5,
+      "theo_usd": 29525.6375,
+      "coin_in_usd": 590512.75,
+      "available_hours": 4332.6108333333,
+      "scheduled_hours": 4343.0,
+      "down_hours": 10.3891666667,
+      "variance_usd2": 17431175.09409375,
+      "missed_theo_mid": 63.149573206,
+      "missed_wagers_low": 1013.4864193831,
+      "missed_wagers_mid": 1262.9914641204,
+      "missed_wagers_high": 1600.2779210069,
+      "active_days": 181,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-06-30T00:00:00.000",
+      "manufacturer": "Ridgeline",
+      "theme": "Royal Draw",
+      "install_date": "2021-11-18T00:00:00.000",
+      "retire_date": null,
+      "lease_class": "leased_fixed",
+      "eligible_july": true,
+      "availability": 0.9976078364,
+      "theo_per_hour": 6.8147448815,
+      "actual_per_day": 176.4613259669,
+      "payout_gap": 2413.8625,
+      "payout_sd": 4175.0658790124,
+      "standardized_gap": 0.5781615356,
+      "theme_peer_theo_per_hour": 10.5999371891,
+      "peer_ratio": 0.6429042701
+    },
+    {
+      "machine_id": "M-1265",
+      "house_win_usd": 32071.0,
+      "theo_usd": 32208.88,
+      "coin_in_usd": 402611.0,
+      "available_hours": 4334.9463888889,
+      "scheduled_hours": 4343.0,
+      "down_hours": 8.0536111111,
+      "variance_usd2": 5254088.697,
+      "missed_theo_mid": 69.8015990741,
+      "missed_wagers_low": 702.7218778935,
+      "missed_wagers_mid": 872.5199884259,
+      "missed_wagers_high": 1008.1746267361,
+      "active_days": 181,
+      "first_day": "2025-01-01T00:00:00.000",
+      "last_day": "2025-06-30T00:00:00.000",
+      "manufacturer": "Halcyon",
+      "theme": "Comet Cash",
+      "install_date": "2023-11-14T00:00:00.000",
+      "retire_date": null,
+      "lease_class": "leased_revenue_share",
+      "eligible_july": true,
+      "availability": 0.9981456111,
+      "theo_per_hour": 7.4300526721,
+      "actual_per_day": 177.1878453039,
+      "payout_gap": -137.88,
+      "payout_sd": 2292.1799006622,
+      "standardized_gap": -0.0601523467,
+      "theme_peer_theo_per_hour": 12.9864580819,
+      "peer_ratio": 0.5721385019
+    }
+  ],
+  "action_catalog": [
+    {
+      "action_type_id": "A-MOVE-MACHINE",
+      "name": "Relocate one machine",
+      "unit": "machine",
+      "unit_cost_cents": 180000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 2,
+      "downtime_minutes": 180,
+      "quantity_limit": 24,
+      "incompatibility_group": "same_machine",
+      "notes": "Moves happen at a gaming-day boundary to an empty or swapped slot."
+    },
+    {
+      "action_type_id": "A-MOVE-BANK",
+      "name": "Relocate a whole bank",
+      "unit": "bank",
+      "unit_cost_cents": 950000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 5,
+      "downtime_minutes": 480,
+      "quantity_limit": 3,
+      "incompatibility_group": "same_machine",
+      "notes": "All machines in the bank move together."
+    },
+    {
+      "action_type_id": "A-REPLACE-LEASE",
+      "name": "Replace a machine with a leased new title",
+      "unit": "machine",
+      "unit_cost_cents": 250000,
+      "recurring_cost_cents_per_day": 5500,
+      "lead_days": 14,
+      "downtime_minutes": 360,
+      "quantity_limit": 20,
+      "incompatibility_group": "same_machine",
+      "notes": "Lease runs for the remainder of the horizon."
+    },
+    {
+      "action_type_id": "A-REPLACE-BUY",
+      "name": "Replace a machine with a purchased new title",
+      "unit": "machine",
+      "unit_cost_cents": 2200000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 21,
+      "downtime_minutes": 360,
+      "quantity_limit": 10,
+      "incompatibility_group": "same_machine",
+      "notes": "Capital cost charged to this budget in full."
+    },
+    {
+      "action_type_id": "A-TECH-SHIFT",
+      "name": "Add one technician to a shift for 30 days",
+      "unit": "technician_shift",
+      "unit_cost_cents": 1152000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 7,
+      "downtime_minutes": 0,
+      "quantity_limit": 3,
+      "incompatibility_group": null,
+      "notes": "8 h x 30 days at the supplied labor rate."
+    },
+    {
+      "action_type_id": "A-PREVENTIVE",
+      "name": "Preventive maintenance sweep for one manufacturer",
+      "unit": "manufacturer",
+      "unit_cost_cents": 900000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 7,
+      "downtime_minutes": 90,
+      "quantity_limit": 3,
+      "incompatibility_group": null,
+      "notes": "90 minutes downtime per machine, scheduled in quiet hours."
+    },
+    {
+      "action_type_id": "A-INSPECT",
+      "name": "Machine inspection and paytable verification",
+      "unit": "machine",
+      "unit_cost_cents": 120000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 1,
+      "downtime_minutes": 120,
+      "quantity_limit": 15,
+      "incompatibility_group": null,
+      "notes": "Outcome is information, not a guaranteed finding."
+    },
+    {
+      "action_type_id": "A-WAYFINDING",
+      "name": "Wayfinding and signage refresh for a zone",
+      "unit": "zone",
+      "unit_cost_cents": 750000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 10,
+      "downtime_minutes": 0,
+      "quantity_limit": 2,
+      "incompatibility_group": null,
+      "notes": "Signage and sightline changes; no construction."
+    },
+    {
+      "action_type_id": "A-COMP-PILOT",
+      "name": "Comp policy pilot with control group",
+      "unit": "pilot",
+      "unit_cost_cents": 400000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 5,
+      "downtime_minutes": 0,
+      "quantity_limit": 1,
+      "incompatibility_group": "comp_policy",
+      "notes": "Design, training and tracking only; comp costs still flow through POS cogs."
+    },
+    {
+      "action_type_id": "A-COMP-CHANGE",
+      "name": "Change comp redemption rate floor-wide",
+      "unit": "policy",
+      "unit_cost_cents": 150000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 3,
+      "downtime_minutes": 0,
+      "quantity_limit": 1,
+      "incompatibility_group": "comp_policy",
+      "notes": "Point cost per comp dollar can be set between 5 and 20."
+    },
+    {
+      "action_type_id": "A-PROMO",
+      "name": "Property promotion weekend",
+      "unit": "event",
+      "unit_cost_cents": 1500000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 14,
+      "downtime_minutes": 0,
+      "quantity_limit": 2,
+      "incompatibility_group": null,
+      "notes": "Marketing, prizes and staffing."
+    },
+    {
+      "action_type_id": "A-SURVEY",
+      "name": "Expanded guest intercept survey",
+      "unit": "month",
+      "unit_cost_cents": 350000,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 7,
+      "downtime_minutes": 0,
+      "quantity_limit": 1,
+      "incompatibility_group": null,
+      "notes": "Triples the monthly sample."
+    },
+    {
+      "action_type_id": "A-HOLD",
+      "name": "Preserve budget",
+      "unit": "none",
+      "unit_cost_cents": 0,
+      "recurring_cost_cents_per_day": 0,
+      "lead_days": 0,
+      "downtime_minutes": 0,
+      "quantity_limit": 1,
+      "incompatibility_group": null,
+      "notes": "A valid recommendation."
+    }
+  ]
+}
