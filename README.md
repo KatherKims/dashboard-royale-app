@@ -2,6 +2,8 @@
 
 A learning project built with Databricks and Python. The app has three pages: Casino overview, Machine investigation, and the $100,000 decision lab. All casino data is synthetic, January–June 2025. July 1–30 is the decision horizon, not the current calendar month.
 
+**Joining the team?** Start with [TEAM_HANDOFF.md](TEAM_HANDOFF.md) for collaboration steps, the analysis status, and the optional Gemini/retro-floor roadmap.
+
 ## What each tool does
 
 - **Databricks** runs the documented analysis and preserves the notebook for judges.
@@ -29,7 +31,7 @@ If `py -3.12` is unavailable, install Python 3.12 first. This project was tested
 
 ## Add this work to GitHub Desktop
 
-1. Choose **File → Add local repository** and select this folder. If it says this is not a Git repository, choose **Create a repository here**.
+1. Choose **File → Add local repository** and select this folder (the folder containing `app.py`, `README.md` and the hidden `.git` directory). If it says this is not a Git repository, verify the folder first. If you received a ZIP, clone the GitHub repository instead to get its history and remote connection.
 2. The first local checkpoint has already been saved. Click **History** to see it. After your next edit, review **Changes**, enter a short summary, then **Commit to main**. A commit is a saved checkpoint.
 3. When ready to upload, choose **Publish repository**. Review visibility before publishing. Raw data, passwords and tokens do not belong in Git.
 4. After later edits: review Changes → write a summary → Commit → Push origin. Committing saves locally; pushing updates GitHub.
