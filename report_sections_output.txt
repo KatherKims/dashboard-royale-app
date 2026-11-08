@@ -1,0 +1,2630 @@
+
+====================================================================================================
+FORECAST
+====================================================================================================
+{
+  "train_start": "2025-01-01",
+  "train_end": "2025-04-30",
+  "test_start": "2025-05-01",
+  "test_end": "2025-06-30",
+  "weekday_mae": 68698.55169827497,
+  "constant_mae": 218258.0969262295,
+  "winner": "weekday",
+  "improvement_pct": 0.6852416809925048,
+  "test_rows": [
+    {
+      "gaming_date": "2025-05-01T00:00:00.000",
+      "coin_in_usd": 1291815.85,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-02T00:00:00.000",
+      "coin_in_usd": 1631269.55,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-03T00:00:00.000",
+      "coin_in_usd": 1743901.5,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-04T00:00:00.000",
+      "coin_in_usd": 1343811.5,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-05T00:00:00.000",
+      "coin_in_usd": 1070007.9,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-06T00:00:00.000",
+      "coin_in_usd": 991699.2,
+      "weekday_prediction": 1112941.95,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-07T00:00:00.000",
+      "coin_in_usd": 1106454.35,
+      "weekday_prediction": 1149981.0444444446,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-08T00:00:00.000",
+      "coin_in_usd": 1203856.6,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-09T00:00:00.000",
+      "coin_in_usd": 1567783.0,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-10T00:00:00.000",
+      "coin_in_usd": 1755586.95,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-11T00:00:00.000",
+      "coin_in_usd": 1431857.75,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-12T00:00:00.000",
+      "coin_in_usd": 1221449.3,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-13T00:00:00.000",
+      "coin_in_usd": 1069979.25,
+      "weekday_prediction": 1112941.95,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-14T00:00:00.000",
+      "coin_in_usd": 1140824.55,
+      "weekday_prediction": 1149981.0444444446,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-15T00:00:00.000",
+      "coin_in_usd": 1290797.8,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-16T00:00:00.000",
+      "coin_in_usd": 1744575.8,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-17T00:00:00.000",
+      "coin_in_usd": 2073091.55,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-18T00:00:00.000",
+      "coin_in_usd": 1661795.4,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-19T00:00:00.000",
+      "coin_in_usd": 1228961.75,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-20T00:00:00.000",
+      "coin_in_usd": 1116186.25,
+      "weekday_prediction": 1112941.95,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-21T00:00:00.000",
+      "coin_in_usd": 1183952.15,
+      "weekday_prediction": 1149981.0444444446,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-22T00:00:00.000",
+      "coin_in_usd": 1305669.45,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-23T00:00:00.000",
+      "coin_in_usd": 1582260.85,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-24T00:00:00.000",
+      "coin_in_usd": 1808468.0,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-25T00:00:00.000",
+      "coin_in_usd": 1387073.1,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-26T00:00:00.000",
+      "coin_in_usd": 1196838.2,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-27T00:00:00.000",
+      "coin_in_usd": 1108861.95,
+      "weekday_prediction": 1112941.95,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-28T00:00:00.000",
+      "coin_in_usd": 1176974.6,
+      "weekday_prediction": 1149981.0444444446,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-29T00:00:00.000",
+      "coin_in_usd": 1279443.2,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-30T00:00:00.000",
+      "coin_in_usd": 1560965.95,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-05-31T00:00:00.000",
+      "coin_in_usd": 1708170.05,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-01T00:00:00.000",
+      "coin_in_usd": 1394639.55,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-02T00:00:00.000",
+      "coin_in_usd": 1187695.7,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-03T00:00:00.000",
+      "coin_in_usd": 1064891.45,
+      "weekday_prediction": 1112941.95,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-04T00:00:00.000",
+      "coin_in_usd": 1111422.4,
+      "weekday_prediction": 1149981.0444444446,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-05T00:00:00.000",
+      "coin_in_usd": 1227154.6,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-06T00:00:00.000",
+      "coin_in_usd": 1571962.25,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-07T00:00:00.000",
+      "coin_in_usd": 1722647.25,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-08T00:00:00.000",
+      "coin_in_usd": 1300608.3,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-09T00:00:00.000",
+      "coin_in_usd": 1240886.05,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-10T00:00:00.000",
+      "coin_in_usd": 1187963.45,
+      "weekday_prediction": 1112941.95,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-11T00:00:00.000",
+      "coin_in_usd": 1244896.95,
+      "weekday_prediction": 1149981.0444444446,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-12T00:00:00.000",
+      "coin_in_usd": 1346270.6,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-13T00:00:00.000",
+      "coin_in_usd": 1586472.9,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-14T00:00:00.000",
+      "coin_in_usd": 1799689.3,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-15T00:00:00.000",
+      "coin_in_usd": 1414084.85,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-16T00:00:00.000",
+      "coin_in_usd": 1135901.05,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-17T00:00:00.000",
+      "coin_in_usd": 1004140.85,
+      "weekday_prediction": 1112941.95,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-18T00:00:00.000",
+      "coin_in_usd": 1076348.25,
+      "weekday_prediction": 1149981.0444444446,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-19T00:00:00.000",
+      "coin_in_usd": 1183952.0,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-20T00:00:00.000",
+      "coin_in_usd": 1599667.0,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-21T00:00:00.000",
+      "coin_in_usd": 1729846.7,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-22T00:00:00.000",
+      "coin_in_usd": 1375155.3,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-23T00:00:00.000",
+      "coin_in_usd": 1162013.95,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-24T00:00:00.000",
+      "coin_in_usd": 1055434.8,
+      "weekday_prediction": 1112941.95,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-25T00:00:00.000",
+      "coin_in_usd": 1105788.65,
+      "weekday_prediction": 1149981.0444444446,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-26T00:00:00.000",
+      "coin_in_usd": 1276182.15,
+      "weekday_prediction": 1290980.4529411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-27T00:00:00.000",
+      "coin_in_usd": 1549921.4,
+      "weekday_prediction": 1655737.2029411765,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-28T00:00:00.000",
+      "coin_in_usd": 1601715.0,
+      "weekday_prediction": 1820595.1852941175,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-29T00:00:00.000",
+      "coin_in_usd": 1328909.25,
+      "weekday_prediction": 1465879.0823529414,
+      "constant_prediction": 1384919.0508333333
+    },
+    {
+      "gaming_date": "2025-06-30T00:00:00.000",
+      "coin_in_usd": 1144287.9,
+      "weekday_prediction": 1212138.3205882353,
+      "constant_prediction": 1384919.0508333333
+    }
+  ],
+  "july_refit_baseline_wagers": 40711161.62000001,
+  "july_refit_note": "Winner refit on Jan-Jun after holdout evaluation; July is a scenario, not a validated forecast."
+}
+
+====================================================================================================
+SIMULATION
+====================================================================================================
+{
+  "seed": 20251107,
+  "scenarios": 1000,
+  "objective": "Maximize expected 30-day incremental contribution",
+  "horizon": "2025-07-01 to 2025-07-30",
+  "candidate_count": 9,
+  "feasible_portfolios": 42,
+  "candidates": [
+    {
+      "id": "inspect_M-1158",
+      "action_type": "A-INSPECT",
+      "name": "Machine inspection and paytable verification",
+      "target": "M-1158",
+      "quantity": 1,
+      "cost": 1200.0,
+      "lead_days": 1,
+      "benefit_days": 29,
+      "catalogue_downtime_minutes": 120,
+      "additional_theo_cost": 23.945242517783758,
+      "targets": [
+        "M-1158"
+      ],
+      "assumption": "Information only; no cash recovery credited without a corrective-action estimate.",
+      "expected_net": -1223.945242517784
+    },
+    {
+      "id": "inspect_M-1181",
+      "action_type": "A-INSPECT",
+      "name": "Machine inspection and paytable verification",
+      "target": "M-1181",
+      "quantity": 1,
+      "cost": 1200.0,
+      "lead_days": 1,
+      "benefit_days": 29,
+      "catalogue_downtime_minutes": 120,
+      "additional_theo_cost": 15.006473421231838,
+      "targets": [
+        "M-1181"
+      ],
+      "assumption": "Information only; no cash recovery credited without a corrective-action estimate.",
+      "expected_net": -1215.006473421232
+    },
+    {
+      "id": "move_weak",
+      "action_type": "A-MOVE-MACHINE",
+      "name": "Relocate one machine",
+      "target": "M-5076",
+      "quantity": 1,
+      "cost": 1800.0,
+      "lead_days": 2,
+      "benefit_days": 28,
+      "catalogue_downtime_minutes": 180,
+      "additional_theo_cost": 19.176153846153845,
+      "targets": [
+        "M-5076"
+      ],
+      "assumption": "Incremental play uplift triangular(-10%,20%,60%); floor retention triangular(25%,50%,100%). Destination not yet chosen; exploratory candidate.",
+      "expected_net": -1244.8852049998711
+    },
+    {
+      "id": "lease_weak",
+      "action_type": "A-REPLACE-LEASE",
+      "name": "Replace a machine with a leased new title",
+      "target": "M-5076",
+      "quantity": 1,
+      "cost": 3380.0,
+      "lead_days": 14,
+      "benefit_days": 16,
+      "catalogue_downtime_minutes": 360,
+      "additional_theo_cost": 38.35230769230769,
+      "targets": [
+        "M-5076"
+      ],
+      "assumption": "New title uplift triangular(-10%,50%,150%); floor retention 25%-100%; no observed replacement effect claimed.",
+      "expected_net": -2539.166547308062
+    },
+    {
+      "id": "technician",
+      "action_type": "A-TECH-SHIFT",
+      "name": "Add one technician to a shift for 30 days",
+      "target": "One additional shift; roster to select",
+      "quantity": 1,
+      "cost": 11520.0,
+      "lead_days": 7,
+      "benefit_days": 23,
+      "catalogue_downtime_minutes": 0,
+      "additional_theo_cost": 0.0,
+      "targets": [
+        "M-5076",
+        "M-1158",
+        "M-1238",
+        "M-1181",
+        "M-1035",
+        "M-1179",
+        "M-1017",
+        "M-1265",
+        "M-1256",
+        "M-1063",
+        "M-1192",
+        "M-1162",
+        "M-1059",
+        "M-1048",
+        "M-1210",
+        "M-1184",
+        "M-1095",
+        "M-1075",
+        "M-1053",
+        "M-1041",
+        "M-1128",
+        "M-1070",
+        "M-1168",
+        "M-1252",
+        "M-1189",
+        "M-1042",
+        "M-1195",
+        "M-1532",
+        "M-1157",
+        "M-1289",
+        "M-1230",
+        "M-1232",
+        "M-1218",
+        "M-1290",
+        "M-1009",
+        "M-1065",
+        "M-1082",
+        "M-1033",
+        "M-1050",
+        "M-1026",
+        "M-1131",
+        "M-1202",
+        "M-1228",
+        "M-1288",
+        "M-1274",
+        "M-1173",
+        "M-1115",
+        "M-1270",
+        "M-1057",
+        "M-1140",
+        "M-1126",
+        "M-1076",
+        "M-1243",
+        "M-1239",
+        "M-1275",
+        "M-1255",
+        "M-1200",
+        "M-1163",
+        "M-1197",
+        "M-1240",
+        "M-1216",
+        "M-1245",
+        "M-1058",
+        "M-1300",
+        "M-1071",
+        "M-1144",
+        "M-1165",
+        "M-1248",
+        "M-1014",
+        "M-1153",
+        "M-1185",
+        "M-1086",
+        "M-1008",
+        "M-1107",
+        "M-1292",
+        "M-1092",
+        "M-1047",
+        "M-1083",
+        "M-1190",
+        "M-1034",
+        "M-1129",
+        "M-1084",
+        "M-1124",
+        "M-1207",
+        "M-1262",
+        "M-1139",
+        "M-1247",
+        "M-1194",
+        "M-1090",
+        "M-1010",
+        "M-1040",
+        "M-1221",
+        "M-1231",
+        "M-1283",
+        "M-1154",
+        "M-1012",
+        "M-1278",
+        "M-1088",
+        "M-1064",
+        "M-1003",
+        "M-1298",
+        "M-1056",
+        "M-7487",
+        "M-1299",
+        "M-1236",
+        "M-1241",
+        "M-1137",
+        "M-1073",
+        "M-1155",
+        "M-1015",
+        "M-1145",
+        "M-8743",
+        "M-2799",
+        "M-1276",
+        "M-1081",
+        "M-1004",
+        "M-1045",
+        "M-1286",
+        "M-1104",
+        "M-1054",
+        "M-1080",
+        "M-1249",
+        "M-1272",
+        "M-1037",
+        "M-7943",
+        "M-7756",
+        "M-1116",
+        "M-3101",
+        "M-1143",
+        "M-1079",
+        "M-1023",
+        "M-1068",
+        "M-1123",
+        "M-1006",
+        "M-1127",
+        "M-1038",
+        "M-8057",
+        "M-1149",
+        "M-1180",
+        "M-2642",
+        "M-1069",
+        "M-1279",
+        "M-1201",
+        "M-1150",
+        "M-1148",
+        "M-1052",
+        "M-1295",
+        "M-1227",
+        "M-1049",
+        "M-1277",
+        "M-1089",
+        "M-1030",
+        "M-1109",
+        "M-1094",
+        "M-1258",
+        "M-1187",
+        "M-1019",
+        "M-1146",
+        "M-1051",
+        "M-1215",
+        "M-1204",
+        "M-1183",
+        "M-1175",
+        "M-1251",
+        "M-1032",
+        "M-1250",
+        "M-1217",
+        "M-1117",
+        "M-1122",
+        "M-1264",
+        "M-1005",
+        "M-1235",
+        "M-1225",
+        "M-1110",
+        "M-1167",
+        "M-1119",
+        "M-1025",
+        "M-1028",
+        "M-1024",
+        "M-1280",
+        "M-1078",
+        "M-1260",
+        "M-1188",
+        "M-1178",
+        "M-1151",
+        "M-1101",
+        "M-1066",
+        "M-1018",
+        "M-1061",
+        "M-1282",
+        "M-1152",
+        "M-1293",
+        "M-1186",
+        "M-1220",
+        "M-1263",
+        "M-1191",
+        "M-1029",
+        "M-1199",
+        "M-1182",
+        "M-1002",
+        "M-1106",
+        "M-1046",
+        "M-1013",
+        "M-1020",
+        "M-1166",
+        "M-1211",
+        "M-1285",
+        "M-1141",
+        "M-1113",
+        "M-1007",
+        "M-1203",
+        "M-1159",
+        "M-1100",
+        "M-1259",
+        "M-1222",
+        "M-1208",
+        "M-1138",
+        "M-1284",
+        "M-1226",
+        "M-1172",
+        "M-1156",
+        "M-1108",
+        "M-1044",
+        "M-1055",
+        "M-1237",
+        "M-1062",
+        "M-1209",
+        "M-1176",
+        "M-1098",
+        "M-1134",
+        "M-1171",
+        "M-1105",
+        "M-1164",
+        "M-1160",
+        "M-1223",
+        "M-1021",
+        "M-1254",
+        "M-1136",
+        "M-1096",
+        "M-1234",
+        "M-1229",
+        "M-1224",
+        "M-1102",
+        "M-1242",
+        "M-1036",
+        "M-1273",
+        "M-1099",
+        "M-1297",
+        "M-1022",
+        "M-1060",
+        "M-1206",
+        "M-1125",
+        "M-1147",
+        "M-1205",
+        "M-1135",
+        "M-1177",
+        "M-1266",
+        "M-1067",
+        "M-1031",
+        "M-1133",
+        "M-1214",
+        "M-1112",
+        "M-1074",
+        "M-1043",
+        "M-1016",
+        "M-1269",
+        "M-1161",
+        "M-1103",
+        "M-1196",
+        "M-1296",
+        "M-1091",
+        "M-1219",
+        "M-1142",
+        "M-1244",
+        "M-1077",
+        "M-1001",
+        "M-1085",
+        "M-1246",
+        "M-1097",
+        "M-1213",
+        "M-1193",
+        "M-1132",
+        "M-1271",
+        "M-1261",
+        "M-1174",
+        "M-1072",
+        "M-1268",
+        "M-1233",
+        "M-1281",
+        "M-1039",
+        "M-1294",
+        "M-1111",
+        "M-1257",
+        "M-1130",
+        "M-1093",
+        "M-1121",
+        "M-1253",
+        "M-1011",
+        "M-1287",
+        "M-1027",
+        "M-1291",
+        "M-1169",
+        "M-1170",
+        "M-1114",
+        "M-1198",
+        "M-1212",
+        "M-1087",
+        "M-1267"
+      ],
+      "assumption": "Recovers 10%-60% (mode30%) of historical downtime opportunity scaled to 23 July days; assumes one shift can cover this opportunity.",
+      "expected_net": -9278.331139757047
+    },
+    {
+      "id": "preventive",
+      "action_type": "A-PREVENTIVE",
+      "name": "Preventive maintenance sweep for one manufacturer",
+      "target": "Ridgeline",
+      "quantity": 1,
+      "cost": 9000.0,
+      "lead_days": 7,
+      "benefit_days": 23,
+      "catalogue_downtime_minutes": 90,
+      "additional_theo_cost": 2417.3546241334866,
+      "targets": [
+        "M-1158",
+        "M-1179",
+        "M-1017",
+        "M-1063",
+        "M-1184",
+        "M-1095",
+        "M-1053",
+        "M-1041",
+        "M-1070",
+        "M-1168",
+        "M-1252",
+        "M-1195",
+        "M-1230",
+        "M-1009",
+        "M-1065",
+        "M-1033",
+        "M-1173",
+        "M-1057",
+        "M-1126",
+        "M-1076",
+        "M-1255",
+        "M-1197",
+        "M-1300",
+        "M-1144",
+        "M-1014",
+        "M-1153",
+        "M-1190",
+        "M-1034",
+        "M-1207",
+        "M-1139",
+        "M-1247",
+        "M-1090",
+        "M-1278",
+        "M-1236",
+        "M-1241",
+        "M-1073",
+        "M-1015",
+        "M-1081",
+        "M-1054",
+        "M-1127",
+        "M-1038",
+        "M-1180",
+        "M-1295",
+        "M-1049",
+        "M-1258",
+        "M-1051",
+        "M-1028",
+        "M-1078",
+        "M-1188",
+        "M-1151",
+        "M-1066",
+        "M-1061",
+        "M-1293",
+        "M-1182",
+        "M-1002",
+        "M-1106",
+        "M-1046",
+        "M-1166",
+        "M-1141",
+        "M-1226",
+        "M-1172",
+        "M-1156",
+        "M-1044",
+        "M-1176",
+        "M-1105",
+        "M-1164",
+        "M-1160",
+        "M-1223",
+        "M-1136",
+        "M-1102",
+        "M-1242",
+        "M-1036",
+        "M-1273",
+        "M-1297",
+        "M-1022",
+        "M-1125",
+        "M-1177",
+        "M-1031",
+        "M-1133",
+        "M-1214",
+        "M-1112",
+        "M-1043",
+        "M-1244",
+        "M-1193",
+        "M-1268",
+        "M-1111",
+        "M-1093",
+        "M-1121",
+        "M-1011",
+        "M-1027",
+        "M-1114",
+        "M-1267"
+      ],
+      "assumption": "Recovers 20%-80% (mode50%) of manufacturer downtime; planned 90 minutes per machine deducted.",
+      "expected_net": -9606.856721698427
+    },
+    {
+      "id": "signage",
+      "action_type": "A-WAYFINDING",
+      "name": "Wayfinding and signage refresh for a zone",
+      "target": "Back Forty",
+      "quantity": 1,
+      "cost": 7500.0,
+      "lead_days": 10,
+      "benefit_days": 20,
+      "catalogue_downtime_minutes": 0,
+      "additional_theo_cost": 0.0,
+      "targets": [
+        "M-1008",
+        "M-1014",
+        "M-1017",
+        "M-1033",
+        "M-1035",
+        "M-1040",
+        "M-1042",
+        "M-1045",
+        "M-1048",
+        "M-1053",
+        "M-1057",
+        "M-1063",
+        "M-1071",
+        "M-1073",
+        "M-1079",
+        "M-1082",
+        "M-1092",
+        "M-1116",
+        "M-1120",
+        "M-1128",
+        "M-1129",
+        "M-1131",
+        "M-1140",
+        "M-1146",
+        "M-1152",
+        "M-1154",
+        "M-1157",
+        "M-1158",
+        "M-1168",
+        "M-1179",
+        "M-1180",
+        "M-1181",
+        "M-1184",
+        "M-1185",
+        "M-1194",
+        "M-1197",
+        "M-1202",
+        "M-1207",
+        "M-1216",
+        "M-1221",
+        "M-1227",
+        "M-1230",
+        "M-1231",
+        "M-1232",
+        "M-1238",
+        "M-1256",
+        "M-1265",
+        "M-1283",
+        "M-5076"
+      ],
+      "assumption": "Zone play uplift triangular(0%,2.5%,8%); retained incremental floor play 25%-100%. Observational location differences are not causal effects.",
+      "expected_net": -2322.9102799195566
+    },
+    {
+      "id": "comp_policy",
+      "action_type": "A-COMP-CHANGE",
+      "name": "Change comp redemption rate floor-wide",
+      "target": "Floor-wide: proposed 12 points per comp face-value dollar",
+      "quantity": 1,
+      "cost": 1500.0,
+      "lead_days": 3,
+      "benefit_days": 27,
+      "catalogue_downtime_minutes": 0,
+      "additional_theo_cost": 0.0,
+      "targets": [],
+      "assumption": "Proposed rate12 (catalogue range5-20); savings0%-25% (mode10%) and loss of expected gaming earnings0%-0.2% (mode0.05%) are assumptions, not proven effects.",
+      "expected_net": -1028.3724442924035
+    },
+    {
+      "id": "comp_pilot",
+      "action_type": "A-COMP-PILOT",
+      "name": "Comp policy pilot with control group",
+      "target": "Randomized pilot with unchanged total comp budget",
+      "quantity": 1,
+      "cost": 4000.0,
+      "lead_days": 5,
+      "benefit_days": 25,
+      "catalogue_downtime_minutes": 0,
+      "additional_theo_cost": 0.0,
+      "targets": [],
+      "assumption": "Information-only test; no immediate benefit or additional comp spend credited. Cannot combine with floor-wide change.",
+      "expected_net": -4000.0
+    }
+  ],
+  "portfolios": [
+    {
+      "actions": [],
+      "cost": 0,
+      "mean_net": 0.0,
+      "median_net": 0.0,
+      "p10": 0.0,
+      "p90": 0.0,
+      "probability_positive": 0.0,
+      "conservative_net": 0
+    },
+    {
+      "actions": [
+        "comp_policy"
+      ],
+      "cost": 1500.0,
+      "mean_net": -1028.3724442924035,
+      "median_net": -975.1193526429633,
+      "p10": -3842.7362221794915,
+      "p90": 1643.580316432699,
+      "probability_positive": 0.31,
+      "conservative_net": -8524.583877563537
+    },
+    {
+      "actions": [
+        "inspect_M-1181"
+      ],
+      "cost": 1200.0,
+      "mean_net": -1215.006473421232,
+      "median_net": -1215.006473421232,
+      "p10": -1215.006473421232,
+      "p90": -1215.006473421232,
+      "probability_positive": 0.0,
+      "conservative_net": -1215.006473421232
+    },
+    {
+      "actions": [
+        "inspect_M-1158"
+      ],
+      "cost": 1200.0,
+      "mean_net": -1223.945242517784,
+      "median_net": -1223.9452425177838,
+      "p10": -1223.9452425177838,
+      "p90": -1223.9452425177838,
+      "probability_positive": 0.0,
+      "conservative_net": -1223.9452425177838
+    },
+    {
+      "actions": [
+        "move_weak"
+      ],
+      "cost": 1800.0,
+      "mean_net": -1244.8852049998711,
+      "median_net": -1302.740536941513,
+      "p10": -1701.5828251307423,
+      "p90": -720.3323525947942,
+      "probability_positive": 0.003,
+      "conservative_net": -2246.5304395604394
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "comp_policy"
+      ],
+      "cost": 2700.0,
+      "mean_net": -2243.3789177136355,
+      "median_net": -2190.1258260641953,
+      "p10": -5057.742695600723,
+      "p90": 428.5738430114671,
+      "probability_positive": 0.141,
+      "conservative_net": -9739.590350984769
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "comp_policy"
+      ],
+      "cost": 2700.0,
+      "mean_net": -2252.317686810187,
+      "median_net": -2199.064595160747,
+      "p10": -5066.681464697274,
+      "p90": 419.63507391491527,
+      "probability_positive": 0.14,
+      "conservative_net": -9748.52912008132
+    },
+    {
+      "actions": [
+        "signage"
+      ],
+      "cost": 7500.0,
+      "mean_net": -2322.9102799195566,
+      "median_net": -2862.6932959885703,
+      "p10": -5616.693729078954,
+      "p90": 1879.9814148432608,
+      "probability_positive": 0.198,
+      "conservative_net": -7500.0
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "inspect_M-1181"
+      ],
+      "cost": 2400.0,
+      "mean_net": -2438.9517159390157,
+      "median_net": -2438.9517159390157,
+      "p10": -2438.9517159390157,
+      "p90": -2438.9517159390157,
+      "probability_positive": 0.0,
+      "conservative_net": -2438.9517159390157
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "move_weak"
+      ],
+      "cost": 3000.0,
+      "mean_net": -2459.891678421103,
+      "median_net": -2517.747010362745,
+      "p10": -2916.5892985519745,
+      "p90": -1935.3388260160264,
+      "probability_positive": 0.0,
+      "conservative_net": -3461.5369129816713
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "move_weak"
+      ],
+      "cost": 3000.0,
+      "mean_net": -2468.8304475176546,
+      "median_net": -2526.6857794592966,
+      "p10": -2925.5280676485263,
+      "p90": -1944.2775951125782,
+      "probability_positive": 0.0,
+      "conservative_net": -3470.475682078223
+    },
+    {
+      "actions": [
+        "lease_weak"
+      ],
+      "cost": 3380.0,
+      "mean_net": -2539.166547308062,
+      "median_net": -2614.2456162997732,
+      "p10": -3176.143724626705,
+      "p90": -1847.8575612133561,
+      "probability_positive": 0.0,
+      "conservative_net": -3662.554756671899
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "inspect_M-1181",
+        "comp_policy"
+      ],
+      "cost": 3900.0,
+      "mean_net": -3467.324160231419,
+      "median_net": -3414.071068581979,
+      "p10": -6281.687938118506,
+      "p90": -795.3713995063167,
+      "probability_positive": 0.05,
+      "conservative_net": -10963.535593502553
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "inspect_M-1181",
+        "move_weak"
+      ],
+      "cost": 4200.0,
+      "mean_net": -3683.8369209388866,
+      "median_net": -3741.6922528805285,
+      "p10": -4140.534541069758,
+      "p90": -3159.28406853381,
+      "probability_positive": 0.0,
+      "conservative_net": -4685.482155499455
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "lease_weak"
+      ],
+      "cost": 4580.0,
+      "mean_net": -3754.173020729294,
+      "median_net": -3829.252089721005,
+      "p10": -4391.150198047937,
+      "p90": -3062.8640346345883,
+      "probability_positive": 0.0,
+      "conservative_net": -4877.561230093132
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "lease_weak"
+      ],
+      "cost": 4580.0,
+      "mean_net": -3763.1117898258453,
+      "median_net": -3838.1908588175575,
+      "p10": -4400.088967144489,
+      "p90": -3071.8028037311396,
+      "probability_positive": 0.0,
+      "conservative_net": -4886.499999189683
+    },
+    {
+      "actions": [
+        "comp_pilot"
+      ],
+      "cost": 4000.0,
+      "mean_net": -4000.0,
+      "median_net": -4000.0,
+      "p10": -4000.0,
+      "p90": -4000.0,
+      "probability_positive": 0.0,
+      "conservative_net": -4000.0
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "inspect_M-1181",
+        "lease_weak"
+      ],
+      "cost": 5780.0,
+      "mean_net": -4978.118263247078,
+      "median_net": -5053.197332238789,
+      "p10": -5615.095440565721,
+      "p90": -4286.809277152372,
+      "probability_positive": 0.0,
+      "conservative_net": -6101.506472610915
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "comp_pilot"
+      ],
+      "cost": 5200.0,
+      "mean_net": -5215.006473421234,
+      "median_net": -5215.006473421232,
+      "p10": -5215.006473421232,
+      "p90": -5215.006473421232,
+      "probability_positive": 0.0,
+      "conservative_net": -5215.006473421232
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "comp_pilot"
+      ],
+      "cost": 5200.0,
+      "mean_net": -5223.945242517786,
+      "median_net": -5223.945242517784,
+      "p10": -5223.945242517784,
+      "p90": -5223.945242517784,
+      "probability_positive": 0.0,
+      "conservative_net": -5223.945242517784
+    },
+    {
+      "actions": [
+        "move_weak",
+        "comp_pilot"
+      ],
+      "cost": 5800.0,
+      "mean_net": -5244.885204999871,
+      "median_net": -5302.740536941514,
+      "p10": -5701.582825130743,
+      "p90": -4720.3323525947935,
+      "probability_positive": 0.0,
+      "conservative_net": -6246.53043956044
+    },
+    {
+      "actions": [
+        "signage",
+        "comp_pilot"
+      ],
+      "cost": 11500.0,
+      "mean_net": -6322.910279919557,
+      "median_net": -6862.693295988571,
+      "p10": -9616.693729078954,
+      "p90": -2120.0185851567394,
+      "probability_positive": 0.032,
+      "conservative_net": -11500.0
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "inspect_M-1181",
+        "comp_pilot"
+      ],
+      "cost": 6400.0,
+      "mean_net": -6438.951715939015,
+      "median_net": -6438.951715939016,
+      "p10": -6438.951715939016,
+      "p90": -6438.951715939016,
+      "probability_positive": 0.0,
+      "conservative_net": -6438.951715939016
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "move_weak",
+        "comp_pilot"
+      ],
+      "cost": 7000.0,
+      "mean_net": -6459.891678421102,
+      "median_net": -6517.747010362746,
+      "p10": -6916.589298551975,
+      "p90": -5935.338826016025,
+      "probability_positive": 0.0,
+      "conservative_net": -7461.536912981672
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "move_weak",
+        "comp_pilot"
+      ],
+      "cost": 7000.0,
+      "mean_net": -6468.830447517655,
+      "median_net": -6526.685779459296,
+      "p10": -6925.528067648526,
+      "p90": -5944.277595112578,
+      "probability_positive": 0.0,
+      "conservative_net": -7470.475682078223
+    },
+    {
+      "actions": [
+        "lease_weak",
+        "comp_pilot"
+      ],
+      "cost": 7380.0,
+      "mean_net": -6539.166547308061,
+      "median_net": -6614.245616299773,
+      "p10": -7176.143724626705,
+      "p90": -5847.857561213356,
+      "probability_positive": 0.0,
+      "conservative_net": -7662.5547566719
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "inspect_M-1181",
+        "move_weak",
+        "comp_pilot"
+      ],
+      "cost": 8200.0,
+      "mean_net": -7683.836920938887,
+      "median_net": -7741.692252880528,
+      "p10": -8140.534541069758,
+      "p90": -7159.28406853381,
+      "probability_positive": 0.0,
+      "conservative_net": -8685.482155499456
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "lease_weak",
+        "comp_pilot"
+      ],
+      "cost": 8580.0,
+      "mean_net": -7754.173020729294,
+      "median_net": -7829.252089721005,
+      "p10": -8391.150198047937,
+      "p90": -7062.864034634588,
+      "probability_positive": 0.0,
+      "conservative_net": -8877.561230093132
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "lease_weak",
+        "comp_pilot"
+      ],
+      "cost": 8580.0,
+      "mean_net": -7763.111789825845,
+      "median_net": -7838.1908588175575,
+      "p10": -8400.08896714449,
+      "p90": -7071.80280373114,
+      "probability_positive": 0.0,
+      "conservative_net": -8886.499999189684
+    },
+    {
+      "actions": [
+        "inspect_M-1158",
+        "inspect_M-1181",
+        "lease_weak",
+        "comp_pilot"
+      ],
+      "cost": 9780.0,
+      "mean_net": -8978.118263247077,
+      "median_net": -9053.19733223879,
+      "p10": -9615.095440565721,
+      "p90": -8286.809277152373,
+      "probability_positive": 0.0,
+      "conservative_net": -10101.506472610916
+    },
+    {
+      "actions": [
+        "technician"
+      ],
+      "cost": 11520.0,
+      "mean_net": -9278.331139757047,
+      "median_net": -9385.786835456056,
+      "p10": -10318.525395791345,
+      "p90": -8010.114938098309,
+      "probability_positive": 0.0,
+      "conservative_net": -11520.0
+    },
+    {
+      "actions": [
+        "preventive"
+      ],
+      "cost": 9000.0,
+      "mean_net": -9606.856721698427,
+      "median_net": -9713.631264942198,
+      "p10": -10400.173362708134,
+      "p90": -8667.629819237492,
+      "probability_positive": 0.0,
+      "conservative_net": -11417.354624133486
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "preventive"
+      ],
+      "cost": 10200.0,
+      "mean_net": -10821.863195119657,
+      "median_net": -10928.63773836343,
+      "p10": -11615.179836129366,
+      "p90": -9882.636292658724,
+      "probability_positive": 0.0,
+      "conservative_net": -12632.361097554718
+    },
+    {
+      "actions": [
+        "move_weak",
+        "preventive"
+      ],
+      "cost": 10800.0,
+      "mean_net": -10851.741926698294,
+      "median_net": -10982.107371566217,
+      "p10": -11873.840964253579,
+      "p90": -9603.887039299583,
+      "probability_positive": 0.0,
+      "conservative_net": -13663.885063693926
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "move_weak",
+        "preventive"
+      ],
+      "cost": 12000.0,
+      "mean_net": -12066.748400119528,
+      "median_net": -12197.113844987449,
+      "p10": -13088.84743767481,
+      "p90": -10818.893512720815,
+      "probability_positive": 0.0,
+      "conservative_net": -14878.891537115158
+    },
+    {
+      "actions": [
+        "lease_weak",
+        "preventive"
+      ],
+      "cost": 12380.0,
+      "mean_net": -12146.023269006488,
+      "median_net": -12272.145134799293,
+      "p10": -13321.820399861714,
+      "p90": -10880.747366548036,
+      "probability_positive": 0.0,
+      "conservative_net": -15079.909380805386
+    },
+    {
+      "actions": [
+        "technician",
+        "comp_pilot"
+      ],
+      "cost": 15520.0,
+      "mean_net": -13278.331139757047,
+      "median_net": -13385.786835456056,
+      "p10": -14318.525395791345,
+      "p90": -12010.114938098308,
+      "probability_positive": 0.0,
+      "conservative_net": -15520.0
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "lease_weak",
+        "preventive"
+      ],
+      "cost": 13580.0,
+      "mean_net": -13361.029742427718,
+      "median_net": -13487.151608220525,
+      "p10": -14536.826873282946,
+      "p90": -12095.753839969268,
+      "probability_positive": 0.0,
+      "conservative_net": -16294.915854226618
+    },
+    {
+      "actions": [
+        "preventive",
+        "comp_pilot"
+      ],
+      "cost": 13000.0,
+      "mean_net": -13606.856721698425,
+      "median_net": -13713.631264942198,
+      "p10": -14400.173362708134,
+      "p90": -12667.629819237492,
+      "probability_positive": 0.0,
+      "conservative_net": -15417.354624133486
+    },
+    {
+      "actions": [
+        "inspect_M-1181",
+        "preventive",
+        "comp_pilot"
+      ],
+      "cost": 14200.0,
+      "mean_net": -14821.863195119657,
+      "median_net": -14928.63773836343,
+      "p10": -15615.179836129366,
+      "p90": -13882.636292658724,
+      "probability_positive": 0.0,
+      "conservative_net": -16632.36109755472
+    },
+    {
+      "actions": [
+        "move_weak",
+        "preventive",
+        "comp_pilot"
+      ],
+      "cost": 14800.0,
+      "mean_net": -14851.741926698296,
+      "median_net": -14982.107371566217,
+      "p10": -15873.840964253579,
+      "p90": -13603.887039299583,
+      "probability_positive": 0.0,
+      "conservative_net": -17663.885063693924
+    },
+    {
+      "actions": [
+        "lease_weak",
+        "preventive",
+        "comp_pilot"
+      ],
+      "cost": 16380.0,
+      "mean_net": -16146.023269006488,
+      "median_net": -16272.145134799293,
+      "p10": -17321.82039986171,
+      "p90": -14880.747366548036,
+      "probability_positive": 0.0,
+      "conservative_net": -19079.909380805388
+    }
+  ],
+  "recommended": {
+    "actions": [],
+    "cost": 0,
+    "mean_net": 0.0,
+    "median_net": 0.0,
+    "p10": 0.0,
+    "p90": 0.0,
+    "probability_positive": 0.0,
+    "conservative_net": 0
+  },
+  "learning_option": [
+    "inspect_M-1158"
+  ],
+  "limitations": [
+    "Effects are assumed, not causal estimates. Probabilities are conditional on assumptions.",
+    "Simulation concerns theoretical contribution, not realized payout profit.",
+    "Common demand scenarios are used for all portfolios; shocks are bootstrapped independently by day.",
+    "Search is exhaustive only within this limited candidate list and conservative overlap exclusions.",
+    "Information value is unpriced; information-only actions may be worthwhile beyond 30 days.",
+    "Moving/replacement/signage targets require location and operational feasibility checks before implementation."
+  ]
+}
+
+====================================================================================================
+DOWNTIME
+====================================================================================================
+{
+  "hours": 5021.078888888889,
+  "missed_wagers_low": 856353.7586591465,
+  "missed_wagers_mid": 990374.5526150785,
+  "missed_wagers_high": 1138230.518955472,
+  "missed_theo_mid": 92253.68459083037,
+  "method": "Machine-by-weekday operating-day hourly wager rate, 25th/50th/75th percentiles; machine/global fallback. Historical machine opportunity, not net floor loss or confidence interval."
+}
+
+====================================================================================================
+BOTTOM10
+====================================================================================================
+[
+  {
+    "machine_id": "M-5076",
+    "house_win_usd": 3573.25,
+    "theo_usd": 7478.7,
+    "coin_in_usd": 149574.0,
+    "available_hours": 1170.0,
+    "scheduled_hours": 1176.0,
+    "down_hours": 6.0,
+    "variance_usd2": 4440598.2255,
+    "missed_theo_mid": 24.2015625,
+    "missed_wagers_low": 445.046875,
+    "missed_wagers_mid": 484.03125,
+    "missed_wagers_high": 630.59375,
+    "active_days": 49,
+    "first_day": "2025-05-13T00:00:00.000",
+    "last_day": "2025-06-30T00:00:00.000",
+    "manufacturer": "Halcyon",
+    "theme": "Royal Draw",
+    "install_date": "2025-05-13T00:00:00.000",
+    "retire_date": null,
+    "lease_class": "leased_fixed",
+    "eligible_july": true,
+    "availability": 0.9948979592,
+    "theo_per_hour": 6.3920512821,
+    "actual_per_day": 72.9234693878,
+    "payout_gap": -3905.45,
+    "payout_sd": 2107.2726984185,
+    "standardized_gap": -1.8533196975,
+    "theme_peer_theo_per_hour": 10.5999371891,
+    "peer_ratio": 0.6030272791
+  },
+  {
+    "machine_id": "M-1158",
+    "house_win_usd": 15796.25,
+    "theo_usd": 51961.0,
+    "coin_in_usd": 519610.0,
+    "available_hours": 4339.9852777778,
+    "scheduled_hours": 4343.0,
+    "down_hours": 3.0147222222,
+    "variance_usd2": 62619681.045,
+    "missed_theo_mid": 32.2221537654,
+    "missed_wagers_low": 256.3770023148,
+    "missed_wagers_mid": 322.2215376539,
+    "missed_wagers_high": 407.7097771991,
+    "active_days": 181,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-06-30T00:00:00.000",
+    "manufacturer": "Ridgeline",
+    "theme": "Desert Gold",
+    "install_date": "2021-06-04T00:00:00.000",
+    "retire_date": null,
+    "lease_class": "owned",
+    "eligible_july": true,
+    "availability": 0.9993058434,
+    "theo_per_hour": 11.9726212589,
+    "actual_per_day": 87.2720994475,
+    "payout_gap": -36164.75,
+    "payout_sd": 7913.2598241812,
+    "standardized_gap": -4.5701456547,
+    "theme_peer_theo_per_hour": 17.7809564858,
+    "peer_ratio": 0.6733395511
+  },
+  {
+    "machine_id": "M-1120",
+    "house_win_usd": 16355.0,
+    "theo_usd": 18910.925,
+    "coin_in_usd": 378218.5,
+    "available_hours": 3150.1636111111,
+    "scheduled_hours": 3167.0,
+    "down_hours": 16.8363888889,
+    "variance_usd2": 10519944.2248125,
+    "missed_theo_mid": 97.4013169126,
+    "missed_wagers_low": 1399.6994010417,
+    "missed_wagers_mid": 1948.0263382523,
+    "missed_wagers_high": 2342.0118881348,
+    "active_days": 132,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-05-12T00:00:00.000",
+    "manufacturer": "Ridgeline",
+    "theme": "Royal Draw",
+    "install_date": "2018-02-16T00:00:00.000",
+    "retire_date": "2025-05-13T00:00:00.000",
+    "lease_class": "leased_revenue_share",
+    "eligible_july": false,
+    "availability": 0.9946838052,
+    "theo_per_hour": 6.0031564498,
+    "actual_per_day": 123.9015151515,
+    "payout_gap": -2555.925,
+    "payout_sd": 3243.4463499205,
+    "standardized_gap": -0.7880275251,
+    "theme_peer_theo_per_hour": 10.5999371891,
+    "peer_ratio": 0.56633887
+  },
+  {
+    "machine_id": "M-1118",
+    "house_win_usd": 20050.0,
+    "theo_usd": 25329.0,
+    "coin_in_usd": 253290.0,
+    "available_hours": 1313.4636111111,
+    "scheduled_hours": 1320.0,
+    "down_hours": 6.5363888889,
+    "variance_usd2": 66205854.0,
+    "missed_theo_mid": 80.7516377315,
+    "missed_wagers_low": 640.6656333929,
+    "missed_wagers_mid": 807.5163773148,
+    "missed_wagers_high": 860.624537037,
+    "active_days": 55,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-02-24T00:00:00.000",
+    "manufacturer": "Ridgeline",
+    "theme": "Platinum Reels",
+    "install_date": "2019-02-16T00:00:00.000",
+    "retire_date": "2025-02-25T00:00:00.000",
+    "lease_class": "leased_revenue_share",
+    "eligible_july": false,
+    "availability": 0.9950481902,
+    "theo_per_hour": 19.2841276955,
+    "actual_per_day": 364.5454545455,
+    "payout_gap": -5279.0,
+    "payout_sd": 8136.6979789101,
+    "standardized_gap": -0.6487889822,
+    "theme_peer_theo_per_hour": 16.7482730831,
+    "peer_ratio": 1.1514099155
+  },
+  {
+    "machine_id": "M-1238",
+    "house_win_usd": 24932.75,
+    "theo_usd": 33139.3125,
+    "coin_in_usd": 662786.25,
+    "available_hours": 4331.8036111111,
+    "scheduled_hours": 4343.0,
+    "down_hours": 11.1963888889,
+    "variance_usd2": 20434513.838281248,
+    "missed_theo_mid": 72.9823505498,
+    "missed_wagers_low": 1249.9100202546,
+    "missed_wagers_mid": 1459.6470109954,
+    "missed_wagers_high": 1825.6072511574,
+    "active_days": 181,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-06-30T00:00:00.000",
+    "manufacturer": "Halcyon",
+    "theme": "Royal Draw",
+    "install_date": "2017-10-03T00:00:00.000",
+    "retire_date": null,
+    "lease_class": "leased_fixed",
+    "eligible_july": true,
+    "availability": 0.9974219689,
+    "theo_per_hour": 7.6502342846,
+    "actual_per_day": 137.75,
+    "payout_gap": -8206.5625,
+    "payout_sd": 4520.4550477005,
+    "standardized_gap": -1.8154284056,
+    "theme_peer_theo_per_hour": 10.5999371891,
+    "peer_ratio": 0.7217244921
+  },
+  {
+    "machine_id": "M-1181",
+    "house_win_usd": 26977.0,
+    "theo_usd": 32516.16,
+    "coin_in_usd": 406452.0,
+    "available_hours": 4333.6177777778,
+    "scheduled_hours": 4343.0,
+    "down_hours": 9.3822222222,
+    "variance_usd2": 5300632.0674,
+    "missed_theo_mid": 76.9061756944,
+    "missed_wagers_low": 786.1475260417,
+    "missed_wagers_mid": 961.3271961806,
+    "missed_wagers_high": 1184.4542947049,
+    "active_days": 181,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-06-30T00:00:00.000",
+    "manufacturer": "Halcyon",
+    "theme": "Comet Cash",
+    "install_date": "2024-09-23T00:00:00.000",
+    "retire_date": null,
+    "lease_class": "leased_revenue_share",
+    "eligible_july": true,
+    "availability": 0.9978396909,
+    "theo_per_hour": 7.5032367106,
+    "actual_per_day": 149.044198895,
+    "payout_gap": -5539.16,
+    "payout_sd": 2302.3101588187,
+    "standardized_gap": -2.4059138943,
+    "theme_peer_theo_per_hour": 12.9864580819,
+    "peer_ratio": 0.5777739137
+  },
+  {
+    "machine_id": "M-1035",
+    "house_win_usd": 30303.5,
+    "theo_usd": 30894.6,
+    "coin_in_usd": 617892.0,
+    "available_hours": 4339.3863888889,
+    "scheduled_hours": 4343.0,
+    "down_hours": 3.6136111111,
+    "variance_usd2": 18847540.08275,
+    "missed_theo_mid": 19.5342029803,
+    "missed_wagers_low": 281.2970399306,
+    "missed_wagers_mid": 390.6840596065,
+    "missed_wagers_high": 460.7730584491,
+    "active_days": 181,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-06-30T00:00:00.000",
+    "manufacturer": "Northwind",
+    "theme": "Royal Draw",
+    "install_date": "2019-03-02T00:00:00.000",
+    "retire_date": null,
+    "lease_class": "leased_fixed",
+    "eligible_july": true,
+    "availability": 0.9991679459,
+    "theo_per_hour": 7.1195780305,
+    "actual_per_day": 167.4226519337,
+    "payout_gap": -591.1,
+    "payout_sd": 4341.3753676398,
+    "standardized_gap": -0.1361550085,
+    "theme_peer_theo_per_hour": 10.5999371891,
+    "peer_ratio": 0.6716622847
+  },
+  {
+    "machine_id": "M-1179",
+    "house_win_usd": 30393.75,
+    "theo_usd": 33784.7,
+    "coin_in_usd": 422308.75,
+    "available_hours": 4325.2266666667,
+    "scheduled_hours": 4343.0,
+    "down_hours": 17.7733333333,
+    "variance_usd2": 5431442.5917,
+    "missed_theo_mid": 139.3579784722,
+    "missed_wagers_low": 1328.6357798032,
+    "missed_wagers_mid": 1741.9747309028,
+    "missed_wagers_high": 2161.4335619213,
+    "active_days": 181,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-06-30T00:00:00.000",
+    "manufacturer": "Ridgeline",
+    "theme": "Comet Cash",
+    "install_date": "2021-08-10T00:00:00.000",
+    "retire_date": null,
+    "lease_class": "owned",
+    "eligible_july": true,
+    "availability": 0.9959075908,
+    "theo_per_hour": 7.8110819626,
+    "actual_per_day": 167.9212707182,
+    "payout_gap": -3390.95,
+    "payout_sd": 2330.5455566669,
+    "standardized_gap": -1.4550026668,
+    "theme_peer_theo_per_hour": 12.9864580819,
+    "peer_ratio": 0.6014790109
+  },
+  {
+    "machine_id": "M-1017",
+    "house_win_usd": 31939.5,
+    "theo_usd": 29525.6375,
+    "coin_in_usd": 590512.75,
+    "available_hours": 4332.6108333333,
+    "scheduled_hours": 4343.0,
+    "down_hours": 10.3891666667,
+    "variance_usd2": 17431175.09409375,
+    "missed_theo_mid": 63.149573206,
+    "missed_wagers_low": 1013.4864193831,
+    "missed_wagers_mid": 1262.9914641204,
+    "missed_wagers_high": 1600.2779210069,
+    "active_days": 181,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-06-30T00:00:00.000",
+    "manufacturer": "Ridgeline",
+    "theme": "Royal Draw",
+    "install_date": "2021-11-18T00:00:00.000",
+    "retire_date": null,
+    "lease_class": "leased_fixed",
+    "eligible_july": true,
+    "availability": 0.9976078364,
+    "theo_per_hour": 6.8147448815,
+    "actual_per_day": 176.4613259669,
+    "payout_gap": 2413.8625,
+    "payout_sd": 4175.0658790124,
+    "standardized_gap": 0.5781615356,
+    "theme_peer_theo_per_hour": 10.5999371891,
+    "peer_ratio": 0.6429042701
+  },
+  {
+    "machine_id": "M-1265",
+    "house_win_usd": 32071.0,
+    "theo_usd": 32208.88,
+    "coin_in_usd": 402611.0,
+    "available_hours": 4334.9463888889,
+    "scheduled_hours": 4343.0,
+    "down_hours": 8.0536111111,
+    "variance_usd2": 5254088.697,
+    "missed_theo_mid": 69.8015990741,
+    "missed_wagers_low": 702.7218778935,
+    "missed_wagers_mid": 872.5199884259,
+    "missed_wagers_high": 1008.1746267361,
+    "active_days": 181,
+    "first_day": "2025-01-01T00:00:00.000",
+    "last_day": "2025-06-30T00:00:00.000",
+    "manufacturer": "Halcyon",
+    "theme": "Comet Cash",
+    "install_date": "2023-11-14T00:00:00.000",
+    "retire_date": null,
+    "lease_class": "leased_revenue_share",
+    "eligible_july": true,
+    "availability": 0.9981456111,
+    "theo_per_hour": 7.4300526721,
+    "actual_per_day": 177.1878453039,
+    "payout_gap": -137.88,
+    "payout_sd": 2292.1799006622,
+    "standardized_gap": -0.0601523467,
+    "theme_peer_theo_per_hour": 12.9864580819,
+    "peer_ratio": 0.5721385019
+  }
+]
+
+====================================================================================================
+ACTION_CATALOG
+====================================================================================================
+[
+  {
+    "action_type_id": "A-MOVE-MACHINE",
+    "name": "Relocate one machine",
+    "unit": "machine",
+    "unit_cost_cents": 180000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 2,
+    "downtime_minutes": 180,
+    "quantity_limit": 24,
+    "incompatibility_group": "same_machine",
+    "notes": "Moves happen at a gaming-day boundary to an empty or swapped slot."
+  },
+  {
+    "action_type_id": "A-MOVE-BANK",
+    "name": "Relocate a whole bank",
+    "unit": "bank",
+    "unit_cost_cents": 950000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 5,
+    "downtime_minutes": 480,
+    "quantity_limit": 3,
+    "incompatibility_group": "same_machine",
+    "notes": "All machines in the bank move together."
+  },
+  {
+    "action_type_id": "A-REPLACE-LEASE",
+    "name": "Replace a machine with a leased new title",
+    "unit": "machine",
+    "unit_cost_cents": 250000,
+    "recurring_cost_cents_per_day": 5500,
+    "lead_days": 14,
+    "downtime_minutes": 360,
+    "quantity_limit": 20,
+    "incompatibility_group": "same_machine",
+    "notes": "Lease runs for the remainder of the horizon."
+  },
+  {
+    "action_type_id": "A-REPLACE-BUY",
+    "name": "Replace a machine with a purchased new title",
+    "unit": "machine",
+    "unit_cost_cents": 2200000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 21,
+    "downtime_minutes": 360,
+    "quantity_limit": 10,
+    "incompatibility_group": "same_machine",
+    "notes": "Capital cost charged to this budget in full."
+  },
+  {
+    "action_type_id": "A-TECH-SHIFT",
+    "name": "Add one technician to a shift for 30 days",
+    "unit": "technician_shift",
+    "unit_cost_cents": 1152000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 7,
+    "downtime_minutes": 0,
+    "quantity_limit": 3,
+    "incompatibility_group": null,
+    "notes": "8 h x 30 days at the supplied labor rate."
+  },
+  {
+    "action_type_id": "A-PREVENTIVE",
+    "name": "Preventive maintenance sweep for one manufacturer",
+    "unit": "manufacturer",
+    "unit_cost_cents": 900000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 7,
+    "downtime_minutes": 90,
+    "quantity_limit": 3,
+    "incompatibility_group": null,
+    "notes": "90 minutes downtime per machine, scheduled in quiet hours."
+  },
+  {
+    "action_type_id": "A-INSPECT",
+    "name": "Machine inspection and paytable verification",
+    "unit": "machine",
+    "unit_cost_cents": 120000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 1,
+    "downtime_minutes": 120,
+    "quantity_limit": 15,
+    "incompatibility_group": null,
+    "notes": "Outcome is information, not a guaranteed finding."
+  },
+  {
+    "action_type_id": "A-WAYFINDING",
+    "name": "Wayfinding and signage refresh for a zone",
+    "unit": "zone",
+    "unit_cost_cents": 750000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 10,
+    "downtime_minutes": 0,
+    "quantity_limit": 2,
+    "incompatibility_group": null,
+    "notes": "Signage and sightline changes; no construction."
+  },
+  {
+    "action_type_id": "A-COMP-PILOT",
+    "name": "Comp policy pilot with control group",
+    "unit": "pilot",
+    "unit_cost_cents": 400000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 5,
+    "downtime_minutes": 0,
+    "quantity_limit": 1,
+    "incompatibility_group": "comp_policy",
+    "notes": "Design, training and tracking only; comp costs still flow through POS cogs."
+  },
+  {
+    "action_type_id": "A-COMP-CHANGE",
+    "name": "Change comp redemption rate floor-wide",
+    "unit": "policy",
+    "unit_cost_cents": 150000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 3,
+    "downtime_minutes": 0,
+    "quantity_limit": 1,
+    "incompatibility_group": "comp_policy",
+    "notes": "Point cost per comp dollar can be set between 5 and 20."
+  },
+  {
+    "action_type_id": "A-PROMO",
+    "name": "Property promotion weekend",
+    "unit": "event",
+    "unit_cost_cents": 1500000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 14,
+    "downtime_minutes": 0,
+    "quantity_limit": 2,
+    "incompatibility_group": null,
+    "notes": "Marketing, prizes and staffing."
+  },
+  {
+    "action_type_id": "A-SURVEY",
+    "name": "Expanded guest intercept survey",
+    "unit": "month",
+    "unit_cost_cents": 350000,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 7,
+    "downtime_minutes": 0,
+    "quantity_limit": 1,
+    "incompatibility_group": null,
+    "notes": "Triples the monthly sample."
+  },
+  {
+    "action_type_id": "A-HOLD",
+    "name": "Preserve budget",
+    "unit": "none",
+    "unit_cost_cents": 0,
+    "recurring_cost_cents_per_day": 0,
+    "lead_days": 0,
+    "downtime_minutes": 0,
+    "quantity_limit": 1,
+    "incompatibility_group": null,
+    "notes": "A valid recommendation."
+  }
+]
+
+====================================================================================================
+PLAYERS
+====================================================================================================
+{
+  "tracked_players": 113890,
+  "tracked_wagers": 163804869.64999998,
+  "tracked_payouts": 148219409.05,
+  "player_net": -15585460.600000001,
+  "players_ahead_share": 0.13613135481605057,
+  "top1pct_count": 1139,
+  "top1pct_wager_share": 0.22859958424929527,
+  "top1pct_positive_loss_share": 0.19860854533368733,
+  "tracked_wager_coverage": 0.6581013855136345
+}
+
+====================================================================================================
+LOYALTY
+====================================================================================================
+[
+  {
+    "gaming_month": "2025-01",
+    "points_delta": -1433623,
+    "face_cents": 10349950,
+    "cost_cents": 2875030,
+    "redemptions": 9171,
+    "points_per_face_dollar": 13.8514968671
+  },
+  {
+    "gaming_month": "2025-02",
+    "points_delta": -1411208,
+    "face_cents": 10685350,
+    "cost_cents": 2985430,
+    "redemptions": 9292,
+    "points_per_face_dollar": 13.2069422153
+  },
+  {
+    "gaming_month": "2025-03",
+    "points_delta": -1531314,
+    "face_cents": 11916750,
+    "cost_cents": 3325550,
+    "redemptions": 10430,
+    "points_per_face_dollar": 12.8500975518
+  },
+  {
+    "gaming_month": "2025-04",
+    "points_delta": -1404060,
+    "face_cents": 11221400,
+    "cost_cents": 3139030,
+    "redemptions": 9702,
+    "points_per_face_dollar": 12.5123424885
+  },
+  {
+    "gaming_month": "2025-05",
+    "points_delta": -719172,
+    "face_cents": 12304850,
+    "cost_cents": 3444610,
+    "redemptions": 10629,
+    "points_per_face_dollar": 5.8446222424
+  },
+  {
+    "gaming_month": "2025-06",
+    "points_delta": -673602,
+    "face_cents": 11796650,
+    "cost_cents": 3297280,
+    "redemptions": 10137,
+    "points_per_face_dollar": 5.7101126167
+  }
+]
+
+====================================================================================================
+EVENT_ASSOCIATIONS
+====================================================================================================
+[
+  {
+    "event": "CES",
+    "start": "2025-01-07",
+    "end": "2025-01-10",
+    "days": 4,
+    "wagers": 5166884.4,
+    "weekday_baseline": 5094944.086038961,
+    "difference_pct": 0.014119941798413027
+  },
+  {
+    "event": "Super Bowl LIX weekend",
+    "start": "2025-02-07",
+    "end": "2025-02-09",
+    "days": 3,
+    "wagers": 5831329.05,
+    "weekday_baseline": 4742418.897500001,
+    "difference_pct": 0.22961070627354863
+  },
+  {
+    "event": "College basketball tournament opening rounds",
+    "start": "2025-03-20",
+    "end": "2025-03-23",
+    "days": 4,
+    "wagers": 7163708.05,
+    "weekday_baseline": 6013420.73159091,
+    "difference_pct": 0.19128668519170278
+  },
+  {
+    "event": "CinemaCon",
+    "start": "2025-03-31",
+    "end": "2025-04-03",
+    "days": 4,
+    "wagers": 4817531.0,
+    "weekday_baseline": 4689024.439299831,
+    "difference_pct": 0.027405820200706366
+  },
+  {
+    "event": "NAB Show",
+    "start": "2025-04-05",
+    "end": "2025-04-09",
+    "days": 5,
+    "wagers": 6928996.000000001,
+    "weekday_baseline": 6559569.327708922,
+    "difference_pct": 0.056318738904175714
+  },
+  {
+    "event": "EDC Las Vegas festival weekend",
+    "start": "2025-05-16",
+    "end": "2025-05-18",
+    "days": 3,
+    "wagers": 5479462.75,
+    "weekday_baseline": 4742418.897500001,
+    "difference_pct": 0.15541517281160822
+  },
+  {
+    "event": "Gilded Ace Winter Slot Tournament",
+    "start": "2025-02-21",
+    "end": "2025-02-23",
+    "days": 3,
+    "wagers": 5583941.15,
+    "weekday_baseline": 4742418.897500001,
+    "difference_pct": 0.17744578677847578
+  },
+  {
+    "event": "Gilded Ace Locals Appreciation Week",
+    "start": "2025-06-09",
+    "end": "2025-06-15",
+    "days": 7,
+    "wagers": 9820264.100000001,
+    "weekday_baseline": 9431443.336799832,
+    "difference_pct": 0.04122600850317992
+  }
+]
+
+====================================================================================================
+TRAFFIC
+====================================================================================================
+[
+  {
+    "month": "2025-01",
+    "zone_id": "Z-B40",
+    "observed_entries": 18332.0,
+    "covered_minutes": 44570,
+    "valid_intervals": 743,
+    "intervals": 744,
+    "entries_per_covered_hour": 24.6784832847,
+    "valid_interval_share": 0.998655914
+  },
+  {
+    "month": "2025-01",
+    "zone_id": "Z-BAR",
+    "observed_entries": 84309.0,
+    "covered_minutes": 44494,
+    "valid_intervals": 742,
+    "intervals": 744,
+    "entries_per_covered_hour": 113.6903852205,
+    "valid_interval_share": 0.997311828
+  },
+  {
+    "month": "2025-01",
+    "zone_id": "Z-ENT",
+    "observed_entries": 85621.0,
+    "covered_minutes": 44339,
+    "valid_intervals": 740,
+    "intervals": 744,
+    "entries_per_covered_hour": 115.8632355263,
+    "valid_interval_share": 0.9946236559
+  },
+  {
+    "month": "2025-01",
+    "zone_id": "Z-GAR",
+    "observed_entries": 70413.0,
+    "covered_minutes": 44436,
+    "valid_intervals": 742,
+    "intervals": 744,
+    "entries_per_covered_hour": 95.0756143667,
+    "valid_interval_share": 0.997311828
+  },
+  {
+    "month": "2025-01",
+    "zone_id": "Z-HL",
+    "observed_entries": 4761.0,
+    "covered_minutes": 44253,
+    "valid_intervals": 739,
+    "intervals": 744,
+    "entries_per_covered_hour": 6.4551555827,
+    "valid_interval_share": 0.9932795699
+  },
+  {
+    "month": "2025-01",
+    "zone_id": "Z-HTL",
+    "observed_entries": 62593.0,
+    "covered_minutes": 44405,
+    "valid_intervals": 741,
+    "intervals": 744,
+    "entries_per_covered_hour": 84.5756108546,
+    "valid_interval_share": 0.9959677419
+  },
+  {
+    "month": "2025-01",
+    "zone_id": "Z-PIT",
+    "observed_entries": 124593.0,
+    "covered_minutes": 44128,
+    "valid_intervals": 736,
+    "intervals": 744,
+    "entries_per_covered_hour": 169.4067258883,
+    "valid_interval_share": 0.9892473118
+  },
+  {
+    "month": "2025-02",
+    "zone_id": "Z-B40",
+    "observed_entries": 17047.0,
+    "covered_minutes": 39992,
+    "valid_intervals": 667,
+    "intervals": 672,
+    "entries_per_covered_hour": 25.575615123,
+    "valid_interval_share": 0.9925595238
+  },
+  {
+    "month": "2025-02",
+    "zone_id": "Z-BAR",
+    "observed_entries": 79335.0,
+    "covered_minutes": 40227,
+    "valid_intervals": 671,
+    "intervals": 672,
+    "entries_per_covered_hour": 118.3309717354,
+    "valid_interval_share": 0.9985119048
+  },
+  {
+    "month": "2025-02",
+    "zone_id": "Z-ENT",
+    "observed_entries": 82241.0,
+    "covered_minutes": 40121,
+    "valid_intervals": 669,
+    "intervals": 672,
+    "entries_per_covered_hour": 122.9894568929,
+    "valid_interval_share": 0.9955357143
+  },
+  {
+    "month": "2025-02",
+    "zone_id": "Z-GAR",
+    "observed_entries": 66155.0,
+    "covered_minutes": 40200,
+    "valid_intervals": 670,
+    "intervals": 672,
+    "entries_per_covered_hour": 98.7388059701,
+    "valid_interval_share": 0.9970238095
+  },
+  {
+    "month": "2025-02",
+    "zone_id": "Z-HL",
+    "observed_entries": 4910.0,
+    "covered_minutes": 40032,
+    "valid_intervals": 668,
+    "intervals": 672,
+    "entries_per_covered_hour": 7.3591127098,
+    "valid_interval_share": 0.994047619
+  },
+  {
+    "month": "2025-02",
+    "zone_id": "Z-HTL",
+    "observed_entries": 58730.0,
+    "covered_minutes": 40070,
+    "valid_intervals": 669,
+    "intervals": 672,
+    "entries_per_covered_hour": 87.9411030696,
+    "valid_interval_share": 0.9955357143
+  },
+  {
+    "month": "2025-02",
+    "zone_id": "Z-PIT",
+    "observed_entries": 118617.0,
+    "covered_minutes": 40196,
+    "valid_intervals": 671,
+    "intervals": 672,
+    "entries_per_covered_hour": 177.0579162106,
+    "valid_interval_share": 0.9985119048
+  },
+  {
+    "month": "2025-03",
+    "zone_id": "Z-B40",
+    "observed_entries": 13603.0,
+    "covered_minutes": 44395,
+    "valid_intervals": 740,
+    "intervals": 743,
+    "entries_per_covered_hour": 18.3845027593,
+    "valid_interval_share": 0.9959623149
+  },
+  {
+    "month": "2025-03",
+    "zone_id": "Z-BAR",
+    "observed_entries": 97826.0,
+    "covered_minutes": 44460,
+    "valid_intervals": 741,
+    "intervals": 743,
+    "entries_per_covered_hour": 132.0188933873,
+    "valid_interval_share": 0.99730821
+  },
+  {
+    "month": "2025-03",
+    "zone_id": "Z-ENT",
+    "observed_entries": 78347.0,
+    "covered_minutes": 44161,
+    "valid_intervals": 738,
+    "intervals": 743,
+    "entries_per_covered_hour": 106.4473177691,
+    "valid_interval_share": 0.9932705249
+  },
+  {
+    "month": "2025-03",
+    "zone_id": "Z-GAR",
+    "observed_entries": 72189.0,
+    "covered_minutes": 44431,
+    "valid_intervals": 741,
+    "intervals": 743,
+    "entries_per_covered_hour": 97.4846391033,
+    "valid_interval_share": 0.99730821
+  },
+  {
+    "month": "2025-03",
+    "zone_id": "Z-HL",
+    "observed_entries": 5717.0,
+    "covered_minutes": 44371,
+    "valid_intervals": 741,
+    "intervals": 743,
+    "entries_per_covered_hour": 7.7307250231,
+    "valid_interval_share": 0.99730821
+  },
+  {
+    "month": "2025-03",
+    "zone_id": "Z-HTL",
+    "observed_entries": 63765.0,
+    "covered_minutes": 44217,
+    "valid_intervals": 738,
+    "intervals": 743,
+    "entries_per_covered_hour": 86.5255444738,
+    "valid_interval_share": 0.9932705249
+  },
+  {
+    "month": "2025-03",
+    "zone_id": "Z-PIT",
+    "observed_entries": 136407.0,
+    "covered_minutes": 44552,
+    "valid_intervals": 743,
+    "intervals": 743,
+    "entries_per_covered_hour": 183.7048841803,
+    "valid_interval_share": 1.0
+  },
+  {
+    "month": "2025-04",
+    "zone_id": "Z-B40",
+    "observed_entries": 15766.0,
+    "covered_minutes": 43109,
+    "valid_intervals": 719,
+    "intervals": 720,
+    "entries_per_covered_hour": 21.9434456842,
+    "valid_interval_share": 0.9986111111
+  },
+  {
+    "month": "2025-04",
+    "zone_id": "Z-BAR",
+    "observed_entries": 84138.0,
+    "covered_minutes": 43048,
+    "valid_intervals": 718,
+    "intervals": 720,
+    "entries_per_covered_hour": 117.2709533544,
+    "valid_interval_share": 0.9972222222
+  },
+  {
+    "month": "2025-04",
+    "zone_id": "Z-ENT",
+    "observed_entries": 81790.0,
+    "covered_minutes": 42979,
+    "valid_intervals": 717,
+    "intervals": 720,
+    "entries_per_covered_hour": 114.1813443775,
+    "valid_interval_share": 0.9958333333
+  },
+  {
+    "month": "2025-04",
+    "zone_id": "Z-GAR",
+    "observed_entries": 67232.0,
+    "covered_minutes": 42895,
+    "valid_intervals": 716,
+    "intervals": 720,
+    "entries_per_covered_hour": 94.0417298053,
+    "valid_interval_share": 0.9944444444
+  },
+  {
+    "month": "2025-04",
+    "zone_id": "Z-HL",
+    "observed_entries": 4648.0,
+    "covered_minutes": 42910,
+    "valid_intervals": 717,
+    "intervals": 720,
+    "entries_per_covered_hour": 6.4991843393,
+    "valid_interval_share": 0.9958333333
+  },
+  {
+    "month": "2025-04",
+    "zone_id": "Z-HTL",
+    "observed_entries": 60994.0,
+    "covered_minutes": 42990,
+    "valid_intervals": 717,
+    "intervals": 720,
+    "entries_per_covered_hour": 85.1277041172,
+    "valid_interval_share": 0.9958333333
+  },
+  {
+    "month": "2025-04",
+    "zone_id": "Z-PIT",
+    "observed_entries": 123723.0,
+    "covered_minutes": 42865,
+    "valid_intervals": 715,
+    "intervals": 720,
+    "entries_per_covered_hour": 173.1804502508,
+    "valid_interval_share": 0.9930555556
+  },
+  {
+    "month": "2025-05",
+    "zone_id": "Z-B40",
+    "observed_entries": 17056.0,
+    "covered_minutes": 44392,
+    "valid_intervals": 740,
+    "intervals": 744,
+    "entries_per_covered_hour": 23.0528023067,
+    "valid_interval_share": 0.9946236559
+  },
+  {
+    "month": "2025-05",
+    "zone_id": "Z-BAR",
+    "observed_entries": 82368.0,
+    "covered_minutes": 42822,
+    "valid_intervals": 714,
+    "intervals": 744,
+    "entries_per_covered_hour": 115.4098360656,
+    "valid_interval_share": 0.9596774194
+  },
+  {
+    "month": "2025-05",
+    "zone_id": "Z-ENT",
+    "observed_entries": 86675.0,
+    "covered_minutes": 44286,
+    "valid_intervals": 740,
+    "intervals": 744,
+    "entries_per_covered_hour": 117.4298875491,
+    "valid_interval_share": 0.9946236559
+  },
+  {
+    "month": "2025-05",
+    "zone_id": "Z-GAR",
+    "observed_entries": 69616.0,
+    "covered_minutes": 44541,
+    "valid_intervals": 743,
+    "intervals": 744,
+    "entries_per_covered_hour": 93.7778675827,
+    "valid_interval_share": 0.998655914
+  },
+  {
+    "month": "2025-05",
+    "zone_id": "Z-HL",
+    "observed_entries": 4848.0,
+    "covered_minutes": 44409,
+    "valid_intervals": 742,
+    "intervals": 744,
+    "entries_per_covered_hour": 6.5500236439,
+    "valid_interval_share": 0.997311828
+  },
+  {
+    "month": "2025-05",
+    "zone_id": "Z-HTL",
+    "observed_entries": 62138.0,
+    "covered_minutes": 44556,
+    "valid_intervals": 743,
+    "intervals": 744,
+    "entries_per_covered_hour": 83.6762725559,
+    "valid_interval_share": 0.998655914
+  },
+  {
+    "month": "2025-05",
+    "zone_id": "Z-PIT",
+    "observed_entries": 126686.0,
+    "covered_minutes": 44278,
+    "valid_intervals": 739,
+    "intervals": 744,
+    "entries_per_covered_hour": 171.6690004065,
+    "valid_interval_share": 0.9932795699
+  },
+  {
+    "month": "2025-06",
+    "zone_id": "Z-B40",
+    "observed_entries": 15858.0,
+    "covered_minutes": 42970,
+    "valid_intervals": 717,
+    "intervals": 720,
+    "entries_per_covered_hour": 22.1428903886,
+    "valid_interval_share": 0.9958333333
+  },
+  {
+    "month": "2025-06",
+    "zone_id": "Z-BAR",
+    "observed_entries": 80294.0,
+    "covered_minutes": 42898,
+    "valid_intervals": 716,
+    "intervals": 720,
+    "entries_per_covered_hour": 112.304536342,
+    "valid_interval_share": 0.9944444444
+  },
+  {
+    "month": "2025-06",
+    "zone_id": "Z-ENT",
+    "observed_entries": 80022.0,
+    "covered_minutes": 43028,
+    "valid_intervals": 718,
+    "intervals": 720,
+    "entries_per_covered_hour": 111.5859440364,
+    "valid_interval_share": 0.9972222222
+  },
+  {
+    "month": "2025-06",
+    "zone_id": "Z-GAR",
+    "observed_entries": 66934.0,
+    "covered_minutes": 43051,
+    "valid_intervals": 718,
+    "intervals": 720,
+    "entries_per_covered_hour": 93.2856379643,
+    "valid_interval_share": 0.9972222222
+  },
+  {
+    "month": "2025-06",
+    "zone_id": "Z-HL",
+    "observed_entries": 4219.0,
+    "covered_minutes": 43037,
+    "valid_intervals": 718,
+    "intervals": 720,
+    "entries_per_covered_hour": 5.881915561,
+    "valid_interval_share": 0.9972222222
+  },
+  {
+    "month": "2025-06",
+    "zone_id": "Z-HTL",
+    "observed_entries": 55996.0,
+    "covered_minutes": 42907,
+    "valid_intervals": 716,
+    "intervals": 720,
+    "entries_per_covered_hour": 78.3033071527,
+    "valid_interval_share": 0.9944444444
+  },
+  {
+    "month": "2025-06",
+    "zone_id": "Z-PIT",
+    "observed_entries": 117336.0,
+    "covered_minutes": 42876,
+    "valid_intervals": 715,
+    "intervals": 720,
+    "entries_per_covered_hour": 164.1981528128,
+    "valid_interval_share": 0.9930555556
+  }
+]
