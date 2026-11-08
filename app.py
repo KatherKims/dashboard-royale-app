@@ -2771,8 +2771,8 @@ with note_col:
             {start_date.strftime("%b %d, %Y")} –
             {end_date.strftime("%b %d, %Y")}<br>
             Machine, downtime, demand, and comp calculations use this local
-            synthetic-data evidence period. Forecast holdout validation remains
-            fixed to its precomputed May–June test window.
+            synthetic data evidence period. Forecast holdout validation remains
+            fixed to its precomputed May-June test window.
         </div>
         """,
         unsafe_allow_html=True,
@@ -2882,19 +2882,18 @@ if page == "Decision Center":
         "Decision Center",
         "From low revenue to the right decision.",
         (
-            "The raw bottom ten begins the investigation. Exposure, payout "
-            "variance, downtime, and placement context determine the next step."
+            "Start with the lowest performers, then check whether downtime, payout "
+            "swings, or floor placement may explain the result."
         ),
     )
 
     if official["keep_budget"]:
         executive_heading = (
-            "Do not automatically replace the ten lowest-earning machines."
+            "Do not rush to replace the lowest earning machines."
         )
         executive_text = (
-            "The official precomputed 30-day portfolio model ranks preserving "
-            "the budget first. Evidence can still support reversible inspection "
-            "or operational learning actions."
+            "The July model favors holding the budget for now. Some machines may "
+            "still be worth checking or testing before making a larger investment."
         )
     else:
         executive_heading = (
@@ -3233,9 +3232,8 @@ if page == "Decision Center":
     insight_bubble(
         "How to use it",
         (
-            "Draw a machine from the raw total-earnings bottom ten. The claw "
-            "reveals local-data evidence only. It does not alter rankings, "
-            "recommendations, or the official model."
+            "Pick one of the lowest earning machines and take a closer look. "
+            "The claw is just a quick way to choose where to start."
         ),
         tone="blue",
     )
@@ -3492,8 +3490,7 @@ elif page == "Investigate":
         "Machine Investigation",
         "Luck, location, downtime, or a persistent gap?",
         (
-            "Follow one machine from descriptive evidence to a reversible "
-            "operational next step."
+            "Look at one machine in detail and decide what is worth checking next."
         ),
     )
 
@@ -4297,8 +4294,7 @@ elif page == "July Action Plan":
         "July Action Plan",
         "Price the decision before spending.",
         (
-            "Catalog costs and limits are local challenge data. Benefit ranges "
-            "are visible planning sensitivities, not causal claims."
+            "Check the cost, timing, and possible upside before adding anything to the July plan."
         ),
     )
 
@@ -4883,10 +4879,7 @@ elif page == "July Action Plan":
     st.markdown(
         """
         <div class="warning">
-            Sandbox benefits are sensitivity assumptions, not observed causal
-            effects. Catalog costs, limits, lead times, and downtime minutes are
-            local challenge inputs. The official precomputed simulation remains
-            the portfolio decision reference.
+            These estimates are for planning only. Use them to compare options, not as a promise of results.
         </div>
         """,
         unsafe_allow_html=True,
@@ -5031,8 +5024,7 @@ elif page == "July Demand Outlook":
         "July Demand Outlook",
         "Validate before forecasting.",
         (
-            "January–April training · May–June frozen holdout · July planning "
-            "scenario."
+            "Built from January through April data, checked against May and June, then used to plan for July."
         ),
     )
 
@@ -5393,9 +5385,7 @@ elif page == "Guest & Loyalty Insights":
     st.markdown(
         """
         <div class="warning">
-            Do not use gambling-loss behavior to target guests or encourage harmful
-            gambling. Any comp test should use a comparison group and focus on
-            hospitality, service, redemption value, or guest experience.
+            "Keep guest offers focused on service and experience. Do not base offers on individual gambling losses."
         </div>
         """,
         unsafe_allow_html=True,
@@ -5776,11 +5766,8 @@ elif page == "Guest & Loyalty Insights":
 else:
     section_header(
         "Methods & Evidence",
-        "Trace recommendations back to evidence and limitations.",
-        (
-            "All calculations use local synthetic files or visibly labeled "
-            "challenge planning assumptions."
-        ),
+        "See where the numbers came from.",
+        "Everything shown here comes from the local sample data and the assumptions selected in the planner.",
     )
 
     (
@@ -6366,8 +6353,7 @@ else:
 st.markdown(
     """
     <div class="footer">
-        ACEIQ · THE GILDED ACE · Synthetic Dashboard Royale data only ·
-        Descriptive and modeled results do not prove causality.
+
     </div>
     """,
     unsafe_allow_html=True,
