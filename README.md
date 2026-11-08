@@ -6,7 +6,7 @@ A learning project built with Databricks and Python. The app has three pages: Ex
 
 **Learning the code or preparing for judging?** Read [the comprehensive code and requirements explanation](docs/CODE_EXPLAINED.md). It covers the formulas, architecture, evidence, Databricks integration, proposed Gemini design, and requirements that remain unfinished.
 
-**New local version:** [Read the upgrade guide](docs/UPGRADE_GUIDE.md) for the implemented floor map, forecast comparison, corrected calculations and teammate extension points. The cloud notebook and original saved scenario files retain version 1 results. Gemini remains unimplemented.
+**Latest version:** [Read the upgrade guide](docs/UPGRADE_GUIDE.md) for the implemented floor map, forecast comparison, corrected calculations and teammate extension points. The cloud notebook and original saved scenario files retain version 1 results. Gemini remains unimplemented.
 
 ## What each tool does
 

@@ -1,6 +1,6 @@
 # AceIQ: interface, forecasting and floor-map update
 
-This version combines the teammate's AceIQ presentation with corrected analytics and modular additions. The source attachment remains unchanged. The existing `01_data_checks` notebook and saved original scenario exports are preserved as version 1 evidence. This update was built and tested locally; it has not been pushed to GitHub, deployed publicly, or executed in the Databricks workspace.
+This version combines the teammate's AceIQ presentation with corrected analytics and modular additions. The source attachment remains unchanged. The existing `01_data_checks` notebook and saved original scenario exports are preserved as version 1 evidence. This update was built and tested locally and shared in the team GitHub repository. It has not been deployed publicly or executed in the Databricks workspace.
 
 ## Walk through it together
 
