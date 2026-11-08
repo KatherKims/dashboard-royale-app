@@ -4,9 +4,16 @@
     "name": "Run casino dashboard",
     "type": "debugpy",
     "request": "launch",
+    "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "cwd": "${workspaceFolder}",
     "module": "streamlit",
-    "args": ["run", "app.py"],
-    "console": "integratedTerminal",
+    "args": ["run", "app.py", "--server.address", "127.0.0.1", "--server.port", "8501", "--server.headless", "true", "--global.developmentMode", "false"],
+    "console": "internalConsole",
+    "serverReadyAction": {
+      "action": "openExternally",
+      "pattern": "URL: (http://127\\.0\\.0\\.1:[0-9]+)",
+      "uriFormat": "%s"
+    },
     "justMyCode": true
   }]
 }

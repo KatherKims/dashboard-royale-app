@@ -1,5 +1,7 @@
 # Findings and decision notes
 
+**Historical version-1 notes.** Current forecast/scenario results and product status are in [CLAIMS_AND_EVIDENCE.md](CLAIMS_AND_EVIDENCE.md). The older forecast and candidate values below are retained for provenance and must not be presented as the current dashboard model.
+
 Synthetic casino data, January 1–June 30, 2025. Planning horizon: July 1–30. These findings use the supplied data release, whose hashes appear in `data/analysis_results.json`.
 
 ## 1. Replacing the lowest-total-earnings machines is not supported

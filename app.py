@@ -828,6 +828,15 @@ with st.sidebar.expander("Metric definitions"):
 
 st.sidebar.caption("Synthetic Dashboard Royale data only.")
 
+with st.sidebar.expander("Judge guide & evidence"):
+    st.write("Change dates, investigate a bank, inspect the held-out forecast, then trace an action to its evidence. The floor previews hypothetical moves; it is not live casino activity.")
+    for label, relative, filename in [
+        ("Download judging / startup guide", "JUDGE_START_HERE.md", "AceIQ_Judge_Guide.md"),
+        ("Download Claims & Evidence", "docs/CLAIMS_AND_EVIDENCE.md", "AceIQ_Claims_and_Evidence.md"),
+        ("Download AI disclosure", "docs/AI_DISCLOSURE.md", "AceIQ_AI_Disclosure.md"),
+    ]:
+        st.download_button(label, (ROOT / relative).read_text(encoding="utf-8"), filename, mime="text/markdown", key=filename)
+
 # =============================================================================
 # PAGE 1 — EXECUTIVE OVERVIEW
 # =============================================================================

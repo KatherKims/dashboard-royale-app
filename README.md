@@ -2,6 +2,8 @@
 
 A learning project built with Databricks and Python. The app has three pages: Executive overview, Machine investigation, and the $100,000 decision lab. All casino data is synthetic, January–June 2025. July 1–30 is the decision horizon, not the current calendar month.
 
+**Judges and first-time users:** start with [JUDGE_START_HERE.md](JUDGE_START_HERE.md). Windows users can double-click `START_DASHBOARD.cmd`. The current [Claims & Evidence appendix](docs/CLAIMS_AND_EVIDENCE.md) and [AI disclosure](docs/AI_DISCLOSURE.md) are also downloadable from the dashboard sidebar.
+
 **Joining the team?** Start with [TEAM_HANDOFF.md](TEAM_HANDOFF.md) for collaboration steps, the analysis status, and the optional Gemini roadmap.
 
 **Learning the code or preparing for judging?** Read [the comprehensive code and requirements explanation](docs/CODE_EXPLAINED.md). It covers the formulas, architecture, evidence, Databricks integration, proposed Gemini design, and requirements that remain unfinished.
@@ -19,6 +21,10 @@ The app reads small exported results; public deployment has not been performed. 
 
 ## Open and run in VS Code
 
+**Already set up on Katherine's computer:** open this project folder, press **F5** (or **Run → Start Debugging**) and choose **Run casino dashboard** if prompted. The browser opens at `http://127.0.0.1:8501`. Keep VS Code open while using the dashboard; press **Shift+F5** to stop it. Edit the code in VS Code and use the dashboard in your browser.
+
+**First-time setup on another Windows computer:**
+
 1. In VS Code choose **File → Open Folder** and select this folder.
 2. Install the Microsoft Python extension if prompted. Use Python 3.12.
 3. Open **Terminal → New Terminal** and run:
@@ -31,7 +37,7 @@ py -3.12 -m venv .venv
 
 4. Open the localhost address printed in the terminal. Edit `app.py`, save, and refresh the app. Stop it with Ctrl+C.
 
-If `py -3.12` is unavailable, install Python 3.12 first. This project was tested using Python 3.12. Choose the `.venv` interpreter in VS Code; the included Run configuration then works with F5.
+If `py -3.12` is unavailable, install Python 3.12 first. This project was tested using Python 3.12. The included Windows Run configuration uses `.venv\Scripts\python.exe` directly and works with F5 once setup is complete. Each teammate creates their own `.venv`; it is excluded from Git. Stop a terminal-started server with Ctrl+C before using F5 on the same port.
 
 ## Add this work to GitHub Desktop
 
