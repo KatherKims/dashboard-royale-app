@@ -10,11 +10,11 @@ AceIQ combines a retro Streamlit dashboard with an interactive casino floor. Use
 
 The dashboard covers demand, event associations, traffic coverage, tracked-player outcomes, comp economics and forecast validation. Its July planner compares actions within a $100,000 cash budget using 1,000 seeded Monte Carlo draws.
 
-The floor supports moving, swapping, adding and removing machines, plus inspection, replacement and maintenance scenarios. Users preview costs, uncertainty and incremental net before confirming, play through July, review suggestions and undo changes. Walking guests are decorative; forecasts and assumed action effects drive the financial model.
+The floor supports moving, swapping, adding and removing machines, plus inspection, replacement and maintenance scenarios. Users preview costs, uncertainty and incremental net before confirming, play through July, review suggestions and undo changes. The public floor uses Streamlit controls; the local SVG edition adds drag-and-drop and decorative guests. Both share the same financial model.
 
 ## How we built it
 
-We used Python, Streamlit, Pandas, NumPy, Plotly and PyArrow, with local synthetic Parquet, JSON and NPZ exports. Databricks notebooks preserve the original analysis; the app runs without a live connection. JavaScript, SVG and CSS power the floor.
+We used Python, Streamlit, Pandas, NumPy, Plotly and PyArrow, with local synthetic Parquet, JSON and NPZ exports. Databricks notebooks preserve and verify the final analysis; the app runs without a live connection. JavaScript, SVG and CSS power the floor.
 
 We reconciled totals, adjusted comparisons for exposure, incorporated supplied payout variance and documented claims. Forecast selection uses January–March training and April validation, followed by a January–April refit and frozen May–June test against a constant baseline. July remains unobserved.
 

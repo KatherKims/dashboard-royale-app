@@ -27,12 +27,12 @@ pages=['Overview','Machines','Guests','Scenarios','Floor lab']
 page=st.query_params.get('page','Overview')
 if page not in pages:page='Overview'
 
-st.markdown('<div class="brandline"><div><span class="suit">♠</span> THE GILDED ACE <small>ACEIQ / DECISION INTELLIGENCE</small></div><span class="synthetic">LOCAL · SYNTHETIC DATA</span></div>',unsafe_allow_html=True)
-nav=''.join(f'<a class="{"active" if p==page else ""}" href="'+('http://127.0.0.1:8502/floor-lab' if p=='Floor lab' else '?page='+p)+f'" target="_self">{p}{" ↗" if p=="Floor lab" else ""}</a>' for p in pages)
+st.markdown('<div class="brandline"><div><span class="suit">♠</span> THE GILDED ACE <small>ACEIQ / DECISION INTELLIGENCE</small></div><span class="synthetic">SYNTHETIC DATA</span></div>',unsafe_allow_html=True)
+nav=''.join(f'<a class="{"active" if p==page else ""}" href="'+('?page=Floor%20lab' if p=='Floor lab' else '?page='+p)+f'" target="_self">{p}{" ↗" if p=="Floor lab" else ""}</a>' for p in pages)
 st.markdown('<nav aria-label="Dashboard destinations">'+nav+'</nav>',unsafe_allow_html=True)
 if page=='Floor lab':
-    st.link_button('Open the full-window floor lab ↗','http://127.0.0.1:8502/floor-lab',type='primary')
-    st.caption('Run python run_local.py to start both local services. The floor opens separately from Streamlit.')
+    from dashboard.cloud_floor import render_floor
+    render_floor(b)
     st.stop()
 
 f1,f2,f3=st.columns([1.6,1.2,2.2])
@@ -109,7 +109,7 @@ if page=='Overview':
         fig=px.scatter(slots,x='x_m',y='y_m',color='theo_per_hour',hover_name='machine_id',hover_data=['theme','location_id'],color_continuous_scale=['#31554f','#75c9b9','#e4bd75'])
         fig.update_traces(marker=dict(symbol='square',size=8));fig.update_layout(coloraxis_colorbar=dict(title='Expected $/hr',tickprefix='$',thickness=12));fig.update_xaxes(title='Floor x (metres)');fig.update_yaxes(title='Floor y (metres)',scaleanchor='x',constrain='domain',range=[slots.y_m.min()-10,slots.y_m.max()+10]);fig.update_xaxes(range=[slots.x_m.min()-10,slots.x_m.max()+10],tickangle=0,nticks=4,constrain='domain');chart(fig,'overview_floor',340)
         takeaway('Gold marks higher historical expected earnings per available hour; teal marks lower rates.', 'July 1 placements; colors use full-history rates. Location associations do not establish that moving a machine will improve demand.')
-        st.link_button('Enter interactive floor lab ↗','http://127.0.0.1:8502/floor-lab')
+        st.link_button('Enter interactive floor lab ↗','?page=Floor%20lab')
     left,right=st.columns([1.4,1])
     with left.container(border=True):
         st.subheader('Machines to investigate')
@@ -237,7 +237,7 @@ elif page=='Machines':
             st.caption('Effective-dated placement history. Before/after changes can reflect timing and demand, not the move itself.')
             st.write('July eligible:',bool(row.eligible_july));csv(md,'machine-'+mid+'.csv')
             st.dataframe(pd.DataFrame([r for r in report['action_catalog'] if r['action_type_id'] in ['A-INSPECT','A-MOVE-MACHINE','A-REPLACE-LEASE']]),hide_index=True)
-        st.link_button('Review actions on floor ↗','http://127.0.0.1:8502/floor-lab')
+        st.link_button('Review actions on floor ↗','?page=Floor%20lab')
 
 elif page=='Guests':
     guests=b['guests'].copy();months=pd.period_range(start,end,freq='M').astype(str)
@@ -308,7 +308,7 @@ elif page=='Scenarios':
         st.subheader('Recommended within this shortlist')
         st.markdown('**'+best.Actions+'**');st.write(f'10th–90th net: {money(best["10th percentile"])} to {money(best["90th percentile"])}')
         st.caption('Conditional assumptions, not measured action effects. Monte Carlo spans 1,000 shared seeded draws. The nine original targets are a limited search, not global optimization. Cash excludes planned downtime opportunity; net subtracts both.')
-        st.link_button('Build a custom plan on the floor ↗','http://127.0.0.1:8502/floor-lab')
+        st.link_button('Build a custom plan on the floor ↗','?page=Floor%20lab')
     left,right=st.columns([1.4,1])
     with left.container(border=True):
         st.subheader('Forecast evidence · independent May–June holdout')

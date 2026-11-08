@@ -11,3 +11,8 @@ Gemini chat is not implemented. The running app does not call Databricks; notebo
 The previous disclosure is preserved in `docs/archive/AI_DISCLOSURE_08dab59.md` as historical context.
 
 The final presentation pass also used the supplied Datathon Project Ideation PDF as a reference for chart definitions and concise summaries. The assistant restored evidence views, added an optional random Evidence Claw, reconciled formulas against local exports, and drafted a Devpost description. The claw is a browsing aid, not an analytical recommendation. No generative model is used by the running app.
+
+
+## Public Streamlit Floor Lab update
+
+AI-assisted implementation added `dashboard/cloud_floor.py` and routed dashboard floor links to the same Streamlit app. It exposes the existing FloorSimulation engine through form controls, a supplied-coordinate map, July day selection, preview/confirmation, undo, suggestions and downloads. Drag-and-drop and decorative walking guests remain local SVG features. Financial models and datasets are unchanged. Databricks verification is pinned to application revision 2a124ca and does not claim to validate this later UI addition.

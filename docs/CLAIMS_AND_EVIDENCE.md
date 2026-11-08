@@ -157,3 +157,8 @@ Inspect settings and meter reconciliation for anomalies; random payout recovery 
 ## Reference comparison update
 
 See [REFERENCE_COMPARISON.md](REFERENCE_COMPARISON.md) for the PDF-to-current-chart mapping and independent reconciliation checks. New evidence views use the existing exports and definitions. The optional claw chooses a raw-bottom-ten machine for investigation and makes no analytical recommendation.
+
+
+## Public Streamlit Floor Lab update
+
+AI-assisted implementation added `dashboard/cloud_floor.py` and routed dashboard floor links to the same Streamlit app. It exposes the existing FloorSimulation engine through form controls, a supplied-coordinate map, July day selection, preview/confirmation, undo, suggestions and downloads. Drag-and-drop and decorative walking guests remain local SVG features. Financial models and datasets are unchanged. Databricks verification is pinned to application revision 2a124ca and does not claim to validate this later UI addition.

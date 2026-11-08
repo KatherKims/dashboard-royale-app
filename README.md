@@ -1,3 +1,9 @@
+## Public Floor Lab update
+
+The dashboard's Floor Lab now runs inside Streamlit using the same simulation engine. Public visitors can view the floor, select moves/swaps/inspection/leases/maintenance/add/remove actions, preview and confirm costs, inspect July days, undo, request suggestions and download plans. No separate port is needed for this version. Plans are session-only.
+
+The local SVG edition remains available through `python run_local.py`; drag-and-drop and walking guests belong to that local edition. Older descriptions below of the standalone floor refer to that edition. Data, forecasts and financial calculations are unchanged. For Community Cloud, select Python 3.12 during deployment.
+
 # The Gilded Ace · ACEIQ
 
 A local Python/Streamlit decision dashboard and a separate interactive SVG casino floor. All casino and guest data is synthetic. January–June 2025 is observed history; July 1–30 is a modeled decision horizon, not the current date.
