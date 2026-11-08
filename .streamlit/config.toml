@@ -1,10 +1,13 @@
 [theme]
 base = "dark"
-primaryColor = "#D9B66F"
-backgroundColor = "#101419"
-secondaryBackgroundColor = "#1B222A"
-textColor = "#F4F1E9"
+primaryColor = "#E4BD75"
+backgroundColor = "#0B231F"
+secondaryBackgroundColor = "#17382E"
+textColor = "#F6EACB"
 font = "monospace"
-
 [browser]
 gatherUsageStats = false
+[server]
+address = "127.0.0.1"
+headless = true
+runOnSave = true

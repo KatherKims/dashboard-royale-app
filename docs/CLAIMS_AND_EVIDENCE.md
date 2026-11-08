@@ -1,235 +1,155 @@
-# AceIQ — Claims & Evidence appendix
+# Claims & Evidence · local rebuild
 
-Updated November 7, 2026 against application commit `3271aaad8b6790e01d3e2f3985e71cb2dcc594f8` (`final`). This update changes evidence documentation and the in-app appendix, not the analytical calculations or retro layout.
+Updated November 8, 2026 for the rebuild based on `08dab59`, integrated on top of `25e345f`. This supersedes the baseline appendix for the current interface. Synthetic history: January–June 2025; modeled planning: July 1–30. Sources, original exports, shared financial definitions and forecasts are unchanged.
 
-All casino and player records are synthetic. Historical period: **January 1–June 30, 2025**. Decision horizon: **July 1–30, 2025**. Dollar findings below use the full historical period unless specified. July outcomes are unavailable. “Theo” means expected house win based on game math, before operating costs; it is not net profit.
+## Original guide coverage
 
-## Conclusion supported by the evidence
+Underperformance: C1–C3. Demand change and context: C4/C8. Downtime and timing: C5. Tracked outcomes and concentration: C6. Comp costs/change: C7. The $100,000 decision and evaluation: C10–C14. Floor context: C9. This is evidence coverage, not a claim of causal identification or a public deployment.
 
-**Do not automatically replace the ten lowest earners.** Their totals mix exposure, availability, demand and payout variation. M-1158 merits inspection, not a definitive defect diagnosis. For maximizing expected 30-day incremental contribution, the original limited simulation favors **preserving the $100,000** under its disclosed assumptions. This does not establish that every possible investment is unattractive or that inspection has no information value.
+## C1 · Historical money reconciles
 
-## Fit to the original guide
+**Evidence:** machine_daily.parquet; analysis_results.json; pipeline.py
 
-| Original question | Evidence | Boundary of the answer |
-|---|---|---|
-| Which machines underperform after exposure, availability and luck? | C1–C3; Investigate | Separates plausible explanations and inspection leads; does not prove a hardware defect. |
-| What changed in demand, and why? | C4, C9–C11 | Quantifies change and context; causal explanations remain hypotheses. |
-| How much play was lost to downtime, and when? | C5; monthly/daily availability in Investigate | Estimates machine-level missed-play opportunity and timing, not net recoverable floor revenue. |
-| What did tracked players wager, receive and net, and how concentrated was it? | C6–C7; Guest & Loyalty Insights and appendix | Individual concentration is fixed six-month report evidence, now included in the appendix; group shares are a different measure. |
-| What did comps cost, and did anything change? | C8 | Shows economic cost and redemption-ratio change; does not prove policy causality or program ROI. |
-| What should the $100,000 fund, and how would we know it worked? | C12–C14; July Action Plan | Conditional preserve-budget recommendation and proposed evaluation plans; sandbox limitations remain. |
+**Finding / method:** $248,905,219.25 wagers − $225,267,064.15 payouts = $23,638,155.10 actual house win. Theo $23,545,364.48; weighted hold 9.50%.
 
-This mapping documents analytical coverage, not certification that every interaction or submission requirement is complete.
+**Alternative / limitation:** January–June active records. Wagers include recycled winnings; earnings are before operating costs.
 
-## Claims, sources and alternatives
+**Inspect:** Overview; tests/test_results.py
 
-The same claim records are available in **Methods & Evidence → Claims Appendix → Download claims appendix CSV** and `docs/CLAIMS_AND_EVIDENCE.csv`. Repository paths below are relative to the project root.
+## C2 · Raw bottom ten mix exposure, availability and luck
 
-### C1. Historical money totals reconcile.
+**Evidence:** machine_daily.parquet; machines.parquet; daily_variance.parquet
 
-**Evidence:** data/analysis_results.json: validation; data/machine_daily.parquet; analysis/pipeline.py; notebooks/01_data_checks.ipynb.
+**Finding / method:** M-5076 has 49 active days, M-1118 55, M-1120 132. Selected-period rates and payout scores are recomputed.
 
-**Finding / method:** January–June active machine-days: $248,905,219.25 wagers − $225,267,064.15 payouts = $23,638,155.10 actual house win. Expected house win (theo) is $23,545,364.48. Weighted hold = total house win / total wagers = 9.50%.
+**Alternative / limitation:** 55,092 active records of 56,110 original machine-days. Rates/peers do not establish causality.
 
-**Alternative / limitation:** Wagers include recycled winnings. Actual and expected house win are before operating costs, not net business profit. Reconciliation establishes arithmetic consistency, not accuracy of every source measurement.
+**Inspect:** Machines; analytics.machine_summary
 
-**Decision / where to inspect:** Use consistent units and weighted ratios when comparing actual and expected results. Visible in Decision Center; fixed six-month totals here.
+## C3 · M-1158 merits inspection, not a defect verdict
 
-### C2. Low total earnings do not establish true underperformance.
+**Evidence:** machines.parquet; daily_variance.parquet
 
-**Evidence:** data/machines.parquet; data/machine_daily.parquet; data/daily_variance.parquet; app.py: build_machine_summary, machine_category.
+**Finding / method:** Full-period actual $15,796.25 vs theo $51,961.00; gap −$36,164.75, modeled standardized gap −4.57, downtime 3.01 hours.
 
-**Finding / method:** 55,092 active rows out of 56,110 machine-days. M-5076 has 49 active days, M-1118 has 55 and M-1120 has 132. Compare availability, expected earnings per available hour, exposure and actual-minus-expected payout variation.
+**Alternative / limitation:** Variance assumptions and multiple-machine screening matter. June-only score is about −0.98. Verify meters/configuration before irreversible action.
 
-**Alternative / limitation:** Short exposure, lifecycle changes, downtime, low demand and payout luck can all lower totals. Peer comparisons do not fully control location or guest mix. Retired machines are not July replacement targets.
+**Inspect:** Machines → M-1158
 
-**Decision / where to inspect:** Investigate before replacing the bottom ten. Investigate recomputes selected-period evidence; full-period inspection screening is suppressed for restricted date ranges.
+## C4 · Exposure-adjusted demand softened after February
 
-### C3. M-1158 is an inspection lead, not a proven faulty machine.
+**Evidence:** analysis_results.json: monthly, event_associations, traffic
 
-**Evidence:** data/machines.parquet; data/daily_variance.parquet; data/machine_daily.parquet; app.py: build_machine_summary.
+**Finding / method:** $197.07 wagers/available machine-hour in February vs $179.67 in June: about 8.8% lower.
 
-**Finding / method:** January–June actual house win $15,796.25 versus theo $51,961.00: gap −$36,164.75, modeled standardized gap −4.57, downtime 3.01 hours. The selected June-only standardized gap is about −0.98.
+**Alternative / limitation:** Events, placement, seasonality and machine mix overlap. Why remains a set of hypotheses, not a proven causal finding.
 
-**Alternative / limitation:** The standardized score assumes correct game math and modeled payout variance; it is not a defect probability. Random variation or recording/configuration error remain possible. Screening many machines is not corrected for multiple comparisons.
+**Inspect:** Overview trends and demand-context expander
 
-**Decision / where to inspect:** Inspect paytable/configuration and meter history before spending on replacement. Do not apply the six-month anomaly score to a one-month selection. Inspect the machine evidence in Investigate.
+## C5 · Downtime is an opportunity estimate
 
-### C4. Demand per available machine-hour softened after February.
+**Evidence:** analysis_results.json: downtime; machine_daily.parquet
 
-**Evidence:** data/analysis_results.json: monthly, zone_monthly, event_associations; data/property_daily.parquet; analysis/pipeline.py.
+**Finding / method:** 5,021.08 unavailable hours; midpoint missed wagers $990,374.55; sensitivity $856,353.76–$1,138,230.52; missed theo $92,253.68.
 
-**Finding / method:** Monthly total wagers / total available machine-hours declined from $197.07 in February to $179.67 in June, about 8.8%. Zone and event comparisons provide descriptive context.
+**Alternative / limitation:** Guests may switch machines. Quantile sensitivity is not a confidence interval or guaranteed recoverable floor revenue.
 
-**Alternative / limitation:** Seasonality, events, machine mix, location and guest mix overlap. Associations and descriptive before/after movement comparisons do not establish a causal explanation. External context is not a causal control.
+**Inspect:** Machines → monthly availability and daily outages
 
-**Decision / where to inspect:** Investigate demand patterns before attributing low earnings to hardware. Decision Center and Investigate show selected-period context; the February–June comparison here is fixed.
+## C6 · Tracked play is partial and concentrated
 
-### C5. Downtime creates estimated missed-play opportunity, not measured net floor loss.
+**Evidence:** analysis_results.json: players; guest_groups.parquet
 
-**Evidence:** data/analysis_results.json: downtime; data/machine_daily.parquet; analysis/pipeline.py.
+**Finding / method:** 113,890 distinct tracked players: $163,804,869.65 wagers, $148,219,409.05 payouts, −$15,585,460.60 net. Coverage 65.81%; top 1% wager share 22.86%, separately ranked positive-loss share 19.86%.
 
-**Finding / method:** January–June downtime is 5,021.08 hours. Same-machine/weekday operating-rate quantiles, with fallbacks, imply midpoint missed wagers $990,374.55, sensitivity $856,353.76–$1,138,230.52, and midpoint missed theo $92,253.68.
+**Alternative / limitation:** Distinct/concentration values are fixed full-cohort January–June results. Filtered group counts are player-months. Guest monthly totals use whole included months and region.
 
-**Alternative / limitation:** Visitors may switch machines, and downtime may fall in quiet hours. Quantile-based low/mid/high estimates are sensitivity cases, not statistical confidence intervals or guaranteed recoverable revenue.
+**Inspect:** Guests; fixed-cohort concentration panel
 
-**Decision / where to inspect:** Use monthly/daily availability evidence in Investigate to prioritize investigation. Evaluate maintenance using recovered availability and total-floor contribution, including displacement.
+## C7 · Comp economics changed around May
 
-### C6. Tracked-player totals cover only part of casino play.
+**Evidence:** analysis_results.json: loyalty; pipeline.py
 
-**Evidence:** data/analysis_results.json: players; data/guest_groups.parquet; analysis/pipeline.py: player aggregation.
+**Finding / method:** $190,669.30 property economic comp cost; points/face-value dollar 12.51 April, 5.84 May, 5.71 June.
 
-**Finding / method:** Six-month totals: 113,890 distinct tracked players, $163,804,869.65 wagers, $148,219,409.05 payouts and −$15,585,460.60 player net. Tracked wagers cover 65.81% of machine wagers; 13.61% of tracked players finished ahead.
+**Alternative / limitation:** Redemption mix can change without a universal policy change. Economic cost differs from face value; do not double-subtract comps. Property comp panel is all regions.
 
-**Alternative / limitation:** Card users do not represent all visitors. Guest-page counts are player-months and cannot be summed into distinct six-month players. Partial date selections use complete included months, as disclosed in the UI.
+**Inspect:** Guests → property comp economics
 
-**Decision / where to inspect:** Use Guest & Loyalty Insights for monthly group comparisons. Distinct-player, coverage and ahead-share figures above are fixed report findings, not dynamically filtered guest-page cards.
+## C8 · Forecast protocol and metrics now use one machine-level version
 
-### C7. Tracked wagers and positive player losses are concentrated.
+**Evidence:** forecast_metadata.json; demand_predictions.parquet; dashboard/forecast.py
 
-**Evidence:** data/analysis_results.json: players.top1pct_count, top1pct_wager_share, top1pct_positive_loss_share; analysis/pipeline.py.
+**Finding / method:** January–March fit, April selection, January–April refit, frozen May–June test: machine-day MAE $934.98 vs $1,121.28, WAPE 21.24%.
 
-**Finding / method:** Rank six-month totals by player: the top 1% (1,139 players) by wagers account for 22.86% of tracked wagers. A separate ranking by positive player loss accounts for 19.86% of positive losses.
+**Alternative / limitation:** One unseen test machine uses fallback; supplied roster is not predicted. Illustrative April bands are imperfect. Original property-model 68.52% improvement is historical, not this score. No July actuals plotted.
 
-**Alternative / limitation:** These rankings need not contain the same people. Positive-loss share is not share of net casino win. Region/age group shares on the guest page do not answer individual concentration.
+**Inspect:** Scenarios → holdout; Methods dialog
 
-**Decision / where to inspect:** These fixed report findings are available in this appendix and its CSV; the current guest page has no individual concentration cards. Do not use loss concentration to target heavy losers.
+## C9 · Floor placements are time-valid; art and guests are decorative
 
-### C8. Comp redemption economics changed around May.
+**Evidence:** floor_locations.parquet; placements.parquet; analytics.floor_snapshot
 
-**Evidence:** data/analysis_results.json: loyalty; data/property_daily.parquet; analysis/pipeline.py: loyalty-ledger reconciliation.
+**Finding / method:** July 1 at 06:00 Las Vegas: 308 occupied supplied slots and six vacant. Real coordinates place original machines. Swaps preserve both identities and roster.
 
-**Finding / method:** January–June economic comp cost is $190,669.30. Weighted redeemed points per face-value dollar fell from 12.51 in April to 5.84 in May and 5.71 in June. Ledger aggregation uses the Las Vegas 6 a.m. gaming-day boundary.
+**Alternative / limitation:** Decorative rooms, guests and relocation curves do not model customer movement or validate physical feasibility. Original configurations remain associated with machine identity; additions use a labeled proxy.
 
-**Alternative / limitation:** A change in redemption mix can alter the ratio without a uniform posted policy change. Face value differs from economic cost. Avoid subtracting comp costs twice when already included in a cost measure.
+**Inspect:** Floor lab; tests/test_upgrade.py; tests/test_floor_simulation.py
 
-**Decision / where to inspect:** Investigate policy and redemption mix before claiming cause or loyalty-program ROI. Guest & Loyalty Insights shows monthly comparisons; evaluate changes using a controlled pilot.
+## C10 · Shared catalogue actions reconcile across tools
 
-### C9. The original property-level forecast beats a constant comparator in May–June.
+**Evidence:** dashboard/decisions.py; dashboard/floor_simulation.py
 
-**Evidence:** data/analysis_results.json: forecast; analysis/pipeline.py: property forecast; app.py: July Demand Outlook headline metrics.
+**Finding / method:** Existing 1,000 deterministic draws and July forecast baselines are reused. Every tested catalogue action and swap matches shared-engine day-30 net samples; cash stays separate from downtime.
 
-**Finding / method:** Fit January–April; compare predictions with May–June floor-wide daily wagers. Weekday MAE is $68,698.55 versus $218,258.10 constant MAE (68.52% lower). January–June refit gives a July 1–30 wager scenario of $40,711,161.62.
+**Alternative / limitation:** Effect distributions are assumptions, not learned causal effects. Daily benefit allocation follows forecast shares (maintenance spread over active days), not an intraday response model.
 
-**Alternative / limitation:** May–June errors also select the winning method, so this is not an untouched final test of an independently selected winner. July has no actual outcomes. The adjacent April-selection explanation describes a different model (C10).
+**Inspect:** Scenarios; floor preview, confirmation, playback and export
 
-**Decision / where to inspect:** Label these as the original property-level results. Do not pair their 68.52% improvement with the newer model’s selection protocol or interpret the July scenario as validated realized demand.
+## C11 · Search scope changes the recommendation
 
-### C10. The newer machine-level model has a separate validation protocol.
+**Evidence:** dashboard/decisions.py: shortlist; floor_simulation.suggestions
 
-**Evidence:** data/forecast_metadata.json; data/demand_predictions.parquet; dashboard/forecast.py; scripts/build_dashboard_data.py.
+**Finding / method:** The original nine-target shortlist favors keep-budget. The wider individually feasible floor search can return positive modeled move/lease/maintenance options against the current plan.
 
-**Finding / method:** Fit January–March, select on April, refit January–April, freeze May–June predictions. Machine-day MAE $934.98 versus $1,121.28 baseline (16.6% lower), WAPE 21.24%. Retained floor aggregation gives MAE $99,117.16 versus $231,842.16 and illustrative band coverage 62.3%.
+**Alternative / limitation:** Not globally optimized combinations or layout. Moves use the first legal vacancy, not a location-specific uplift estimate. Add/remove and swaps are outside suggestions.
 
-**Alternative / limitation:** These are not C9’s model or error scale. April selects the model and calibrates 10th–90th percentile bands; 62.3% coverage is below nominal 80%. Active roster is supplied; one unseen test machine uses a fallback. No July actuals exist.
+**Inspect:** Scenarios → shortlist; Manage → Suggested changes
 
-**Decision / where to inspect:** Use the saved machine diagnostics separately from the original headline forecast. The current July diagnostic chart incorrectly turns missing actuals into zeros; disregard that Observed series until corrected.
+## C12 · Add/remove are explicit what-if extensions
 
-### C11. The current floor view is a bank-level schematic.
+**Evidence:** dashboard/floor_simulation.py: action_daily
 
-**Evidence:** data/floor_locations.parquet; data/floor_walkways.parquet; data/placements.parquet; app.py: build_location_lookup and selected-period bank summaries.
+**Finding / method:** Entered cash paid upfront. Addition = eligible proxy forecast × triangular(0.5,1,1.5) × entered incremental share × existing demand draw. Removal loses forecast × (1−retained share) × demand after activation.
 
-**Finding / method:** Supplied bank coordinates locate bank aggregates. Selected-period machine evidence uses dominant bank/zone metadata; placement history supports descriptive movement comparisons.
+**Alternative / limitation:** No invented resale, operating or lease savings. NEW- identities are hypothetical and do not rewrite sources. Extension results do not appear in official nine-candidate history.
 
-**Alternative / limitation:** This is not the earlier dated, slot-level occupancy simulator. It does not demonstrate executed moves, movement uplift, or validated power/accessibility/capacity feasibility. Historical bank membership is not necessarily July placement.
+**Inspect:** Floor composer, preview assumptions, daily export
 
-**Decision / where to inspect:** Use the map to locate patterns and choose an investigation target. Do not claim 308 occupied slots, six empty slots, animated machine moves or causal location effects from the current visible map.
+## C13 · All floor plans pass centralized constraints
 
-### C12. Preserve Budget ranks first in the stored, limited Monte Carlo comparison.
+**Evidence:** floor_simulation.validate; floor_server.py
 
-**Evidence:** data/analysis_results.json: simulation; data/scenario_net.npz; analysis/pipeline.py: candidate effects and portfolio enumeration.
+**Finding / method:** $100,000 cash, maximum three types including extensions, catalogue quantities, nonoverlapping target sets, legal destinations, unique reservations, removal/arrival timing. Swap uses two move units.
 
-**Finding / method:** 1,000 scenarios, seed 20251107, nine spending candidates and 42 feasible portfolios. At most three action types and $100,000 catalogue cash budget. Keep-budget incremental net is $0; all spending candidates have negative modeled means. Next-best single candidate is comp-policy change at −$1,028.37 mean.
+**Alternative / limitation:** This validates modeled constraints, not engineering, access, licensing or operational feasibility. Browser plans are transient. Refresh resets; exports are manual local downloads.
 
-**Alternative / limitation:** Effects and retained-play fractions are assumptions, not measured intervention outcomes. The shortlist is not exhaustive; inspection information value is unpriced. These saved results do not rerun when dates or sandbox controls change.
+**Inspect:** tests/test_floor_simulation.py; tests/test_floor_api.py
 
-**Decision / where to inspect:** For the stated 30-day objective, preserve funds under the stored assumptions; consider a separately justified learning action. July Action Plan displays this original comparison, not a live DecisionEngine optimization.
+## C14 · No real intervention effect or API integration is claimed
 
-### C13. The interactive action sandbox is a separate what-if calculation.
+**Evidence:** notebooks/01_data_checks.ipynb; data_bundle.py; run_local.py
 
-**Evidence:** app.py: estimate_action_sandbox, plan_budget_used, add_to_plan; data/analysis_results.json: action_catalog.
+**Finding / method:** Historical Databricks notebooks and exports are retained. Runtime reads local files. Gemini chat and live Databricks queries are not implemented.
 
-**Finding / method:** Selected historical rates, catalogue prices/lead times and user assumptions produce low/base/high contribution estimates. Planned downtime is deducted from economic benefit. Custom tray actions do not join the stored 42-portfolio ranking.
+**Alternative / limitation:** Proposed tests need untreated controls, predefined dates and contribution/availability outcomes. Monitor floor-wide displacement; 30 days may be underpowered.
 
-**Alternative / limitation:** The ranges are sensitivities, not Monte Carlo confidence intervals. The tray currently counts downtime opportunity against cash budget. Its comp-policy estimate omits the original simulation’s demand-loss penalty. Successive action selections also reset in an automated interaction check.
+**Inspect:** Methods dialog; README; AI_DISCLOSURE.md
 
-**Decision / where to inspect:** Verify the selected action and compute cash budget separately before acting. M-1158 inspection costs $1,200 cash plus $23.95 opportunity cost; correct cash remaining is $98,800, although the tray reports about $98,776.
+## How to evaluate an action
 
-### C14. Evaluation plans are proposed; no intervention effect has been measured.
+Inspect settings and meter reconciliation for anomalies; random payout recovery alone is not proof of repair. For moves, replacements and signage, compare treated units with matched untreated units over the same dates and check whole-floor play for displacement. For maintenance, measure availability, repeat faults and contribution per scheduled hour. For comp changes, use a controlled pilot and measure incremental contribution after economic comp cost, without targeting heavy-loss players. Predefine sample size, minimum useful effect and stopping rules. These experiments have not been run.
 
-**Evidence:** app.py: action measurement plans; analysis/pipeline.py; notebooks/01_data_checks.ipynb; this appendix’s evaluation table.
+## Version boundary
 
-**Finding / method:** Predefine target, untreated comparison, timing, cash cost and a contribution/availability outcome. Monitor whole-floor play for displacement and inspect meter/configuration evidence for anomalies.
-
-**Alternative / limitation:** No randomized action trial, verified repair effect or July intervention outcome exists in these exports. Thirty days may be underpowered. A favorable simulated result is not proof that an intervention works.
-
-**Decision / where to inspect:** Use the dashboard to choose and design a test, then evaluate genuinely new evidence. Databricks supports the notebook/analysis provenance; the dashboard reads local exports and has no live Databricks or Gemini API connection.
-
-## Keep the two forecast versions separate
-
-| Item | Original property-level model | Newer machine-level model |
-|---|---|---|
-| Saved evidence | `analysis_results.json: forecast` | `forecast_metadata.json`; `demand_predictions.parquet` |
-| Target | Floor-wide daily wagers | Machine-day wagers; can be aggregated |
-| Selection | Choose weekday versus constant using May–June errors after January–April fit | Fit January–March; select on April |
-| Evaluation | May–June out-of-sample predictions, also used for selection | January–April refit; frozen May–June test |
-| Main result | $68,698.55 MAE vs $218,258.10 | $934.98 machine-day MAE vs $1,121.28 |
-| Current app use | Main July Demand Outlook headline and original stored scenario context | Additional diagnostics and method text on the same page |
-| July | Refit January–June; scenario only | Refit January–June; forecast only |
-
-The current method panel and primary scorecards are not consistently version-labeled. C9 and C10 provide the correct attribution; this appendix does not repair that UI mismatch. The newer daily bands are illustrative and do not form a 30-day profit interval. The original simulation largely uses historical operating rates: it does not convert every newer forecast prediction into an optimized action.
-
-## What the original Monte Carlo comparison assumes
-
-`analysis/pipeline.py` generates 1,000 scenarios using seed `20251107`. It samples January–April fitted-demand residual ratios into 30-day averages and shares demand/retention draws across candidate comparisons. Effects are stipulated, not estimated treatment effects:
-
-| Assumption | Distribution / treatment |
-|---|---|
-| Retained incremental floor play | Triangular 25%, 50%, 100% (minimum, mode, maximum) |
-| Machine move uplift | Triangular −10%, 20%, 60% |
-| Leased-title uplift | Triangular −10%, 50%, 150% |
-| Technician recovery of downtime opportunity | Triangular 10%, 30%, 60%; assumes one shift can address the modeled scope |
-| Preventive-maintenance recovery | Triangular 20%, 50%, 80% |
-| Signage uplift | Triangular 0%, 2.5%, 8% |
-| Comp-policy savings / demand-loss penalty | Savings triangular 0%, 10%, 25%; theo-loss fraction triangular 0%, 0.05%, 0.2% |
-| Inspection and comp-pilot monetary benefit | No recovery credited without an effect estimate; information value is not monetized |
-
-Catalogue lead times reduce benefit days; catalogue cash and planned downtime opportunity reduce incremental net. Feasible portfolios use at most three action types, enforce the cash ceiling, and exclude coded overlaps/incompatibilities. The nine-candidate shortlist uses one catalogue unit per candidate and does not explore all quantities, destinations or purchases. Scenario probabilities are conditional on these assumptions, not empirical success rates. Candidate samples in `scenario_net.npz` are distinct from the 42 portfolio combinations; candidate order is defined by the original pipeline and report.
-
-The latest app's custom sandbox uses selected historical rates and user-controlled sensitivity assumptions. It does not rerun these Monte Carlo draws or the stored portfolio ranking. In particular, its comp-policy calculation omits the original simulation's demand-loss penalty. Do not describe the current app as using the retained `dashboard/decisions.py` shared engine for its displayed official recommendation.
-
-## How we would know an action worked
-
-| Action | Predefined comparison and evidence | Success criterion |
-|---|---|---|
-| Preserve budget / monitor | Track availability, expected earnings per scheduled hour and payout diagnostics; evaluate forecast errors on genuinely new outcomes. | Reconsider when new evidence changes the cost-benefit case. No cash uplift is claimed from doing nothing. |
-| Inspect | Verify configured game math, meter reconciliation, repair records and any corrections. | A verified discrepancy is resolved; random payout recovery alone is not proof. Price corrective work separately. |
-| Move / replace / signage | Compare treated machines or banks with matched untreated controls over the same dates; record downtime and whole-floor play. | Incremental contribution after cash cost and downtime exceeds zero with uncertainty reported, including displacement. |
-| Maintenance / staffing | Compare unavailable hours, repeat faults and contribution per scheduled hour with an untreated group. | Recovered availability and positive incremental contribution after costs, beyond background demand change. |
-| Comp pilot | Randomize eligible participants where feasible; measure economic comp costs and incremental contribution. | Positive contribution after costs with uncertainty; avoid targeting high-loss players. |
-
-These are proposed plans, not completed experiments. Set comparison groups, material effect thresholds, sample size and stopping rules before implementation. Thirty days may be insufficient; an inconclusive result does not demonstrate success or failure.
-
-## Scope, provenance and verification
-
-- Date controls affect machine/property evidence. The concentration and distinct-player findings here remain January–June; guest group exports cover whole months and contain player-month counts. Forecast evaluation windows and the original portfolio ranking stay fixed.
-- `analysis/pipeline.py` reproduces original exports from the raw challenge inputs. `scripts/build_dashboard_data.py` produces the retained machine forecast, placement and variance extensions. Source hashes are recorded in the report/metadata; the current `app.py` does **not** enforce the earlier runtime hash-mismatch guard.
-- `notebooks/01_data_checks.ipynb` preserves original Databricks analysis. The later `notebooks/02_Floor_and_Forecast.ipynb` and shared modules retain extension work, but their presence does not prove every feature is used by the latest UI or was executed in Databricks. The reviewed app reads local exports; it does not query Databricks live.
-- Gemini chat is **not implemented**. Do not claim Gemini integration or describe the numerical models as generative AI. See `AI_DISCLOSURE.md` for the separate tool-use disclosure.
-- Review of application commit `3271aaa`: all six pages rendered at the default period; a complete June range and bank B-01 drilldown rendered; three original numerical export-consistency tests passed. These checks do not establish causal validity, full accessibility or error-free interaction. The repository's older `tests/test_app.py` targets a previous UI and is not evidence of current end-to-end coverage.
-- This update leaves styling, analytical calculations and deployment unchanged. Public judge access is a separate pending task; no public URL is verified by this appendix.
-
-## Known limitations in the reviewed application
-
-These remain open; documenting them is not a code fix.
-
-| Issue | Effect on interpretation or use |
-|---|---|
-| Incomplete date-range selection can crash | A one-date tuple is converted to a timestamp; completed date ranges worked in review. |
-| July diagnostic actuals become zero | All July actuals are missing, but ordinary grouped sum creates zeros and an Observed line. Do not interpret it as measured July play. |
-| Forecast versions are mixed in the explanation | Attribute headline metrics to C9 and machine diagnostics/protocol to C10. |
-| Action tray mixes cash and opportunity cost | Check catalogue cash separately against $100,000. Keep planned downtime as an economic cost in net benefit. |
-| Action selection can reset | Sequential AppTest changes sometimes retained the previous choice. Verify the displayed action before adding it; the exact browser sequence was not independently reproduced. |
-| Individual concentration is not a guest-page card | C6–C7 and the downloadable appendix contain the fixed-period findings; monthly group charts do not replace them. |
-
-The retro identity and current page structure are retained. These limitations concern analytical labeling and interaction correctness, not a request for another visual redesign.
+`analysis_results.json` and `scenario_net.npz` preserve the original version-1 pipeline. The rebuilt UI uses the retained shared DecisionEngine for current calculations, not those older stored candidate arrays. Both are seeded 1,000-scenario systems with different demand/effect construction; do not mix their values. Source hashes are recorded, but the new loader does not claim a runtime cryptographic integrity gate. See LOCAL_REBUILD for performed checks and residual limitations. No July actuals or real intervention effects exist.

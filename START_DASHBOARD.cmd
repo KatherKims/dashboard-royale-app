@@ -13,7 +13,7 @@ if errorlevel 1 goto failed
 ".venv\Scripts\python.exe" -m pip install -r requirements.txt
 if errorlevel 1 goto failed
 :check_packages
-".venv\Scripts\python.exe" -c "import streamlit, pandas, numpy, pyarrow, plotly, matplotlib" >nul 2>&1
+".venv\Scripts\python.exe" -c "import streamlit, pandas, numpy, pyarrow, plotly" >nul 2>&1
 if errorlevel 1 (
   ".venv\Scripts\python.exe" -m pip install -r requirements.txt
   if errorlevel 1 goto failed
@@ -24,7 +24,8 @@ if /i "%~1"=="--check" (
 )
 echo Keep this window open while using AceIQ. Press Ctrl+C to stop.
 echo Dashboard address: http://127.0.0.1:8501
-".venv\Scripts\python.exe" -m streamlit run app.py --server.address 127.0.0.1 --server.port 8501 --server.headless false --global.developmentMode false
+echo Floor lab address: http://127.0.0.1:8502/floor-lab
+".venv\Scripts\python.exe" run_local.py
 if errorlevel 1 goto failed
 exit /b 0
 :failed

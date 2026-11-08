@@ -1,105 +1,110 @@
-# The Gilded Ace — Dashboard Royale
+# The Gilded Ace · ACEIQ
 
-A learning project built with Databricks and Python. The app has three pages: Executive overview, Machine investigation, and the $100,000 decision lab. All casino data is synthetic, January–June 2025. July 1–30 is the decision horizon, not the current calendar month.
+A local Python/Streamlit decision dashboard and a separate interactive SVG casino floor. All casino and guest data is synthetic. January–June 2025 is observed history; July 1–30 is a modeled decision horizon, not the current date.
 
-**Judges and first-time users:** start with [JUDGE_START_HERE.md](JUDGE_START_HERE.md). Windows users can double-click `START_DASHBOARD.cmd`. The current [Claims & Evidence appendix](docs/CLAIMS_AND_EVIDENCE.md) and [AI disclosure](docs/AI_DISCLOSURE.md) are also downloadable from the dashboard sidebar.
+The current version brings the compact dashboard and interactive floor lab into this repository. Earlier versions remain in Git history. The original data exports, analysis notebooks and shared financial models are unchanged. The app runs locally; publishing this code to GitHub does not create a public dashboard.
 
-**Joining the team?** Start with [TEAM_HANDOFF.md](TEAM_HANDOFF.md) for collaboration steps, the analysis status, and the optional Gemini roadmap.
+## Run it
 
-**Learning the code or preparing for judging?** Read [the comprehensive code and requirements explanation](docs/CODE_EXPLAINED.md). It covers the formulas, architecture, evidence, Databricks integration, proposed Gemini design, and requirements that remain unfinished.
+On Windows, double-click **START_DASHBOARD.cmd**. On first use it creates a Python 3.12 virtual environment and installs the required packages. Keep the terminal open; Ctrl+C stops both services. After pulling updates, rerun the dependency-install command below if requirements changed.
 
-**Latest version:** [Read the upgrade guide](docs/UPGRADE_GUIDE.md) for the implemented floor map, forecast comparison, corrected calculations and teammate extension points. The cloud notebook and original saved scenario files retain version 1 results. Gemini remains unimplemented.
+- Dashboard: <http://127.0.0.1:8501/>
+- Floor lab: <http://127.0.0.1:8502/floor-lab>
 
-## What each tool does
+These are local addresses, not public judge links. Stop any previous app occupying these ports before starting. The launcher does not terminate unrelated processes.
 
-- **Databricks** runs the documented analysis and preserves the notebook for judges.
-- **Streamlit** turns Python code into a web app with charts and controls.
-- **VS Code** is where you edit that Python code on your computer.
-- **Git** keeps a history of changes; **GitHub Desktop** provides buttons to review and save that history. GitHub stores a shared copy online.
-
-The app reads small exported results; public deployment has not been performed. Visitors do not need a Databricks account, and the app needs no Databricks password or token. Refreshing the data is an explicit export step; the app is not a live database connection.
-
-## Open and run in VS Code
-
-**Already set up on Katherine's computer:** open this project folder, press **F5** (or **Run → Start Debugging**) and choose **Run casino dashboard** if prompted. The browser opens at `http://127.0.0.1:8501`. Keep VS Code open while using the dashboard; press **Shift+F5** to stop it. Edit the code in VS Code and use the dashboard in your browser.
-
-**First-time setup on another Windows computer:**
-
-1. In VS Code choose **File → Open Folder** and select this folder.
-2. Install the Microsoft Python extension if prompted. Use Python 3.12.
-3. Open **Terminal → New Terminal** and run:
+To set up manually in VS Code, open the repository folder and run these commands in its terminal:
 
 ```powershell
 py -3.12 -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
-.venv\Scripts\python -m streamlit run app.py
+.venv\Scripts\python run_local.py
 ```
 
-4. Open the localhost address printed in the terminal. Edit `app.py`, save, and refresh the app. Stop it with Ctrl+C.
+For F5, select that Python environment in VS Code and choose **Run dashboard + floor lab**. The terminal prints both addresses. No Databricks login, Gemini key or cloud account is required. Node is needed only for the geometry tests, not to run the app.
 
-If `py -3.12` is unavailable, install Python 3.12 first. This project was tested using Python 3.12. The included Windows Run configuration uses `.venv\Scripts\python.exe` directly and works with F5 once setup is complete. Each teammate creates their own `.venv`; it is excluded from Git. Stop a terminal-started server with Ctrl+C before using F5 on the same port.
+On macOS/Linux, use `python3.12 -m venv .venv`, `.venv/bin/python -m pip install -r requirements.txt`, then `.venv/bin/python run_local.py`. Select your local virtual environment in VS Code.
 
-## Add this work to GitHub Desktop
+## Five destinations
 
-1. Choose **File → Add local repository** and select this folder (the folder containing `app.py`, `README.md` and the hidden `.git` directory). If it says this is not a Git repository, verify the folder first. If you received a ZIP, clone the GitHub repository instead to get its history and remote connection.
-2. The first local checkpoint has already been saved. Click **History** to see it. After your next edit, review **Changes**, enter a short summary, then **Commit to main**. A commit is a saved checkpoint.
-3. The repository is already published privately. Review local changes, commit, then **Push origin** to share them. Raw player data, passwords and tokens do not belong in Git.
-4. After later edits: review Changes → write a summary → Commit → Push origin. Committing saves locally; pushing updates GitHub.
+| Destination | Purpose |
+|---|---|
+| Overview | Actual/expected house win, availability, downtime opportunity, observed/forecast wagers, placement preview and investigation leads. |
+| Machines | Search machines; filter by bank; inspect cumulative earnings, selected-period payout variance, monthly/daily availability, theme peers and placement history. |
+| Guests | Complete-month grouped wagers, payouts, player net, expected player loss and comps; region filter; explicitly fixed full-cohort concentration. |
+| Scenarios | Cash ceiling, retained-play sensitivity, original nine targets re-evaluated by the shared engine, ranked feasible portfolios, keep-budget and forecast evidence. |
+| Floor lab | Opens a standalone local page with placements, a minimal HUD, decorative guests, drag/drop, pan/zoom, July playback, previews, suggestions and plan undo. |
 
-Official instructions: [add a local repository](https://docs.github.com/en/desktop/adding-and-cloning-repositories/adding-a-repository-from-your-local-computer-to-github-desktop).
+Metrics use bounded panels; deeper methods and tables are optional. Smaller screens can scroll dashboard panels/page. The floor itself has no page scroll. Use Manage → View controls to focus a zone, zoom, Fit, pause ambient guests, or compare Baseline and Proposed layouts. Baseline is read-only.
 
-## Where to find things
+## Floor actions
 
-| File/folder | Purpose |
-| --- | --- |
-| `app.py` | Three-page Streamlit application |
-| `analysis/pipeline.py` | Original analysis and version 1 scenario calculations |
-| `dashboard/` | Shared analytics, prediction, decision engine and map views |
-| `scripts/build_dashboard_data.py` | Rebuild forecast, variance and floor exports |
-| `notebooks/01_data_checks.ipynb` | Original Databricks notebook with the combined investigation |
-| `data/` | Derived synthetic results used by the app |
-| `docs/findings.md` | Findings, caveats and measurement plans |
-| `scripts/refresh_from_databricks.ps1` | Download fresh exports and the original notebook using your CLI login |
+- Move an eligible original machine to a legal vacancy, or drag it onto another unchanged original machine to review a swap. Moves activate July 3. A swap uses two move units, $3,600 cash, shared uncertainty, and atomic activation/undo; it preserves both identities.
+- Inspect, lease-replace or maintain an eligible manufacturer. Manufacturer maintenance covers all eligible original machines in that scope.
+- Add/remove are explicitly labeled **what-if extensions**. Enter cash cost, activation day and incremental/retained-play share. Additions use an existing performance proxy and get a NEW- ID. Undo and recreate an addition to change it.
+- Preview never changes the plan. Confirmation validates again. A removal can free a slot for an arrival at or after its activation. Undo dependent arrivals before undoing that removal. Chained moves and overlapping targets are rejected.
+- The $100,000 **cash** limit, at most three action types (including what-if types), catalogue quantities, target conflicts and destination reservations are validated centrally.
 
-## Reproduce locally
+Plans live only in browser memory; refresh resets them. Export plan JSON and daily CSV manually from the Plan drawer. No plans or source data are written to the server. Only the dismissible hint uses tab-session storage.
 
-Download the [challenge dataset](https://github.com/tamu-datathon-org/dashboard-royale), then:
+## Models and interpretation
+
+The floor and Scenarios reuse `dashboard/decisions.py` and the saved July machine forecasts. They use the existing shared engine's **1,000 seeded draws**, not an LLM. Day-30 catalogue-action net samples reconcile to that engine. The original `analysis_results.json` simulation and `scenario_net.npz` are retained as historical version-1 evidence; those samples are not interchangeable with the shared engine's later draws.
+
+Upfront catalogue costs are charged on July 1; recurring lease cash starts at activation. Benefits and planned downtime begin at activation. Maintenance benefits are spread across eligible days; other catalogue benefits follow the target's daily forecast share. This timing is a planning allocation, not a learned intraday response. Cash is separate from downtime opportunity.
+
+Expected gaming earnings are before action cash and baseline operating costs. Incremental net is the difference from the unchanged forecast after action cash and planned downtime. Neither is total business profit. July outcomes are unavailable.
+
+Suggested changes search individually feasible original-machine moves, lease replacements and manufacturer maintenance, ranked against the **current** plan. Moves use the first legal vacancy: there is no estimated destination-specific causal effect. Swaps, add/remove and combinations are outside suggestion search. Positive suggestions may appear even though the original nine-target shortlist favors keeping budget; these are different search scopes.
+
+Probabilities and 10th–90th percentiles describe assumed effects, not measured treatment success. Addition performance is triangular 0.5/1/1.5 times a supplied proxy with entered incremental-play share. Removal retains only the entered share of its forecast play elsewhere. No resale, lease savings or operating savings are invented. Decorative guests have no connection to earnings. Illustrated rooms are not a surveyed building.
+
+## Screenshots
+
+![Compact dashboard](docs/dashboard.png)
+
+![Interactive floor lab](docs/floor-lab.png)
+
+[Swap preview](docs/swap-preview.png) · [Suggested changes](docs/suggestions.png)
+
+## Files and evidence
+
+- `app.py`, `assets/dashboard.css`: compact Streamlit dashboard.
+- `dashboard/floor_simulation.py`: validation, daily cash/effects, layouts, preview/confirm/undo, suggestions.
+- `dashboard/floor_server.py`: localhost-only HTTP API and static asset server.
+- `assets/floor-world.html`, `.css`, `.js`: standalone accessible controls and SVG floor.
+- `assets/floor-motion.js`: pure zoom, drop-target, route and obstacle helpers.
+- `dashboard/analytics.py`, `forecast.py`, `decisions.py`: existing shared model definitions, unchanged.
+- `data/`: original exports, unchanged. `analysis/` and `notebooks/`: historical reproducible analysis, unchanged.
+- [Claims & Evidence](docs/CLAIMS_AND_EVIDENCE.md), [AI disclosure](docs/AI_DISCLOSURE.md), [local rebuild notes](docs/LOCAL_REBUILD.md).
+- `docs/archive/`: frozen baseline documentation. Other inherited long-form guides describe earlier versions; use this README and LOCAL_REBUILD for current behavior.
+
+The included runtime data files are listed below. Keep them in `data/` when cloning or copying the project.
+
+```text
+analysis_results.json
+machines.parquet
+machine_daily.parquet
+guest_groups.parquet
+property_daily.parquet
+scenario_net.npz
+daily_variance.parquet
+demand_predictions.parquet
+forecast_metadata.json
+floor_locations.parquet
+floor_walkways.parquet
+placements.parquet
+``` It does not download data or call external APIs. Databricks notebooks document the original work; runtime uses local exports. Gemini chat is not implemented.
+
+## Checks
 
 ```powershell
-.venv\Scripts\python analysis/pipeline.py --data "C:\path\to\dashboard-royale\data" --output data
-.venv\Scripts\python scripts/build_dashboard_data.py --source "C:\path\to\dashboard-royale\data" --output data
+python tests/test_results.py
+python tests/test_upgrade.py
+python tests/test_floor_simulation.py
+python tests/test_floor_api.py
+python tests/test_compact_app.py
+node tests/test_floor_motion.cjs
 ```
 
-The report records source file SHA256 hashes, validation, train/test dates, simulation seed and assumptions. Player exports contain only grouped summaries, not player identifiers.
-
-## Checks completed
-
-The original Databricks notebook ran successfully end to end. Its result snapshots are embedded for reading without rerunning. Local interaction checks passed for all three pages, machine rankings, machine selection, the three decision objectives, zero budget and the benefit sensitivity control. Cross-checks reconcile exported totals, catalogue costs, eligible targets and scenario rankings.
-
-To repeat the local checks:
-
-```powershell
-.venv\Scripts\python tests/test_results.py
-.venv\Scripts\python tests/test_upgrade.py
-.venv\Scripts\python tests/test_app.py
-```
-
-## Refresh from Databricks
-
-After running the complete-analysis section in the original Databricks notebook:
-
-```powershell
-powershell -File scripts/refresh_from_databricks.ps1
-```
-
-The script downloads original results and notebook snapshots into this project. **Rebuild extension exports using `scripts/build_dashboard_data.py` afterward**, pointing to your challenge dataset; the original cloud notebook does not yet generate them. Review the resulting changes in GitHub Desktop. This is a one-way export, not automatic two-way synchronization.
-
-## Publish later
-
-Streamlit Community Cloud can run `app.py` from a GitHub repository. Choose this repository, branch `main`, main file `app.py`, and Python 3.12. No Databricks credentials are needed. [Official deployment instructions](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
-
-## How to interpret the decision lab
-
-The default objective is **maximize expected 30-day incremental contribution**, after action costs and planned downtime. The simulation compares a limited, disclosed shortlist and the keep-budget option. It does not prove causal effects or find the globally best action across every possible location, quantity and catalogue item. Distributions describe assumptions, not statistically established treatment effects. Inspections and pilots receive no unmeasured monetary information value.
-
-Source data attribution and license are in `LICENSE-data.txt`. The challenge guide remains the authority for submission requirements.
+Use your selected Python environment. `tests/test_app.py` is inherited and targets an earlier UI; the compact-app test replaces it for this rebuild. See LOCAL_REBUILD for actual checks performed and limits. Data attribution/license remains in `LICENSE-data.txt`.

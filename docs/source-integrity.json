@@ -1,0 +1,37 @@
+{
+  "baseline": "08dab59de75264b5b52b8327380c7a406c597a2d",
+  "unchanged_content_files": [
+    "analysis/pipeline.py",
+    "dashboard/analytics.py",
+    "dashboard/decisions.py",
+    "dashboard/forecast.py",
+    "data/analysis_results.json",
+    "data/daily_variance.parquet",
+    "data/demand_predictions.parquet",
+    "data/floor_locations.parquet",
+    "data/floor_walkways.parquet",
+    "data/forecast_metadata.json",
+    "data/guest_groups.parquet",
+    "data/machine_daily.parquet",
+    "data/machines.parquet",
+    "data/placements.parquet",
+    "data/property_daily.parquet",
+    "data/scenario_net.npz",
+    "notebooks/01_data_checks.ipynb",
+    "notebooks/01_data_checks.py",
+    "notebooks/02_Floor_and_Forecast.ipynb"
+  ],
+  "archive_crlf_only_files": [
+    "analysis/pipeline.py",
+    "dashboard/analytics.py",
+    "dashboard/decisions.py",
+    "dashboard/forecast.py",
+    "data/analysis_results.json",
+    "data/forecast_metadata.json",
+    "notebooks/01_data_checks.ipynb",
+    "notebooks/01_data_checks.py",
+    "notebooks/02_Floor_and_Forecast.ipynb"
+  ],
+  "changed_source_content": [],
+  "original_working_tree_clean": true
+}

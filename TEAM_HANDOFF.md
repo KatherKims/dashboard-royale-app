@@ -2,13 +2,13 @@
 
 This is the Dashboard Royale casino analytics project. All casino data is synthetic. The app uses January–June 2025 evidence to investigate low-earning machines and compare July 1–30 decisions with a $100,000 budget.
 
-**New version:** [UPGRADE_GUIDE.md](docs/UPGRADE_GUIDE.md) explains the implemented map, shared simulator, period-aware diagnostics and new forecast. The floor-map roadmap below describes the earlier starting point. Gemini remains unimplemented.
+**Current version:** Start with [README.md](README.md) and [rebuild verification](docs/LOCAL_REBUILD.md). The compact dashboard and standalone interactive floor are implemented. Older upgrade guides and the roadmap below describe earlier versions. Gemini remains unimplemented.
 
 ## Start here
 
 1. Clone the repository using **GitHub Desktop → File → Clone repository**. You need an invitation if the repository is private. A ZIP is fine for viewing, but **cloning is the right choice for collaborating** because it includes Git history and the GitHub connection.
 2. Choose **Repository → Open in Visual Studio Code**. Open the whole project folder, not just `app.py`.
-3. Follow the Python 3.12 setup commands in `README.md`. Run `python -m streamlit run app.py` using your virtual environment.
+3. Follow the Python 3.12 setup commands in `README.md`. Run `python run_local.py` using your virtual environment to start both the dashboard and floor lab.
 4. Read `docs/findings.md` before changing calculations. Read the original combined notebook in `notebooks/01_data_checks.ipynb` for the evidence and saved results.
 
 The app runs from the included derived data; teammates do not need Databricks access to run it. To rerun the raw-data pipeline, download the original challenge dataset. The included refresh script requires Katherine's existing Databricks access or your own workspace permissions; it is not needed for normal app development.

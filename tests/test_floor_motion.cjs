@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict');
+const m=require('../assets/floor-motion.js');
+const a={x:10,y:20},b={x:80,y:100};
+const paths=m.pairedRoutes(a,b);
+assert.deepEqual(m.onRoute(paths[0],0),a);assert.deepEqual(m.onRoute(paths[0],1),b);
+assert.deepEqual(m.onRoute(paths[1],0),b);assert.deepEqual(m.onRoute(paths[1],1),a);
+assert.notDeepEqual(paths[0][1],paths[1][1]);
+const camera={x:40,y:80,scale:2},pointer={x:120,y:150};
+const z=m.zoomAt(camera,pointer,1.5);
+assert.deepEqual(m.worldPoint(z,pointer),m.worldPoint(camera,pointer));
+assert.equal(m.zoomAt(camera,pointer,100).scale,6);
+assert.equal(m.dropTarget({x:10,y:20},[{id:'A',x:11,y:20}]).id,'A');
+assert.equal(m.dropTarget({x:100,y:200},[{id:'A',x:11,y:20}]),null);
+const obstacles=[{x:40,y:40,w:16,h:32}];
+const route=m.walkRoute({x:8,y:40},{x:80,y:40},obstacles,{x:0,y:0,w:100,h:100});
+assert.ok(route.length>0);assert.ok(route.every(p=>!m.blocked(p,obstacles,2)));
+console.log('PASS: preview endpoints, separate swap routes, pointer zoom, drop targets and obstacle routing');
