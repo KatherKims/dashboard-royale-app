@@ -16,3 +16,8 @@ The final presentation pass also used the supplied Datathon Project Ideation PDF
 ## Public Streamlit Floor Lab update
 
 AI-assisted implementation added `dashboard/cloud_floor.py` and routed dashboard floor links to the same Streamlit app. It exposes the existing FloorSimulation engine through form controls, a supplied-coordinate map, July day selection, preview/confirmation, undo, suggestions and downloads. Drag-and-drop and decorative walking guests remain local SVG features. Financial models and datasets are unchanged. Databricks verification is pinned to application revision 2a124ca and does not claim to validate this later UI addition.
+
+
+## Public SVG simulator supersedes the form-only edition
+
+The original SVG floor is now embedded publicly through an AI-assisted Streamlit component adapter. Drag/drop, playback, decorative guests, previews, confirmations and undo use the same UI and Python model as the local edition. The public bridge preserves exact daily results; source data and model files are unchanged. July is simulated, and artwork/guests are decorative. Databricks evidence remains pinned to its documented model revision; it does not verify this new hosting adapter.

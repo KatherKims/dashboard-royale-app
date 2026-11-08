@@ -31,8 +31,8 @@ st.markdown('<div class="brandline"><div><span class="suit">♠</span> THE GILDE
 nav=''.join(f'<a class="{"active" if p==page else ""}" href="'+('?page=Floor%20lab' if p=='Floor lab' else '?page='+p)+f'" target="_self">{p}{" ↗" if p=="Floor lab" else ""}</a>' for p in pages)
 st.markdown('<nav aria-label="Dashboard destinations">'+nav+'</nav>',unsafe_allow_html=True)
 if page=='Floor lab':
-    from dashboard.cloud_floor import render_floor
-    render_floor(b)
+    from dashboard.public_floor_component import render_public_floor
+    render_public_floor(b)
     st.stop()
 
 f1,f2,f3=st.columns([1.6,1.2,2.2])

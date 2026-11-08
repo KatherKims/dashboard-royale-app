@@ -1,8 +1,8 @@
-## Public Floor Lab update
+## Public interactive floor simulation
 
-The dashboard's Floor Lab now runs inside Streamlit using the same simulation engine. Public visitors can view the floor, select moves/swaps/inspection/leases/maintenance/add/remove actions, preview and confirm costs, inspect July days, undo, request suggestions and download plans. No separate port is needed for this version. Plans are session-only.
+The public Streamlit Floor Lab now embeds the original SVG game-style simulator: drag/drop, swaps, animated July playback, decorative guests, action previews, confirmation, undo, suggestions and exports. It uses a session-isolated Streamlit component bridge to the unchanged Python FloorSimulation engine. No localhost links or extra public server are required. The standalone local version remains available through `python run_local.py`.
 
-The local SVG edition remains available through `python run_local.py`; drag-and-drop and walking guests belong to that local edition. Older descriptions below of the standalone floor refer to that edition. Data, forecasts and financial calculations are unchanged. For Community Cloud, select Python 3.12 during deployment.
+Supplied machine coordinates and all financial calculations are unchanged. Artwork and guest animation are decorative; July financial series come from the shared 1,000-draw engine. Plans are browser-memory-only; export before reloading. Tests verified the bridge's 30-day results against the direct engine, swap cost/roster, undo, nine floor regression cases and geometry helpers. Browser checks confirmed preview, confirmation and playback. Historical local-only descriptions below predate this hosting update. Deploy with Python 3.12.
 
 # The Gilded Ace · ACEIQ
 
