@@ -37,6 +37,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
+from dashboard.retro_style import stylesheet, masthead
+
 
 # =============================================================================
 # CONFIGURATION
@@ -558,6 +560,8 @@ st.markdown(
 
 # =============================================================================
 # DISPLAY HELPERS
+# Arcade presentation layer; analytical functions below are unchanged.
+st.markdown(stylesheet(), unsafe_allow_html=True)
 # =============================================================================
 
 def money(value, decimals=0):
@@ -632,8 +636,9 @@ def render_chart(fig, title, key, height=380):
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor=BG,
         font=dict(
+            family="Consolas, Liberation Mono, monospace",
             color=WHITE,
-            size=11,
+            size=12,
         ),
         margin=dict(
             l=38,
@@ -1639,42 +1644,23 @@ max_date = daily["gaming_date"].max().date()
 # HEADER AND NAVIGATION
 # =============================================================================
 
-st.markdown(
-    """
-    <div class="topbar">
-        <div>
-            <div class="brand">♠ ACEIQ</div>
-            <div class="brand-sub">
-                The Gilded Ace · Decision Intelligence
-            </div>
-        </div>
-        <div class="top-note">
-            Fictional casino · Synthetic data<br>
-            July planning horizon: 30 days
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
+st.markdown(masthead(), unsafe_allow_html=True)
+
+page = st.radio(
+    "Navigation",
+    [
+        "Decision Center",
+        "Investigate",
+        "July Demand Outlook",
+        "Guest & Loyalty Insights",
+        "Methods & Evidence",
+    ],
+    horizontal=True,
+    label_visibility="collapsed",
+    key="main_navigation",
 )
 
-nav_col, date_col, note_col = st.columns(
-    [1.9, 1.35, 2.0]
-)
-
-with nav_col:
-    page = st.radio(
-        "Navigation",
-        [
-            "Decision Center",
-            "Investigate",
-            "July Demand Outlook",
-            "Guest & Loyalty Insights",
-            "Methods & Evidence",
-        ],
-        horizontal=True,
-        label_visibility="collapsed",
-    )
-
+date_col, note_col = st.columns([1, 2.8])
 with date_col:
     selected_dates = st.date_input(
         "Evidence period",
@@ -1714,7 +1700,7 @@ elif st.session_state.period_signature != period_signature:
 with note_col:
     st.markdown(
         f"""
-        <div style="padding-top:1.65rem;color:#D4DEE3;font-size:.76rem;">
+        <div class="arcade-period">
             <strong>Active period:</strong>
             {start_date.strftime("%b %d, %Y")} –
             {end_date.strftime("%b %d, %Y")}<br>

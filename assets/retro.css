@@ -1,0 +1,83 @@
+/* AceIQ arcade skin. Presentation only; all analytical code remains unchanged. */
+:root { --arcade-font: "Silkscreen", "Courier New", monospace; --mono: "Cascadia Code", "Consolas", "Liberation Mono", monospace; }
+.stApp { background: #0A1118; background-image: radial-gradient(#24323c 1px, transparent 1px); background-size: 16px 16px; }
+html, body, .stApp, .stApp p, .stApp input, .stApp textarea, .stApp select,
+.stApp button, .stApp label, .stApp [data-testid="stMarkdownContainer"],
+.stApp [data-baseweb="select"], .stApp [data-baseweb="popover"] { font-family: var(--mono); }
+.stApp p { line-height: 1.6; }
+.stApp h1, .stApp h2, .stApp h3, .stApp h4 { font-family: var(--arcade-font); font-weight: 400; letter-spacing: 0; line-height: 1.4; }
+.stApp h2 { font-size: clamp(1.2rem, 2vw, 1.65rem); margin-top: .55rem !important; }
+.stApp h3 { font-size: 1.05rem; }
+.block-container { max-width: 1480px; padding-top: 1.25rem; }
+header[data-testid="stHeader"] { background: #0A1118; }
+
+/* Pixel-art title screen: the artwork is decorative, never a data display. */
+.arcade-masthead { display:grid; grid-template-columns: 1fr minmax(280px, 420px); align-items:center; gap:24px; padding:24px 28px; background:#101A22; border:2px solid #E8BD63; box-shadow:6px 6px 0 #493722; margin:0 6px 24px 0; position:relative; }
+.arcade-masthead::before { content:""; position:absolute; inset:6px; border:1px solid #31404D; pointer-events:none; }
+.arcade-kicker { color:#69D6CB; font-size:.75rem; text-transform:uppercase; letter-spacing:.12em; }
+.arcade-brand { font-family:var(--arcade-font); color:#F8DA92; font-size:clamp(2.4rem, 5vw, 4.3rem); line-height:1.1; margin:8px 0; text-shadow:4px 4px 0 #624424; }
+.arcade-tagline { color:#F8F3EA; font-size:.92rem; margin:8px 0 15px; }
+.arcade-meta { display:flex; flex-wrap:wrap; gap:8px 16px; color:#A7B7C2; font-size:.70rem; }
+.arcade-meta span::before { content:"■ "; color:#69D6CB; }
+.arcade-scene { width:100%; image-rendering:pixelated; display:block; }
+.arcade-period { padding:10px 0; color:#A7B7C2; font-size:.78rem; line-height:1.6; }
+.arcade-period strong { color:#69D6CB; }
+
+/* Angular surfaces and offset shadows, instead of rounded/glowing panels. */
+.hero, .panel, .finding, .notice, .warning, .success, .purple, .insight, .status-pill,
+[data-testid="stMetric"], [data-testid="stExpander"], [data-testid="stAlert"],
+[data-testid="stDataFrame"], [data-baseweb="select"] > div,
+[data-baseweb="input"], [data-baseweb="base-input"], [role="tab"] { border-radius:0 !important; }
+.hero { background:#13312F; border:2px solid #69D6CB; padding:22px 24px; box-shadow:5px 5px 0 #081c1c; margin-bottom:24px; }
+.hero::after { content:""; width:24px; height:24px; top:12px; right:12px; background:linear-gradient(90deg,#69D6CB 50%,transparent 50%); opacity:.15; }
+.hero h2 { max-width:1000px; color:#F8F3EA !important; font-size:1.25rem; }
+.eyebrow, .finding-number, .insight-label { font-family:var(--arcade-font); color:#E8BD63; font-weight:400; font-size:.75rem; letter-spacing:0; }
+.subtle { font-size:.87rem; line-height:1.6; color:#C8D2D8; }
+.panel, .finding { background:#17222C; border:2px solid #31404D; border-top-color:#E8BD63; box-shadow:4px 4px 0 #050a0e; }
+.finding { min-height:244px; padding:20px; font-size:.82rem; line-height:1.65; }
+.finding h3 { margin:12px 0 !important; font-size:.95rem; }
+.insight, .notice, .warning, .success, .purple { border-top:1px solid #31404D; border-right:1px solid #31404D; border-bottom:1px solid #31404D; padding:14px 16px; font-size:.84rem; }
+.status-pill { border:1px solid currentColor; }
+[data-testid="stMetric"] { background:#17222C; border:2px solid #31404D; border-top:3px solid #E8BD63; padding:16px; box-shadow:4px 4px 0 #050a0e; min-height:110px; }
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] p { color:#A7B7C2; font-size:.73rem; letter-spacing:.02em; }
+[data-testid="stMetricValue"] { font-family:var(--mono); color:#F8DA92; font-size:clamp(1.15rem, 1.6vw, 1.7rem); font-weight:700; font-variant-numeric:tabular-nums; }
+[data-testid="stPlotlyChart"] { background:#101A22; border:1px solid #31404D; padding:8px; }
+
+/* Keep native controls and focus semantics; decorate them like an arcade menu. */
+.st-key-main_navigation { border-bottom:2px solid #31404D; margin-bottom:12px; padding-bottom:14px; }
+.st-key-main_navigation [role="radiogroup"] { gap:10px; }
+.st-key-main_navigation label:is([data-baseweb="radio"], [data-testid="stRadioOption"]) { margin:0; padding:10px 13px; background:#17222C; border:2px solid #31404D; box-shadow:3px 3px 0 #050a0e; }
+.st-key-main_navigation label:is([data-baseweb="radio"], [data-testid="stRadioOption"]):has(input:checked) { border-color:#E8BD63; background:#332b20; }
+.st-key-main_navigation label p { font-family:var(--arcade-font); font-size:.73rem; }
+.stButton > button, .stDownloadButton > button, [data-testid="stFormSubmitButton"] button { border-radius:0; border:2px solid #E8BD63; background:#17222C; color:#F8DA92; box-shadow:3px 3px 0 #624424; font-family:var(--mono); font-weight:700; padding:10px 16px; transition:transform .12s,box-shadow .12s; }
+.stButton > button:hover, .stDownloadButton > button:hover { color:#0A1118; background:#E8BD63; border-color:#F8DA92; }
+.stButton > button:active, .stDownloadButton > button:active { transform:translate(3px,3px); box-shadow:none; }
+.stButton > button:disabled { border-color:#52616B; box-shadow:none; color:#83939C; background:#17222C; }
+.stApp button:focus-visible, .stApp a:focus-visible, .stApp label:has(input:focus-visible) { outline:3px solid #69D6CB; outline-offset:4px; }
+.stApp [data-baseweb="tab-list"] { gap:8px; }
+.stApp [role="tab"] { padding:12px 16px; background:#17222C; border:1px solid #31404D; }
+.stApp [role="tab"][aria-selected="true"] { color:#F8DA92; border-color:#E8BD63; }
+.stApp hr { border-color:#31404D; border-top-style:dashed; margin:24px 0; }
+
+/* Match the existing animated claw to the same pixel-cabinet style. */
+.claw-cabinet { border-radius:0; border:6px solid #624424; border-top-color:#E8BD63; border-left-color:#E8BD63; background:#350A13; box-shadow:6px 6px 0 #050a0e; }
+.claw-neon { font-family:var(--arcade-font); color:#F8DA92; font-size:.85rem; text-shadow:2px 2px 0 #624424; }
+.claw-glass { border-radius:0; background:#101A22; border-color:#31404D; border-top-color:#69D6CB; }
+.claw-rail { box-shadow:none; background:#69D6CB; }
+.claw-arm::before, .prong, .claw-prize, .capsule { border-radius:0; box-shadow:none; }
+.claw-prize { background:#624424; font-size:10px; }
+.capsule { font-size:9px; }
+.claw-caption { font-family:var(--mono); font-size:.74rem; line-height:1.5; }
+.claw-run-a .claw-carriage, .claw-run-b .claw-carriage, .claw-run-a .claw-prize, .claw-run-b .claw-prize { animation-timing-function:steps(10,end); }
+.footer { color:#A7B7C2; border-top:2px solid #31404D; font-size:.73rem; margin-top:24px; }
+@media(max-width:850px) {
+ .arcade-masthead { grid-template-columns:1fr; padding:22px; gap:16px; }
+ .arcade-scene { max-width:440px; margin:0 auto; }
+ .finding { min-height:0; }
+ .hero { padding:16px; }
+ .st-key-main_navigation label:is([data-baseweb="radio"], [data-testid="stRadioOption"]) { padding:8px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .claw-carriage, .claw-prize { animation:none !important; }
+ .stButton > button, .stDownloadButton > button { transition:none; }
+}
