@@ -66,7 +66,7 @@ MAX_ACTION_TYPES = 3
 JULY_HORIZON_DAYS = 30
 
 st.set_page_config(
-    page_title="AceIQ | Gilded Ace Decision Intelligence",
+    page_title="The Gilded Ace | ACEIQ",
     page_icon="♠",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -3777,10 +3777,13 @@ elif page == "Investigate":
                 legend=False,
             )
 
-    selected_variance = daily_variance[
-        daily_variance["machine_id"].astype(str)
-        == selected_machine_id
-    ].copy()
+        selected_variance = pd.DataFrame()
+
+    if not daily_variance.empty:
+        selected_variance = daily_variance[
+            daily_variance["machine_id"].astype(str)
+            == selected_machine_id
+        ].copy()
 
     if not selected_variance.empty:
         selected_variance = selected_variance[
@@ -4549,8 +4552,7 @@ elif page == "July Action Plan":
                 ]["machine_id"]
                 .astype(str)
                 .tolist()
-)
-
+            )
             manufacturer_daily = filtered_daily[
                 filtered_daily["machine_id"]
                 .astype(str)
@@ -5385,7 +5387,8 @@ elif page == "Guest & Loyalty Insights":
     st.markdown(
         """
         <div class="warning">
-            "Keep guest offers focused on service and experience. Do not base offers on individual gambling losses."
+            Keep guest offers focused on service and experience. Do not base
+            offers on individual gambling losses.
         </div>
         """,
         unsafe_allow_html=True,
@@ -6344,17 +6347,3 @@ else:
             """,
             unsafe_allow_html=True,
         )
-
-
-# =============================================================================
-# FOOTER
-# =============================================================================
-
-st.markdown(
-    """
-    <div class="footer">
-
-    </div>
-    """,
-    unsafe_allow_html=True,
-)

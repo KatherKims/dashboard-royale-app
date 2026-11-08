@@ -10,54 +10,52 @@ All data in this project is synthetic.
 
 ---
 
-## What the dashboard does
-
-The dashboard includes six sections.
+## Dashboard sections
 
 ### Decision Center
 
-Start here for a quick view of the property.
+A high level view of the property.
 
-You can review:
+This section includes:
 
 - Total wagers and house earnings
 - Actual earnings compared with expected earnings
 - Downtime opportunity
 - Low earning machines
-- Payout variance
+- Payout variation context
 - Demand trends over time
 
 The goal is to identify machines that may need a closer look without assuming that every low performer should be replaced.
 
 ### Investigate
 
-Choose a machine and review its results in more detail.
+Select a machine and review its performance in more detail.
 
-This page includes:
+This section includes:
 
 - Actual and expected earnings
 - Availability and downtime
 - Cumulative performance over time
-- Payout variance context
+- Payout variation context
 - Same theme or same zone peer comparisons
 - Placement and floor context
 - Bank movement history when available
 
 ### July Action Plan
 
-Build a July planning scenario using the local action catalog.
+Compare possible July actions using the local action catalog.
 
-The planner includes:
+This section includes:
 
 - A $100,000 budget limit
 - Action costs
 - Lead times
 - Planned downtime
-- Action limits
-- Possible low, base, and high case results
+- Action quantity limits
+- Low, base, and high planning cases
 - A tray for saving actions to compare
 
-The planner is for comparing options. It does not guarantee that an action will produce a certain result.
+The planner helps compare options. It does not guarantee an action will produce a specific result.
 
 ### July Demand Outlook
 
@@ -67,7 +65,7 @@ This section includes:
 
 - Forecast holdout results
 - Model comparison
-- July baseline planning values
+- July planning baseline
 - Event period comparisons
 - Zone traffic context
 - Machine demand prediction diagnostics
@@ -80,6 +78,7 @@ This section includes:
 
 - Tracked player activity
 - Wagers and payouts
+- Player net
 - Expected player loss
 - Comp costs
 - Comp face value
@@ -89,15 +88,15 @@ Guest information is grouped and does not include player identifiers.
 
 ### Methods and Evidence
 
-This section explains the dashboard calculations and provides supporting information.
+Review how the dashboard works and download supporting data.
 
-It includes:
+This section includes:
 
 - Machine performance methods
 - Downtime methods
 - Official simulation results
 - Data quality checks
-- Claims and evidence appendix
+- Claims appendix
 - Downloadable CSV files
 
 ---
