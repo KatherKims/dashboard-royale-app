@@ -18,6 +18,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 from dashboard.analytics import machine_summary as build_machine_summary, machine_category
+from dashboard.availability import render_availability
 from dashboard.views import render_forecast, render_decision
 
 # =============================================================================
@@ -1541,27 +1542,10 @@ elif page == "Machine investigation":
         unsafe_allow_html=True,
     )
 
-    machine_metrics = st.columns(5)
-    machine_metrics[0].metric(
-        "Active days",
-        f"{int(machine['active_days']):,}",
-    )
-    machine_metrics[1].metric(
-        "Availability",
-        pct(machine["availability_rate"]),
-    )
-    machine_metrics[2].metric(
-        "Downtime hours",
-        f"{machine['downtime_hours']:.1f}",
-    )
-    machine_metrics[3].metric(
-        "Actual − expected",
-        money(machine["actual_minus_expected"]),
-    )
-    machine_metrics[4].metric(
-        "Downtime opportunity",
-        money(machine["estimated_downtime_opportunity"]),
-    )
+    machine_metrics = st.columns(3)
+    machine_metrics[0].metric("Actual earnings", money(machine["actual_house_win"]))
+    machine_metrics[1].metric("Expected earnings", money(machine["expected_house_win"]))
+    machine_metrics[2].metric("Actual minus expected", money(machine["actual_minus_expected"]))
 
     evidence = pd.DataFrame(
         [
@@ -1597,12 +1581,8 @@ elif page == "Machine investigation":
         ]
     )
 
-    st.markdown("### Evidence trail")
-    st.dataframe(
-        evidence,
-        width="stretch",
-        hide_index=True,
-    )
+    with st.expander("How to read the earnings and payout evidence"):
+        st.dataframe(evidence, width="stretch", hide_index=True)
 
     selected_daily = (
         filtered_daily[
@@ -1620,71 +1600,37 @@ elif page == "Machine investigation":
         selected_daily["theo_usd"].cumsum()
     )
 
-    left, right = st.columns([1.4, 1])
+    render_availability(selected_daily, selected_machine, start_date, end_date, chart)
+    st.divider()
+    st.markdown("### How did earnings compare with expectations?")
+    machine_fig = go.Figure()
 
-    with left:
-        machine_fig = go.Figure()
+    machine_fig.add_scatter(
+        x=selected_daily["gaming_date"],
+        y=selected_daily["cumulative_actual"],
+        name="Cumulative actual",
+        line=dict(color=GOLD, width=3),
+    )
 
-        machine_fig.add_scatter(
-            x=selected_daily["gaming_date"],
-            y=selected_daily["cumulative_actual"],
-            name="Cumulative actual",
-            line=dict(color=GOLD, width=3),
-        )
+    machine_fig.add_scatter(
+        x=selected_daily["gaming_date"],
+        y=selected_daily["cumulative_expected"],
+        name="Cumulative expected",
+        line=dict(color=TEAL, width=3),
+    )
 
-        machine_fig.add_scatter(
-            x=selected_daily["gaming_date"],
-            y=selected_daily["cumulative_expected"],
-            name="Cumulative expected",
-            line=dict(color=TEAL, width=3),
-        )
+    machine_fig.update_yaxes(
+        title="Cumulative earnings ($)",
+        tickprefix="$",
+    )
 
-        machine_fig.update_yaxes(
-            title="Cumulative earnings ($)",
-            tickprefix="$",
-        )
+    chart(
+        machine_fig,
+        f"{selected_machine} · actual versus expected",
+        "machine_actual_expected",
+        height=430,
+    )
 
-        chart(
-            machine_fig,
-            f"{selected_machine} · actual versus expected",
-            "machine_actual_expected",
-            height=430,
-        )
-
-    with right:
-        selected_daily["daily_availability"] = (
-            selected_daily["available_hours"]
-            / selected_daily["scheduled_hours"].replace(0, np.nan)
-        )
-
-        availability_fig = px.bar(
-            selected_daily,
-            x="gaming_date",
-            y="daily_availability",
-            color="daily_availability",
-            color_continuous_scale=[
-                [0, RED],
-                [0.7, GOLD],
-                [1, TEAL],
-            ],
-            labels={
-                "gaming_date": "Date",
-                "daily_availability": "Availability",
-            },
-        )
-
-        availability_fig.update_layout(coloraxis_showscale=False)
-        availability_fig.update_yaxes(
-            tickformat=".0%",
-            range=[0, 1.05],
-        )
-
-        chart(
-            availability_fig,
-            f"{selected_machine} · daily availability",
-            "machine_availability",
-            height=430,
-        )
 
     with st.expander("Open all selected-period machine diagnostics"):
         diagnostic_table = machine_summary.copy()

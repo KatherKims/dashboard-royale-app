@@ -4,6 +4,8 @@ This version combines the teammate's AceIQ presentation with corrected analytics
 
 ## Walk through it together
 
+Machine availability now starts with a plain-language summary and a monthly chart of unavailable time. Switch to Day for the timing of individual daily totals, inspect the largest daily interruption total, and open the readable table/CSV. The percentage is total available hours divided by total scheduled hours, including daylight-saving day lengths. Availability means ready for play, not actual player usage. This presentation change does not alter the underlying downtime estimates.
+
 1. Start the app using the README instructions. On **Executive overview**, change the evidence dates. Machine and property totals update. Whole-period player headline statistics and event associations explicitly retain their own January–June reference period. Monthly guest and loyalty summaries explicitly use complete months.
 2. Open **Predictions vs actual**. Choose the whole floor, a zone, bank or machine. Compare the frozen May–June demand predictions with observed wagers and the constant baseline. The residual chart shows when the model missed. Switch to July to view a forecast without invented actuals.
 3. On **Machine investigation**, filter a bank, compare rankings and select a machine. Payout variance and the screening score now use the selected evidence period. Scores are screening clues, not confirmed faults or multiple-testing-adjusted findings.
