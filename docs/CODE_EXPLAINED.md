@@ -4,7 +4,9 @@ Prepared November 7, 2026. This document explains the implemented project for it
 
 **Reviewed code:** commit `18677cecc28cf6f04c840d96442baa0b7983401b`. The explanations refer to that implementation, not to future roadmap features. The local participant guide reviewed was `GUIDE.md`, SHA256 `46d9d2cce30ec35e18ff19cb39bc2b72759f281e2566623e9c93ffaca1447411`.
 
-**Current status:** the project contains a working three-page Streamlit app, a reproducible Databricks notebook, exported results, a limited action simulation, tests and collaboration documentation. Databricks is integrated. **Gemini chat and the retro floor simulator are not implemented.** The app addresses all six analytical questions at a descriptive or scenario level, but **does not yet meet every interaction and submission requirement in the guide**. The checklist below identifies the gaps.
+**Status at the reviewed version-1 commit:** the project contains a working three-page Streamlit app, a reproducible Databricks notebook, exported results, a limited action simulation, tests and collaboration documentation. Databricks is integrated. **Gemini chat and the retro floor simulator are not implemented.** The app addresses all six analytical questions at a descriptive or scenario level, but **does not yet meet every interaction and submission requirement in the guide**. The checklist below identifies the gaps.
+
+**Later update:** The local app now includes the floor simulator, date-aware diagnostics and a new demand model. See [the version 2 upgrade guide](UPGRADE_GUIDE.md). The review below is retained as version 1 evidence.
 
 ## 1. The problem the project is solving
 

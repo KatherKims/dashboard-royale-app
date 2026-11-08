@@ -1,10 +1,12 @@
 # The Gilded Ace — Dashboard Royale
 
-A learning project built with Databricks and Python. The app has three pages: Casino overview, Machine investigation, and the $100,000 decision lab. All casino data is synthetic, January–June 2025. July 1–30 is the decision horizon, not the current calendar month.
+A learning project built with Databricks and Python. The app has three pages: Executive overview, Machine investigation, and the $100,000 decision lab. All casino data is synthetic, January–June 2025. July 1–30 is the decision horizon, not the current calendar month.
 
-**Joining the team?** Start with [TEAM_HANDOFF.md](TEAM_HANDOFF.md) for collaboration steps, the analysis status, and the optional Gemini/retro-floor roadmap.
+**Joining the team?** Start with [TEAM_HANDOFF.md](TEAM_HANDOFF.md) for collaboration steps, the analysis status, and the optional Gemini roadmap.
 
 **Learning the code or preparing for judging?** Read [the comprehensive code and requirements explanation](docs/CODE_EXPLAINED.md). It covers the formulas, architecture, evidence, Databricks integration, proposed Gemini design, and requirements that remain unfinished.
+
+**New local version:** [Read the upgrade guide](docs/UPGRADE_GUIDE.md) for the implemented floor map, forecast comparison, corrected calculations and teammate extension points. The cloud notebook and original saved scenario files retain version 1 results. Gemini remains unimplemented.
 
 ## What each tool does
 
@@ -13,7 +15,7 @@ A learning project built with Databricks and Python. The app has three pages: Ca
 - **VS Code** is where you edit that Python code on your computer.
 - **Git** keeps a history of changes; **GitHub Desktop** provides buttons to review and save that history. GitHub stores a shared copy online.
 
-The public app reads small exported results. Visitors do not need a Databricks account, and the app needs no Databricks password or token. Refreshing the data is an explicit export step; the app is not a live database connection.
+The app reads small exported results; public deployment has not been performed. Visitors do not need a Databricks account, and the app needs no Databricks password or token. Refreshing the data is an explicit export step; the app is not a live database connection.
 
 ## Open and run in VS Code
 
@@ -35,7 +37,7 @@ If `py -3.12` is unavailable, install Python 3.12 first. This project was tested
 
 1. Choose **File → Add local repository** and select this folder (the folder containing `app.py`, `README.md` and the hidden `.git` directory). If it says this is not a Git repository, verify the folder first. If you received a ZIP, clone the GitHub repository instead to get its history and remote connection.
 2. The first local checkpoint has already been saved. Click **History** to see it. After your next edit, review **Changes**, enter a short summary, then **Commit to main**. A commit is a saved checkpoint.
-3. When ready to upload, choose **Publish repository**. Review visibility before publishing. Raw data, passwords and tokens do not belong in Git.
+3. The repository is already published privately. Review local changes, commit, then **Push origin** to share them. Raw player data, passwords and tokens do not belong in Git.
 4. After later edits: review Changes → write a summary → Commit → Push origin. Committing saves locally; pushing updates GitHub.
 
 Official instructions: [add a local repository](https://docs.github.com/en/desktop/adding-and-cloning-repositories/adding-a-repository-from-your-local-computer-to-github-desktop).
@@ -45,7 +47,9 @@ Official instructions: [add a local repository](https://docs.github.com/en/deskt
 | File/folder | Purpose |
 | --- | --- |
 | `app.py` | Three-page Streamlit application |
-| `analysis/pipeline.py` | Reproducible analysis and scenario calculations |
+| `analysis/pipeline.py` | Original analysis and version 1 scenario calculations |
+| `dashboard/` | Shared analytics, prediction, decision engine and map views |
+| `scripts/build_dashboard_data.py` | Rebuild forecast, variance and floor exports |
 | `notebooks/01_data_checks.ipynb` | Original Databricks notebook with the combined investigation |
 | `data/` | Derived synthetic results used by the app |
 | `docs/findings.md` | Findings, caveats and measurement plans |
@@ -57,6 +61,7 @@ Download the [challenge dataset](https://github.com/tamu-datathon-org/dashboard-
 
 ```powershell
 .venv\Scripts\python analysis/pipeline.py --data "C:\path\to\dashboard-royale\data" --output data
+.venv\Scripts\python scripts/build_dashboard_data.py --source "C:\path\to\dashboard-royale\data" --output data
 ```
 
 The report records source file SHA256 hashes, validation, train/test dates, simulation seed and assumptions. Player exports contain only grouped summaries, not player identifiers.
@@ -69,6 +74,7 @@ To repeat the local checks:
 
 ```powershell
 .venv\Scripts\python tests/test_results.py
+.venv\Scripts\python tests/test_upgrade.py
 .venv\Scripts\python tests/test_app.py
 ```
 
@@ -80,7 +86,7 @@ After running the complete-analysis section in the original Databricks notebook:
 powershell -File scripts/refresh_from_databricks.ps1
 ```
 
-The script downloads results and notebook snapshots into this project. Review the resulting changes in GitHub Desktop. This is a one-way export, not automatic two-way synchronization.
+The script downloads original results and notebook snapshots into this project. **Rebuild extension exports using `scripts/build_dashboard_data.py` afterward**, pointing to your challenge dataset; the original cloud notebook does not yet generate them. Review the resulting changes in GitHub Desktop. This is a one-way export, not automatic two-way synchronization.
 
 ## Publish later
 

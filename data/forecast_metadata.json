@@ -1,0 +1,23 @@
+{
+  "model": "weekday",
+  "selection_mae": {
+    "constant": 1097.2147463839071,
+    "weekday": 907.8443652583265
+  },
+  "holdout_mae": 934.9787031541359,
+  "baseline_mae": 1121.2827064709136,
+  "holdout_wape": 0.21237253305886164,
+  "unseen_holdout_machines": 1,
+  "selection": "Fit January\u2013March, choose by machine-day MAE on April; shrinkage weight fixed at 10.",
+  "test": "Refit January\u2013April, freeze predictions for May\u2013June. Active roster is supplied; no observed test-day usage or availability enters features.",
+  "future": "Refit January\u2013June for July 1\u201330 on the July-eligible roster. No July actuals exist.",
+  "interval": "April 10th/90th percentiles of aggregate relative residuals, scaled by predicted demand; illustrative daily bands, not guaranteed coverage or causal uncertainty.",
+  "source_hashes": {
+    "machine_day": "8bd1ebdb1dd2f695eef8585da0d3d5b6785d7c050e29ae52b14c2123c7c33176",
+    "game_math": "b6ebc7040d7120dd20be89c5f6ba264d650be9e4bfd03530a2e0abfb3f4f931d",
+    "floor_locations": "47958de9cb8cfbba7cfeab41eb015f8e840e1572f1a2f3d2ed6b6d494de43c39",
+    "floor_walkways": "9cdb3c0205d179dea91ef6c71948913c14dd214e95c76805aeb8624efa07854c",
+    "placements": "0759516a4c8885176ac2e027b6a214f771144d4d4e3d23210d008c3eb806f810"
+  },
+  "base_daily_sha256": "10d5046e166d9eff82a2bda9b6f64a4d5f0afaa993b0b0c23e7855aee5064c05"
+}

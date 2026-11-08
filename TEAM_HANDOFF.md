@@ -2,6 +2,8 @@
 
 This is the Dashboard Royale casino analytics project. All casino data is synthetic. The app uses January–June 2025 evidence to investigate low-earning machines and compare July 1–30 decisions with a $100,000 budget.
 
+**New version:** [UPGRADE_GUIDE.md](docs/UPGRADE_GUIDE.md) explains the implemented map, shared simulator, period-aware diagnostics and new forecast. The floor-map roadmap below describes the earlier starting point. Gemini remains unimplemented.
+
 ## Start here
 
 1. Clone the repository using **GitHub Desktop → File → Clone repository**. You need an invitation if the repository is private. A ZIP is fine for viewing, but **cloning is the right choice for collaborating** because it includes Git history and the GitHub connection.
@@ -20,7 +22,8 @@ The app runs from the included derived data; teammates do not need Databricks ac
 | Decision lab | 1,000 shared scenarios; 42 admissible portfolios from a limited shortlist; budget, objective and benefit-sensitivity controls |
 | Databricks | Original `01_data_checks` notebook contains checks, investigation and completed analysis; end-to-end run passed |
 | Local checks | UI interactions, exported totals, action feasibility and scenario rankings passed |
-| Gemini chat / retro floor simulator | Roadmap ideas, not implemented |
+| Retro floor simulator | Coordinate-based map and interactive actions implemented locally |
+| Gemini chat | Roadmap only, not implemented |
 | Public app deployment | Not yet deployed |
 
 The selected objective is **maximize expected 30-day incremental contribution after action costs and planned downtime**. Keeping the budget wins under the current shortlist and assumptions. This is not proof that all possible interventions are unprofitable. An inspection can buy information whose value is not priced in the current model.
