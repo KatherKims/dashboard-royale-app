@@ -25,13 +25,41 @@ def render_floor(bundle):
     slots['machine'] = slots.location_id.map(layout).fillna('Vacant')
     slots['status'] = ['Vacant' if m == 'Vacant' else 'Changed' if sim.initial.get(s) != m else 'Original'
                        for s,m in zip(slots.location_id, slots.machine)]
-    fig = px.scatter(slots, x='x_m', y='y_m', color='status', symbol_sequence=['square'],
-                     hover_data=['location_id','machine','bank_id','zone_id'],
-                     color_discrete_map={'Original':'#e4bd75','Changed':'#75c9b9','Vacant':'#687b73'})
-    fig.update_traces(marker=dict(size=11, symbol='square', line=dict(width=1,color='#0b231f')))
-    fig.update_layout(height=500, paper_bgcolor='#0b231f', plot_bgcolor='#0b231f',font_color='#f6eacb')
-    fig.update_yaxes(scaleanchor='x',scaleratio=1)
-    st.plotly_chart(fig, width='stretch', key='public_floor_map')
+    zone = st.selectbox('Focus area', ['Entire floor'] + sorted(slots.zone_id.unique()),key='floor_zone')
+    visible = slots if zone == 'Entire floor' else slots[slots.zone_id == zone]
+    map_col, guide_col = st.columns([3,1])
+    with map_col:
+        fig = px.scatter(visible, x='x_m', y='y_m', color='status',
+                         hover_name='machine', hover_data={'location_id':True,'bank_id':True,'zone_id':True,'x_m':False,'y_m':False},
+                         color_discrete_map={'Original':'#e4bd75','Changed':'#75c9b9','Vacant':'#d2919e'})
+        fig.update_traces(marker=dict(size=7 if zone == 'Entire floor' else 13, symbol='square', line=dict(width=1,color='#0b231f')))
+        # Bounds follow the supplied coordinates. Constrain the domains, rather
+        # than letting equal-aspect scaling inflate the x range on wide screens.
+        for bank, group in visible.groupby('bank_id'):
+            x0,x1=group.x_m.min()-1.4,group.x_m.max()+1.4
+            y0,y1=group.y_m.min()-1.4,group.y_m.max()+1.4
+            fig.add_shape(type='rect',x0=x0,x1=x1,y0=y0,y1=y1,
+                          fillcolor='rgba(228,189,117,0.08)',line=dict(color='#426457',width=1),layer='below')
+            fig.add_annotation(x=(x0+x1)/2,y=y1+1.2,text=str(bank),showarrow=False,
+                               font=dict(size=9,color='#a8bdb2'),yanchor='bottom')
+        fig.update_layout(height=650 if zone == 'Entire floor' else 480,
+                          margin=dict(l=12,r=12,t=35,b=15),paper_bgcolor='#0b231f',plot_bgcolor='#0b231f',
+                          font=dict(color='#f6eacb',family='Consolas, monospace',size=13),
+                          legend=dict(title_text='',orientation='h',x=0,y=1.06),dragmode='pan',
+                          title=dict(text=f'JULY {day:02d} · {mode.upper()}',font=dict(size=13),x=0.98,xanchor='right'))
+        fig.update_xaxes(range=[visible.x_m.min()-7,visible.x_m.max()+7],visible=False,constrain='domain')
+        fig.update_yaxes(range=[visible.y_m.min()-7,visible.y_m.max()+7],visible=False,scaleanchor='x',scaleratio=1,constrain='domain')
+        st.plotly_chart(fig, width='stretch', key='public_floor_map',config={'displaylogo':False,'scrollZoom':True})
+    with guide_col:
+        st.subheader('Read the floor')
+        st.metric('Occupied slots', int((visible.machine != 'Vacant').sum()))
+        st.metric('Vacant slots', int((visible.machine == 'Vacant').sum()))
+        st.caption('Gold: original placement. Teal: moved, swapped or added. Pink: vacant.')
+        st.markdown('**Explore:** hover over a machine for its ID. Choose a focus area for a closer view. Drag to pan; double-click to reset.')
+        st.markdown('**Plan:** use the action controls below. Confirm a preview, then move the July slider to see when the change activates.')
+        st.caption('Bank outlines group supplied slots; they are not surveyed walls. Physical coordinates and relative distances are preserved.')
+        if not plan:
+            st.info('No actions yet. $0 incremental net means no change from the baseline—not zero casino earnings.')
     st.caption('Colors show occupancy/placement changes. Inspection, lease and maintenance actions are listed in the plan below. These estimates are conditional assumptions, not guaranteed returns or destination-specific causal effects.')
     eligible = sorted(sim.eligible)
     kind = st.selectbox('Action', ['move','swap','inspect','lease','maintenance','add','remove'],key='floor_kind')
