@@ -25,6 +25,12 @@ For F5, select that Python environment in VS Code and choose **Run dashboard + f
 
 On macOS/Linux, use `python3.12 -m venv .venv`, `.venv/bin/python -m pip install -r requirements.txt`, then `.venv/bin/python run_local.py`. Select your local virtual environment in VS Code.
 
+## Latest evidence and presentation update
+
+The original Silkscreen pixel headings now accompany larger chart labels, explicit units and short takeaways. Overview includes three bottom-ten ranking modes, a residual screen, event/traffic context, zone downtime and an optional Evidence Claw. Guests includes redemption conversion and comp-cost ratios. Negative earnings ratios remain visible.
+
+See [PDF comparison and reconciled figures](docs/REFERENCE_COMPARISON.md) for exact agreements and intentional differences, and [Devpost description](docs/DEVPOST.md) for a submission-ready draft under 400 words. The PDF is earlier source code, not an embedded dataset. The newer machine-day forecast and historical property forecast are labeled separately.
+
 ## Five destinations
 
 | Destination | Purpose |
@@ -35,7 +41,7 @@ On macOS/Linux, use `python3.12 -m venv .venv`, `.venv/bin/python -m pip install
 | Scenarios | Cash ceiling, retained-play sensitivity, original nine targets re-evaluated by the shared engine, ranked feasible portfolios, keep-budget and forecast evidence. |
 | Floor lab | Opens a standalone local page with placements, a minimal HUD, decorative guests, drag/drop, pan/zoom, July playback, previews, suggestions and plan undo. |
 
-Metrics use bounded panels; deeper methods and tables are optional. Smaller screens can scroll dashboard panels/page. The floor itself has no page scroll. Use Manage → View controls to focus a zone, zoom, Fit, pause ambient guests, or compare Baseline and Proposed layouts. Baseline is read-only.
+Headings and navigation use the original bundled Silkscreen pixel font. Charts use larger readable labels, explicit units and short data-driven takeaways. Panels grow to show explanations without internal scrolling; deeper methods and exact tables are optional. Smaller screens can scroll dashboard panels/page. The floor itself has no page scroll. Use Manage → View controls to focus a zone, zoom, Fit, pause ambient guests, or compare Baseline and Proposed layouts. Baseline is read-only.
 
 ## Floor actions
 
@@ -65,7 +71,7 @@ Probabilities and 10th–90th percentiles describe assumed effects, not measured
 
 ![Interactive floor lab](docs/floor-lab.png)
 
-[Swap preview](docs/swap-preview.png) · [Suggested changes](docs/suggestions.png)
+[Swap preview](docs/swap-preview.png) · [Suggested changes](docs/suggestions.png) · [Evidence Claw](docs/evidence-claw.png)
 
 ## Files and evidence
 
@@ -99,6 +105,7 @@ placements.parquet
 ## Checks
 
 ```powershell
+python tests/test_reference_consistency.py
 python tests/test_results.py
 python tests/test_upgrade.py
 python tests/test_floor_simulation.py

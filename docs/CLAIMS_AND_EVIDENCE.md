@@ -153,3 +153,7 @@ Inspect settings and meter reconciliation for anomalies; random payout recovery 
 ## Version boundary
 
 `analysis_results.json` and `scenario_net.npz` preserve the original version-1 pipeline. The rebuilt UI uses the retained shared DecisionEngine for current calculations, not those older stored candidate arrays. Both are seeded 1,000-scenario systems with different demand/effect construction; do not mix their values. Source hashes are recorded, but the new loader does not claim a runtime cryptographic integrity gate. See LOCAL_REBUILD for performed checks and residual limitations. No July actuals or real intervention effects exist.
+
+## Reference comparison update
+
+See [REFERENCE_COMPARISON.md](REFERENCE_COMPARISON.md) for the PDF-to-current-chart mapping and independent reconciliation checks. New evidence views use the existing exports and definitions. The optional claw chooses a raw-bottom-ten machine for investigation and makes no analytical recommendation.

@@ -81,3 +81,7 @@ This local two-service architecture needs a separate hosting design before publi
 ![Ranked suggested changes](suggestions.png)
 
 Current evidence: [Claims & Evidence](CLAIMS_AND_EVIDENCE.md), its CSV counterpart, and [AI disclosure](AI_DISCLOSURE.md). Baseline versions are retained under `archive/`.
+
+## Final reference and readability pass
+
+The PDF reference comparison is recorded in `REFERENCE_COMPARISON.md`. The original pixel font, larger labels, explanatory summaries, three ranking modes, negative-value visibility, residual/event/traffic/downtime views, loyalty-change charts and optional Evidence Claw were verified locally. `test_reference_consistency.py` adds four independent reconciliation checks. `test_compact_app.py` now inspects rendered chart coordinates, three ranking pools, claw membership and date-reset behavior. The runtime floor and shared models are unchanged. `DEVPOST.md` contains a 363-word project description; this is a draft file, not a submission to Devpost.

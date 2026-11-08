@@ -9,3 +9,5 @@ The assistant ran numerical, API, geometry and Streamlit checks and interacted w
 Gemini chat is not implemented. The running app does not call Databricks; notebooks preserve the original Databricks work and local exports support this interface. No secrets are required. Original cloud datasets were not modified. The user subsequently authorized committing and pushing the source rebuild to GitHub. Public floor hosting is not configured by this update. Decorative guests are independent of the financial model. Hypothetical July outcomes are not observed data.
 
 The previous disclosure is preserved in `docs/archive/AI_DISCLOSURE_08dab59.md` as historical context.
+
+The final presentation pass also used the supplied Datathon Project Ideation PDF as a reference for chart definitions and concise summaries. The assistant restored evidence views, added an optional random Evidence Claw, reconciled formulas against local exports, and drafted a Devpost description. The claw is a browsing aid, not an analytical recommendation. No generative model is used by the running app.
