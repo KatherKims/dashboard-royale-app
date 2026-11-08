@@ -1,12 +1,117 @@
-# Retro dashboard assets
+# The Gilded Ace
 
-This presentation layer was added on top of teammate upload `b972f68`.
+## ACEIQ Casino Decision Dashboard
 
-- `retro.css`: pixel-style panels, navigation, controls, responsive layout and reduced-motion support.
-- `pixel-casino.svg`: original code-drawn decorative casino scene in the existing palette. It does not depict measured floor coordinates or data.
-- `fonts/Silkscreen-Regular.ttf`: Silkscreen by Jason Kottke and The Silkscreen Project Authors, distributed under the included SIL Open Font License (`fonts/OFL.txt`). Source: https://github.com/google/fonts/tree/main/ofl/silkscreen
-- `dashboard/retro_style.py` embeds the local font and artwork, so visitors need no third-party font connection.
+The Gilded Ace is a Streamlit dashboard built with Python and synthetic casino data.
 
-Headings use Silkscreen; body text and charts use readable monospace fonts. The existing animated Evidence Claw uses stepped movement and honors reduced-motion preferences.
+It helps users explore machine performance, downtime, floor placement, demand trends, loyalty results, and possible July operating decisions. The dashboard is designed to show that low earnings alone are not enough to make a replacement decision.
 
-Validation: all five pages rendered with Streamlit AppTest; the claw revealed a machine in the browser; desktop and 390px layouts were inspected with no page-wide horizontal overflow on the narrow layout. An AST comparison confirmed that analytical functions were unchanged; only the shared chart renderer's font settings changed. Existing analytical limitations are outside this visual update.
+All data in this project is synthetic.
+
+---
+
+## What the dashboard does
+
+The dashboard includes six sections.
+
+### Decision Center
+
+Start here for a quick view of the property.
+
+You can review:
+
+- Total wagers and house earnings
+- Actual earnings compared with expected earnings
+- Downtime opportunity
+- Low earning machines
+- Payout variance
+- Demand trends over time
+
+The goal is to identify machines that may need a closer look without assuming that every low performer should be replaced.
+
+### Investigate
+
+Choose a machine and review its results in more detail.
+
+This page includes:
+
+- Actual and expected earnings
+- Availability and downtime
+- Cumulative performance over time
+- Payout variance context
+- Same theme or same zone peer comparisons
+- Placement and floor context
+- Bank movement history when available
+
+### July Action Plan
+
+Build a July planning scenario using the local action catalog.
+
+The planner includes:
+
+- A $100,000 budget limit
+- Action costs
+- Lead times
+- Planned downtime
+- Action limits
+- Possible low, base, and high case results
+- A tray for saving actions to compare
+
+The planner is for comparing options. It does not guarantee that an action will produce a certain result.
+
+### July Demand Outlook
+
+Review demand forecasting and demand context.
+
+This section includes:
+
+- Forecast holdout results
+- Model comparison
+- July baseline planning values
+- Event period comparisons
+- Zone traffic context
+- Machine demand prediction diagnostics
+
+### Guest and Loyalty Insights
+
+Review grouped loyalty and comp information.
+
+This section includes:
+
+- Tracked player activity
+- Wagers and payouts
+- Expected player loss
+- Comp costs
+- Comp face value
+- Comp cost trends
+
+Guest information is grouped and does not include player identifiers.
+
+### Methods and Evidence
+
+This section explains the dashboard calculations and provides supporting information.
+
+It includes:
+
+- Machine performance methods
+- Downtime methods
+- Official simulation results
+- Data quality checks
+- Claims and evidence appendix
+- Downloadable CSV files
+
+---
+
+## Data
+
+This project uses local synthetic data only.
+
+Required files inside the `data/` folder:
+
+```text
+analysis_results.json
+machines.parquet
+machine_daily.parquet
+guest_groups.parquet
+property_daily.parquet
+scenario_net.npz
