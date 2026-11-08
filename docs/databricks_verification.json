@@ -1,0 +1,51 @@
+{
+  "git_commit": "2a124ca0b901ab9e4c18d87f471679c0673600a1",
+  "archive_sha256": "f8b6e0d01983c1e6a249a0cc2d4c03e9f1a8ca3e3afe0a41de14d101d7d72e99",
+  "verified_source_files": 76,
+  "cloud_table_reconciled": true,
+  "cloud_totals": {
+    "active_rows": 55092.0,
+    "wagers": 248905219.25,
+    "payouts": 225267064.15,
+    "actual": 23638155.1,
+    "expected": 23545364.4785
+  },
+  "local_totals": {
+    "active_rows": 55092,
+    "wagers": 248905219.25,
+    "payouts": 225267064.15,
+    "actual": 23638155.099999998,
+    "expected": 23545364.4785
+  },
+  "regression_tests": 16,
+  "regressions_passed": true,
+  "leakage_and_placement_checks_passed": true,
+  "forecast_reproduced": true,
+  "machine_day_mae": 934.9787031541359,
+  "baseline_mae": 1121.2827064709136,
+  "shortlist_recommendation": "Keep budget",
+  "shortlist_mean_net": 0.0,
+  "initial_machines": 308,
+  "vacancies": 6,
+  "swap_cash": 3600.0,
+  "swap_preserved_roster": true,
+  "charts": [
+    "01_bottom_ten.png",
+    "02_residuals.png",
+    "03_machine_cumulative.png",
+    "04_monthly_downtime.png",
+    "05_theme_peers.png",
+    "06_demand_rate.png",
+    "07_event_context.png",
+    "08_traffic.png",
+    "09_downtime_zone.png",
+    "10_guest_groups.png",
+    "11_comp_economics.png",
+    "12_redemption_conversion.png",
+    "13_comp_ratio.png",
+    "14_forecast_holdout.png",
+    "15_swap_distribution.png"
+  ],
+  "verified_at_utc": "2026-11-08T16:41:59.186612+00:00",
+  "run_url": "https://dbc-3501c3c5-1cc4.cloud.databricks.com/?o=7474651870217400#job/796646835901211/run/1115290540544965"
+}

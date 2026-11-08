@@ -2,7 +2,7 @@
 
 A local Python/Streamlit decision dashboard and a separate interactive SVG casino floor. All casino and guest data is synthetic. January–June 2025 is observed history; July 1–30 is a modeled decision horizon, not the current date.
 
-The current version brings the compact dashboard and interactive floor lab into this repository. Earlier versions remain in Git history. The original data exports, analysis notebooks and shared financial models are unchanged. The app runs locally; publishing this code to GitHub does not create a public dashboard.
+The current version brings the compact dashboard and interactive floor lab into this repository. Earlier versions remain in Git history. The original data exports and shared financial models are unchanged. The Databricks notebooks retain the original analysis and now include final-product evidence. The app runs locally; publishing this code to GitHub does not create a public dashboard.
 
 ## Run it
 
@@ -81,7 +81,8 @@ Probabilities and 10th–90th percentiles describe assumed effects, not measured
 - `assets/floor-world.html`, `.css`, `.js`: standalone accessible controls and SVG floor.
 - `assets/floor-motion.js`: pure zoom, drop-target, route and obstacle helpers.
 - `dashboard/analytics.py`, `forecast.py`, `decisions.py`: existing shared model definitions, unchanged.
-- `data/`: original exports, unchanged. `analysis/` and `notebooks/`: historical reproducible analysis, unchanged.
+- `data/`: original exports, unchanged. `analysis/`: historical reproducible analysis.
+- `notebooks/01_data_checks`: original analysis plus the final-product evidence section. `notebooks/05_Final_Product_Evidence`: standalone current evidence, forecast reproduction, cloud reconciliation and floor simulation checks. See [Databricks sync and version boundaries](docs/DATABRICKS_FINAL_SYNC.md).
 - [Claims & Evidence](docs/CLAIMS_AND_EVIDENCE.md), [AI disclosure](docs/AI_DISCLOSURE.md), [local rebuild notes](docs/LOCAL_REBUILD.md).
 - `docs/archive/`: frozen baseline documentation. Other inherited long-form guides describe earlier versions; use this README and LOCAL_REBUILD for current behavior.
 
@@ -100,7 +101,9 @@ forecast_metadata.json
 floor_locations.parquet
 floor_walkways.parquet
 placements.parquet
-``` It does not download data or call external APIs. Databricks notebooks document the original work; runtime uses local exports. Gemini chat is not implemented.
+```
+
+The app does not download data or call external APIs. Databricks notebooks document both the original work and the final-product verification; app runtime uses local exports. Gemini chat is not implemented.
 
 ## Checks
 
