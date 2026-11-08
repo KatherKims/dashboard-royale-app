@@ -7,6 +7,7 @@ import streamlit as st
 from dashboard.analytics import floor_snapshot, machine_summary, machine_category
 from dashboard.forecast import aggregate_predictions
 from dashboard.decisions import DecisionEngine, rank_portfolios
+from dashboard.conclusions import render_conclusions
 
 GOLD, TEAL, RED, MUTED = '#D9B66F', '#65C6BD', '#FF756B', '#AEB8C3'
 
@@ -271,11 +272,11 @@ def render_floor(engine, daily, machines, locations, placements, walkways, start
     st.download_button('Download this action and assumptions', pd.DataFrame([row]).to_csv(index=False).encode(), 'aceiq_floor_action.csv', 'text/csv', key='download_floor_action')
 
 
-def render_decision(report, daily, machines, property_daily, predictions, locations, placements, walkways, start_date, end_date):
+def render_decision(report, daily, machines, property_daily, predictions, locations, placements, walkways, start_date, end_date, forecast_metadata):
     st.title('Put the $100,000 on evidence.')
     st.write('Explore the floor, compare actions, and make the assumptions visible.')
     engine = DecisionEngine(daily, machines, property_daily, report, predictions)
-    floor_tab, portfolio_tab, evidence_tab = st.tabs(['♠ Floor map & simulator', 'Portfolio ranking', 'Assumptions & evidence'])
+    floor_tab, portfolio_tab, evidence_tab, conclusions_tab = st.tabs(['♠ Floor map & simulator', 'Portfolio ranking', 'Assumptions & evidence', 'Final conclusions'])
     with floor_tab:
         render_floor(engine, daily, machines, locations, placements, walkways, start_date, end_date)
     with portfolio_tab:
@@ -309,3 +310,5 @@ def render_decision(report, daily, machines, property_daily, predictions, locati
         st.dataframe(table[['id', 'target', 'cost', 'lead_days', 'benefit_days', 'expected_net', 'assumption']], hide_index=True, width='stretch')
         st.dataframe(pd.DataFrame(report['action_catalog']), hide_index=True, width='stretch')
         st.caption('Costs are catalog costs. Expected earnings are before baseline operating costs; action net benefit subtracts action costs and planned downtime opportunity. No Gemini integration is included in this update.')
+    with conclusions_tab:
+        render_conclusions(report, engine, candidates, forecast_metadata)

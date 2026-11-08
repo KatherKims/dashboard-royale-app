@@ -1656,7 +1656,7 @@ elif page == "Machine investigation":
 # =============================================================================
 
 else:
-    render_decision(report, daily, machines, property_daily, predictions, locations, placements, walkways, start_date, end_date)
+    render_decision(report, daily, machines, property_daily, predictions, locations, placements, walkways, start_date, end_date, forecast_metadata)
 
 # =============================================================================
 # FOOTER

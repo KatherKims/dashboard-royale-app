@@ -40,6 +40,7 @@ Windows startup has been checked on the development computer. macOS/Linux instru
 4. **$100,000 decision lab → Floor map & simulator:** select **Plan July actions**, a machine, **Move to an empty slot**, and a destination. The arrow previews the proposed move. Change assumptions to see cost/benefit uncertainty update. Historical mode changes positions by snapshot date; colors summarize the selected evidence period.
 5. **Portfolio ranking:** compare keeping the budget to the disclosed spending shortlist. Change benefit sensitivity and inspect the recommendation. Map experiments do not automatically become combined portfolios.
 6. Download the **Claims & Evidence** and **AI disclosure** from the sidebar, or read `docs/CLAIMS_AND_EVIDENCE.md` and `docs/AI_DISCLOSURE.md`.
+7. End the demo in **$100,000 decision lab → Final conclusions**. It answers the six questions and shows the baseline budget recommendation, model validation and measurement plan. This closing view deliberately uses full January–June evidence and default assumptions, independently of exploratory sliders.
 
 ## What “interactive” means here
 
